@@ -1,15 +1,12 @@
 import Head from "next/head";
-
 import Layout from "../components/Layout";
-
-// import "@/styles/tailwind.css";
-
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
+import React from "react";
 
-export default function App({ Component, pageProps }: AppProps) {
+const App = ({ Component, pageProps }: AppProps) => {
   return (
-    <>
+    <React.Fragment>
       <Head>
         <title>page-title</title>
         {/* {description && <meta name="description" content={description} />} */}
@@ -17,6 +14,8 @@ export default function App({ Component, pageProps }: AppProps) {
       <Layout>
         <Component {...pageProps} />
       </Layout>
-    </>
+    </React.Fragment>
   );
-}
+};
+
+export default App;
