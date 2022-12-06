@@ -1,5 +1,7 @@
 import React from "react";
 import clsx from "clsx";
+import NavBar from "./NavBar";
+import Logo from "./Logo";
 // interface Props {
 //   children: React.ReactNode;
 // }
@@ -29,13 +31,10 @@ const Header: React.FC = () => {
           : "dark:bg-transparent"
       )}
     >
-      <div className="w-full md:flex md:items-center md:justify-between">
-        <div className="min-w-0 flex-1">
-          <h2 className="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">
-            Pet Pal
-          </h2>
-        </div>
-        <div className="mt-4 flex md:mt-0 md:ml-4">
+      <div className="w-full flex items-center justify-between">
+        <Logo />
+        <NavBar />
+        <div className="flex mt-0 md:ml-4">
           <button
             type="button"
             className="inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
