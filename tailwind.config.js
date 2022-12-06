@@ -5,7 +5,15 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ["Inter", ...defaultTheme.fontFamily.sans],
+        display: ["Lexend", ...defaultTheme.fontFamily.sans],
+      },
+      maxWidth: {
+        "8xl": "88rem",
+      },
+    },
   },
   plugins: [],
 };
