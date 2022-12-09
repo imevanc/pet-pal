@@ -1,10 +1,7 @@
 import React from "react";
-import clsx from "clsx";
+// import clsx from "clsx";
 import NavBar from "./NavBar";
 import Logo from "./Logo";
-// interface Props {
-//   children: React.ReactNode;
-// }
 
 const Header: React.FC = () => {
   let [isScrolled, setIsScrolled] = React.useState<boolean>(false);
@@ -31,7 +28,7 @@ const Header: React.FC = () => {
         //   : "dark:bg-transparent"
       }
     >
-      <div className="max-w-5xl w-full flex items-center justify-between">
+      <div className="max-w-6xl w-full flex items-center justify-between">
         <Logo />
         <NavBar />
         <div className="flex mt-0 md:ml-4">
