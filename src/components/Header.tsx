@@ -24,14 +24,14 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className={clsx(
-        "sticky top-0 z-50 flex items-center justify-between bg-white px-4 py-5 shadow-md shadow-slate-900/5 transition duration-500 dark:shadow-none sm:px-6 lg:px-8",
-        isScrolled
-          ? "dark:bg-slate-900/95 dark:backdrop-blur dark:[@supports(backdrop-filter:blur(0))]:bg-slate-900/75"
-          : "dark:bg-transparent"
-      )}
+      className={
+        "sticky top-0 flex items-center justify-center bg-white px-4 py-6"
+        // isScrolled
+        //   ? "dark:bg-slate-900/95 dark:backdrop-blur dark:[@supports(backdrop-filter:blur(0))]:bg-slate-900/75"
+        //   : "dark:bg-transparent"
+      }
     >
-      <div className="w-full flex items-center justify-between">
+      <div className="max-w-5xl w-full flex items-center justify-between">
         <Logo />
         <NavBar />
         <div className="flex mt-0 md:ml-4">
