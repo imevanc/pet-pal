@@ -4,18 +4,19 @@ import React from "react";
 const Home: NextPage = () => {
   return (
     <React.Fragment>
-      <main className="flex items-center justify-center bg-white px-4 py-6">
+      <main className="flex items-center justify-center bg-white px-6 py-6">
         <div className="max-w-5xl w-full flex items-center justify-between">
-          <div>
-            <div>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </div>
+          <div className="mx-auto max-w-prose text-lg">
+            <h1>
+              <span className="mt-2 block text-center text-3xl font-bold leading-8 tracking-tight text-gray-900 sm:text-4xl">
+                All about dogs in one place
+              </span>
+            </h1>
+            <p className="mt-8 text-xl text-center leading-8 text-gray-500">
+              Our mission is to connect the different parts of the dog industry
+              in one place. People and organisations can choose between our
+              account types and have instant communication with other users.
+            </p>
           </div>
         </div>
       </main>
