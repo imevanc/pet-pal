@@ -8,7 +8,7 @@ const App = ({ Component, pageProps }: AppProps) => {
   return (
     <React.Fragment>
       <Head>
-        <title>page-title</title>
+        <title>Pet Pal</title>
         {/* {description && <meta name="description" content={description} />} */}
       </Head>
       <Layout>

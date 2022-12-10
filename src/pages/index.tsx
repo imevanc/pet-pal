@@ -1,11 +1,12 @@
 import type { NextPage } from "next";
 import Image from "next/image";
 import React from "react";
+import Newsletter from "../components/Newsletter";
 
 const Home: NextPage = () => {
   return (
-    <React.Fragment>
-      <main className="h-screen flex flex-col md:flex-row items-center md:items-start md:justify-center bg-white px-6">
+    <div className="h-screen bg-white px-6">
+      <div className="flex flex-col md:flex-row items-center md:items-start md:justify-center">
         <div className="max-w-3xl w-full md:pt-10">
           <div className="mx-auto max-w-prose">
             <h1>
@@ -32,10 +33,9 @@ const Home: NextPage = () => {
             alt="lab"
           />
         </div>
-      </main>
-
-      <footer></footer>
-    </React.Fragment>
+      </div>
+      <Newsletter />
+    </div>
   );
 };
 
