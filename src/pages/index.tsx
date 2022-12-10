@@ -18,7 +18,8 @@ const Home: NextPage = () => {
             <p className="mt-8 text-lg text-left leading-8 text-gray-500 sm:text-xl lg:text-2xl">
               Our mission is to connect the different parts of the dog industry
               in one place. People and organisations can choose between our
-              account types and have instant communication with other users.
+              account types and have instant communication with other users -{" "}
+              <span>From our dog family to yours.</span>
             </p>
           </div>
         </div>
