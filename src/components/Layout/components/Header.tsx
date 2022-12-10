@@ -28,7 +28,7 @@ const Header: React.FC = () => {
         //   : "dark:bg-transparent"
       }
     >
-      <div className="max-w-6xl w-full flex items-center justify-between">
+      <div className="max-w-8xl w-full flex items-center justify-between">
         <Logo />
         <NavBar />
         <div className="flex mt-0 md:ml-4">
