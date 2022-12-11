@@ -2,10 +2,19 @@ import React from "react";
 
 const Logo: React.FC = () => {
   return (
-    <div className="min-w-0">
-      <h2 className="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">
-        Pet Pal
-      </h2>
+    <div className="flex flex-shrink-0 items-center">
+      {/* <img
+        className="block h-8 w-auto lg:hidden"
+        src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+        alt="Pet Pal"
+      />
+      <img
+        className="hidden h-8 w-auto lg:block"
+        src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+        alt="Pet Pal"
+      /> */}
+      <div className="block h-8 w-auto lg:hidden pt-2">Pet Pal</div>
+      <div className="hidden h-8 w-auto lg:block pt-2">Pet Pal</div>
     </div>
   );
 };
