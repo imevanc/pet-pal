@@ -2,10 +2,17 @@ import React from "react";
 
 const Logo: React.FC = () => {
   return (
-    <div className="min-w-0">
-      <h2 className="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">
-        Pet Pal
-      </h2>
+    <div className="flex flex-shrink-0 items-center py-2">
+      <img
+        className="block h-[61px] my-2 w-auto lg:hidden"
+        src="pet-pal-logo.png"
+        alt="Pet Pal"
+      />
+      <img
+        className="hidden h-[61px] my-2 w-auto lg:block"
+        src="pet-pal-logo.png"
+        alt="Pet Pal"
+      />
     </div>
   );
 };
