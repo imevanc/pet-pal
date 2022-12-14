@@ -8,6 +8,8 @@ import ProfileDropDown from "./ProfileDropDown";
 import NonVerifiedUserMobileNavBar from "./NonVerifiedUserMobileNavBar";
 import MobileNavBar from "./MobileNavBar";
 import NotificationsButton from "./NotificationsButton";
+import SignInButton from "./SignInButton";
+import SignUpButton from "./SignUpButton";
 
 const Header: React.FC = () => {
   const isUser = (userVerified?: boolean): boolean => {
@@ -68,8 +70,9 @@ const Header: React.FC = () => {
                   <Logo />
                   <NonVerifiedUserNavBar />
                 </div>
-                <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                  <ProfileDropDown />
+                <div className="hidden sm:ml-6 sm:flex sm:space-x-8 absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                  <SignUpButton />
+                  <SignInButton />
                 </div>
               </div>
             </div>
