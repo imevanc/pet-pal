@@ -42,7 +42,7 @@ const NonVerifiedUserNavBar: React.FC = () => {
     "inline-flex items-center border-b-2 border-lime-500 px-1 pt-1 text-lg font-medium text-gray-900";
   const nonSelectedClass: string =
     "inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-lg font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700";
-  console.log(paths);
+
   return (
     <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
       <Link
