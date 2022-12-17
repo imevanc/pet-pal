@@ -3,8 +3,8 @@ import React from "react";
 const NewsletterContainer: React.FC = () => {
   return (
     <div className="bg-white">
-      <div className="mx-auto max-w-5xl py-12 sm:px-6 lg:py-16">
-        <div className="rounded-lg bg-lime-700 px-6 py-6 md:py-12 md:px-12 lg:py-16 lg:px-16 xl:flex xl:items-center">
+      <div className="mx-auto max-w-5xl py-12 sm:px-6 lg:py-12">
+        <div className="rounded-lg bg-lime-700 px-6 py-6 md:py-12 md:px-12 lg:py-12 lg:px-16 xl:flex xl:items-center">
           <div className="xl:w-0 xl:flex-1">
             <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
               Want product news and updates?
