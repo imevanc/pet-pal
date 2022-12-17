@@ -1,4 +1,7 @@
-export default function Custom404() {
+import Link from "next/link";
+import type { NextPage } from "next";
+
+const Custom404: NextPage = () => {
   return (
     <div className="flex min-h-full flex-col bg-white pt-16 pb-12">
       <div className="mx-auto flex w-full max-w-7xl flex-grow flex-col justify-center px-4 sm:px-6 lg:px-8">
@@ -26,4 +29,6 @@ export default function Custom404() {
       </div>
     </div>
   );
-}
+};
+
+export default Custom404;
