@@ -1,6 +1,6 @@
 import React from "react";
 
-const Newsletter: React.FC = () => {
+const NewsletterContainer: React.FC = () => {
   return (
     <div className="bg-white">
       <div className="mx-auto max-w-5xl py-12 sm:px-6 lg:py-16">
@@ -47,4 +47,4 @@ const Newsletter: React.FC = () => {
   );
 };
 
-export default Newsletter;
+export default NewsletterContainer;

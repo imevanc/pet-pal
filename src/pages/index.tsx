@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Image from "next/image";
 import React from "react";
-import Newsletter from "../components/Newsletter";
+import NewsletterContainer from "../components/NewsletterContainer";
 
 const Home: NextPage = () => {
   return (
@@ -34,7 +34,7 @@ const Home: NextPage = () => {
           />
         </div>
       </div>
-      <Newsletter />
+      <NewsletterContainer />
     </div>
   );
 };
