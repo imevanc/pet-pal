@@ -17,12 +17,12 @@ const Custom404: NextPage = () => {
               Sorry, we couldn’t find the page you’re looking for.
             </p>
             <div className="mt-6">
-              <button
-                type="button"
+              <Link
+                href="/"
                 className="inline-flex items-center rounded-md border border-transparent bg-lime-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-lime-700 focus:outline-none focus:ring-2 focus:ring-lime-500 focus:ring-offset-2"
               >
                 Go Back Home
-              </button>
+              </Link>
             </div>
           </div>
         </div>
