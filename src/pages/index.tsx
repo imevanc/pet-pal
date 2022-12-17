@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Image from "next/image";
 import React from "react";
+import ContainerContainer from "../components/ContactContainer";
 import NewsletterContainer from "../components/NewsletterContainer";
 
 const Home: NextPage = () => {
@@ -35,6 +36,7 @@ const Home: NextPage = () => {
         </div>
       </div>
       <NewsletterContainer />
+      <ContainerContainer />
     </div>
   );
 };
