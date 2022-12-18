@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from "react";
 import ContainerContainer from "../components/ContactContainer";
 import NewsletterContainer from "../components/NewsletterContainer";
+import ReviewsContainer from "../components/ReviewsContainer";
 
 const Home: NextPage = () => {
   return (
@@ -35,6 +36,7 @@ const Home: NextPage = () => {
           />
         </div>
       </div>
+      <ReviewsContainer />
       <NewsletterContainer />
       <ContainerContainer />
     </div>
