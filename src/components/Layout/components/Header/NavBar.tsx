@@ -1,5 +1,3 @@
-import React from "react";
-
 const NavBar: React.FC = () => {
   return (
     <div className="hidden sm:ml-6 sm:flex sm:space-x-8">

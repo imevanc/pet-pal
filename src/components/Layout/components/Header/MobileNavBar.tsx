@@ -1,4 +1,3 @@
-import React from "react";
 import { Disclosure } from "@headlessui/react";
 
 const MobileNavBar: React.FC = () => {

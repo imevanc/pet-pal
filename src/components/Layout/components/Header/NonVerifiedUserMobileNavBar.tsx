@@ -1,6 +1,5 @@
 import React from "react";
 import { Disclosure } from "@headlessui/react";
-import Link from "next/link";
 import { useRouter } from "next/router";
 
 interface Paths {
