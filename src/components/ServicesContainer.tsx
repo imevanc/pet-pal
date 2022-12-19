@@ -56,72 +56,116 @@ const ServicesContainer: React.FC = () => {
           "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
       },
     },
+    {
+      title: "Improve your customer experience",
+      href: "#",
+      category: { name: "Case Study", href: "#" },
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint harum rerum voluptatem quo recusandae magni placeat saepe molestiae, sed excepturi cumque corporis perferendis hic. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint harum rerum voluptatem quo recusandae magni placeat saepe molestiae, sed excepturi cumque corporis perferendis hic. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint harum rerum voluptatem quo recusandae magni placeat saepe molestiae, sed excepturi cumque corporis perferendis hic.",
+      date: "Feb 12, 2020",
+      datetime: "2020-02-12",
+      imageUrl:
+        "https://images.unsplash.com/photo-1492724441997-5dc865305da7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
+      readingTime: "11 min",
+      author: {
+        name: "Daniela Metz",
+        href: "#",
+        imageUrl:
+          "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+      },
+    },
+    {
+      title: "Improve your customer experience",
+      href: "#",
+      category: { name: "Case Study", href: "#" },
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint harum rerum voluptatem quo recusandae magni placeat saepe molestiae, sed excepturi cumque corporis perferendis hic. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint harum rerum voluptatem quo recusandae magni placeat saepe molestiae, sed excepturi cumque corporis perferendis hic. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint harum rerum voluptatem quo recusandae magni placeat saepe molestiae, sed excepturi cumque corporis perferendis hic.",
+      date: "Feb 12, 2020",
+      datetime: "2020-02-12",
+      imageUrl:
+        "https://images.unsplash.com/photo-1492724441997-5dc865305da7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
+      readingTime: "11 min",
+      author: {
+        name: "Daniela Metz",
+        href: "#",
+        imageUrl:
+          "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+      },
+    },
   ];
   return (
     <React.Fragment>
-      <div className="mx-auto max-w-5xl sm:px-6 py-4 lg:py-6">
-        <div className="flex justify-end">
-          {/* <p>Our Customers</p> */}
-          <p className="text-xl py-2 font-semibold text-lime-600">
-            View more ...
+      <div className="mx-auto max-w-5xl sm:px-6 py-4 mt-6 lg:py-6">
+        <div className="flex flex-col pb-5">
+          <p className="text-center text-3xl sm:text-4xl lg:text-5xl font-bold">
+            Meet the platform that
+          </p>
+          <p className="text-center text-3xl sm:text-4xl lg:text-5xl font-bold text-lime-600">
+            unifies the dog industry
           </p>
         </div>
         <div className="m-auto grid max-w-lg gap-5 lg:max-w-none lg:grid-cols-3">
-          {posts.map((post) => (
-            <div
-              key={post.title}
-              className="flex flex-col overflow-hidden rounded-lg shadow-lg"
-            >
-              <div className="flex-shrink-0">
-                <img
-                  className="h-32 w-full object-cover"
-                  src={post.imageUrl}
-                  alt=""
-                />
-              </div>
-              <div className="flex flex-1 flex-col justify-between bg-white p-6">
-                <div className="flex-1">
-                  <p className="text-sm font-medium text-lime-600">
-                    <a href={post.category.href} className="hover:underline">
-                      {post.category.name}
-                    </a>
-                  </p>
-                  <a href={post.href} className="mt-2 block">
-                    <p className="text-xl font-semibold text-gray-900">
-                      {post.title}
-                    </p>
-                    <p className="mt-3 text-base text-gray-500 text-ellipsis whitespace-nowrap overflow-hidden">
-                      {post.description}
-                    </p>
-                  </a>
+          {posts.map((post, idx) => {
+            let pos = "";
+            if (idx === posts.length - 1) {
+              pos = "lg:col-start-2 lg:col-end-4";
+            }
+            return (
+              <div
+                key={idx}
+                className={`flex flex-col overflow-hidden rounded-lg shadow-lg ${pos}`}
+              >
+                <div className="flex-shrink-0">
+                  <img
+                    className="h-32 w-full object-cover"
+                    src={post.imageUrl}
+                    alt=""
+                  />
                 </div>
-                <div className="mt-6 flex items-center">
-                  <div className="flex-shrink-0">
-                    <a href={post.author.href}>
-                      <span className="sr-only">{post.author.name}</span>
-                      <img
-                        className="h-10 w-10 rounded-full"
-                        src={post.author.imageUrl}
-                        alt=""
-                      />
-                    </a>
-                  </div>
-                  <div className="ml-3">
-                    <p className="text-sm font-medium text-gray-900">
-                      <a href={post.author.href} className="hover:underline">
-                        {post.author.name}
+                <div className="flex flex-1 flex-col justify-between bg-white p-6">
+                  <div className="flex-1">
+                    <p className="text-sm font-medium text-lime-600">
+                      <a href={post.category.href} className="hover:underline">
+                        {post.category.name}
                       </a>
                     </p>
-                    <div className="flex space-x-1 text-sm text-gray-500">
-                      <time dateTime={post.datetime}>{post.date}</time>
-                      <span aria-hidden="true">&middot;</span>
-                      <span>{post.readingTime} read</span>
+                    <a href={post.href} className="mt-2 block">
+                      <p className="text-xl font-semibold text-gray-900">
+                        {post.title}
+                      </p>
+                      <p className="mt-3 text-base text-gray-500 text-ellipsis whitespace-nowrap overflow-hidden">
+                        {post.description}
+                      </p>
+                    </a>
+                  </div>
+                  <div className="mt-6 flex items-center">
+                    <div className="flex-shrink-0">
+                      <a href={post.author.href}>
+                        <span className="sr-only">{post.author.name}</span>
+                        <img
+                          className="h-10 w-10 rounded-full"
+                          src={post.author.imageUrl}
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                    <div className="ml-3">
+                      <p className="text-sm font-medium text-gray-900">
+                        <a href={post.author.href} className="hover:underline">
+                          {post.author.name}
+                        </a>
+                      </p>
+                      <div className="flex space-x-1 text-sm text-gray-500">
+                        <time dateTime={post.datetime}>{post.date}</time>
+                        <span aria-hidden="true">&middot;</span>
+                        <span>{post.readingTime} read</span>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </React.Fragment>
