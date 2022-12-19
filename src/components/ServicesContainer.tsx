@@ -1,4 +1,6 @@
-const ReviewsContainer: React.FC = () => {
+import React from "react";
+
+const ServicesContainer: React.FC = () => {
   const posts = [
     {
       title: "Boost your conversion rate",
@@ -56,7 +58,7 @@ const ReviewsContainer: React.FC = () => {
     },
   ];
   return (
-    <div className="bg-white">
+    <React.Fragment>
       <div className="mx-auto max-w-5xl sm:px-6 py-4 lg:py-6">
         <div className="flex justify-end">
           {/* <p>Our Customers</p> */}
@@ -122,8 +124,8 @@ const ReviewsContainer: React.FC = () => {
           ))}
         </div>
       </div>
-    </div>
+    </React.Fragment>
   );
 };
 
-export default ReviewsContainer;
+export default ServicesContainer;
