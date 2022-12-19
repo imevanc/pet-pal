@@ -56,9 +56,10 @@ const ReviewsContainer: React.FC = () => {
     },
   ];
   return (
-    <div className="bg-white pt-3">
+    <div className="bg-white">
       <div className="mx-auto max-w-5xl sm:px-6 py-4 lg:py-6">
         <div className="flex justify-end">
+          {/* <p>Our Customers</p> */}
           <p className="text-xl py-2 font-semibold text-lime-600">
             View more ...
           </p>

@@ -1,5 +1,3 @@
-import React from "react";
-
 const Logo: React.FC = () => {
   return (
     <div className="flex flex-shrink-0 items-center py-2">

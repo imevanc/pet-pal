@@ -1,5 +1,3 @@
-import React from "react";
-
 const NewsletterContainer: React.FC = () => {
   return (
     <div className="bg-white pt-2">

@@ -1,5 +1,4 @@
 import type { NextPage } from "next";
-import React from "react";
 import TeamMemberContainer from "../components/TeamMemberContainer";
 
 const Team: NextPage = () => {
