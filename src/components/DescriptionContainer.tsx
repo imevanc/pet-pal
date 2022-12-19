@@ -32,3 +32,5 @@ const DescriptionContainer: React.FC = () => {
     </div>
   );
 };
+
+export default DescriptionContainer;
