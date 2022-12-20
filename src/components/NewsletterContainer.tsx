@@ -5,7 +5,7 @@ const NewsletterContainer: React.FC = () => {
         <div className="rounded-lg bg-lime-700 px-6 py-6 md:py-6 md:px-12 lg:py-6 lg:px-16 xl:flex xl:items-center">
           <div className="xl:w-0 xl:flex-1">
             <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
-              Want product news and updates?
+              Want services news and updates?
             </h2>
             <p className="mt-3 max-w-3xl text-lg leading-6 text-lime-200">
               Sign up for our woof-letter to stay up to date.
