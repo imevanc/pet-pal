@@ -5,31 +5,31 @@ const ServicesContainer: React.FC = () => {
   const services = [
     {
       title: "Dog Breeder",
-      href: "#",
+      href: "/services/dog-breeder",
       category: { name: "Article", href: "#" },
       imageUrl: "/dog-breeder.jpg",
     },
     {
       title: "Dog Sitter",
-      href: "#",
+      href: "/services/dog-sitter",
       category: { name: "Video", href: "#" },
       imageUrl: "/dog-sitter.jpg",
     },
     {
       title: "Dog Walker",
-      href: "#",
+      href: "/services/dog-walker",
       category: { name: "Case Study", href: "#" },
       imageUrl: "/dog-walker.jpg",
     },
     {
       title: "Food Supplier",
-      href: "#",
+      href: "/services/food-supplier",
       category: { name: "Case Study", href: "#" },
       imageUrl: "/food-supplier.jpg",
     },
     {
       title: "Dog Owner",
-      href: "#",
+      href: "/services/dog-owner",
       category: { name: "Case Study", href: "#" },
       imageUrl: "/dog-owner.jpg",
     },
@@ -53,7 +53,7 @@ const ServicesContainer: React.FC = () => {
               return (
                 <div key={idx} className={`flex flex-col ${pos}`}>
                   <Link href={service.href}>
-                    <div className="flex-shrink-0 overflow-hidden rounded-lg shadow-2xl">
+                    <div className="flex-shrink-0 overflow-hidden rounded-lg shadow-2xl hover:scale-105">
                       <img
                         className="lg:h-72 w-full object-cover"
                         src={service.imageUrl}
