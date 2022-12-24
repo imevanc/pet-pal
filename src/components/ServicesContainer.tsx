@@ -60,7 +60,7 @@ const ServicesContainer: React.FC = () => {
                         alt=""
                       />
                     </div>
-                    <p className="text-xl text-center font-bold italic text-lime-700 hover:underline">
+                    <p className="pt-1 text-xl text-center font-bold italic text-lime-700 hover:underline">
                       {service.title}
                     </p>
                   </Link>
