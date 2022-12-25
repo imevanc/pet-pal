@@ -6,7 +6,7 @@ const DogBreeder: React.FC = () => {
           <div className="px-4 sm:px-6 text-center lg:text-left md:max-w-2xl lg:flex lg:text-left">
             <div>
               <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
-                Upscale Your Game
+                Upscale Your Game.
               </h1>
               <p className="text-base text-gray-500 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
                 No more waiting list notebooks or last minute puppy purchase

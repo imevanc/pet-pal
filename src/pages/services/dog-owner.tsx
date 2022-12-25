@@ -6,7 +6,7 @@ const DogOwner: React.FC = () => {
           <div className="px-4 sm:px-6 text-center lg:text-left md:max-w-2xl lg:flex lg:text-left">
             <div>
               <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
-                Socialise, Learn & Become A Responsible Dog Owner
+                Socialise, Learn & Become A Responsible Dog Owner.
               </h1>
               <p className="text-base text-gray-500 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
                 Does your dog react unsual and you do not know what to do? We
