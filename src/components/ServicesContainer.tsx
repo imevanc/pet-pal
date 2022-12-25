@@ -16,10 +16,10 @@ const ServicesContainer: React.FC = () => {
       imageUrl: "/dog-sitter.jpg",
     },
     {
-      title: "Dog Walker",
-      href: "/services/dog-walker",
+      title: "Dog Trainer",
+      href: "/services/dog-trainer",
       category: { name: "Case Study", href: "#" },
-      imageUrl: "/dog-walker.jpg",
+      imageUrl: "/dog-trainer.jpg",
     },
     {
       title: "Food Supplier",
