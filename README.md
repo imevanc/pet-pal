@@ -15,6 +15,6 @@ Our mission is to connect the different parts of the dog industry in one place. 
   <li>Dog Owner: Prospective and current dog owners interact with others and contact professionals about dog services.</li>
   <li>Dog Breeder: Dog breeders advertise their litres and receive communications from other users.</li>
   <li>Food Supplier: Revolutionising services where dog owners and breeders find their local raw and no-raw food stockist.</li>
-  <li>Dog Walker: Boarding, home visits & similar services with a click of button.</li>
-  <li>Dog Sitter: Short distance walks as never before.</li>
+  <li>Dog Trainer: Expand your dog owners network.</li>
+  <li>Dog Sitter: Boarding, home visits & similar services with a click of button.</li>
 </ol>
