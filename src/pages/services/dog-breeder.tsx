@@ -14,8 +14,10 @@ interface ConnectionsContext {
 
 const DogBreeder: NextPage = () => {
   const heading: string = "Upscale Your Game.";
-  const paragraph: string =
-    "No more waiting list notebooks or last minute puppy purchase cancellations. Our platform gives you the power to compare prospective owners against your criteria, add them to your waiting list (ie they need to pay upfront for the puppy in order to be added) and arrange communication and collection.";
+  const paragraph: string = `No more waiting list notebooks or last minute puppy purchase cancellations. 
+    Our platform gives you the power to compare prospective owners against your criteria, 
+    add them to your waiting list (ie they need to pay upfront for the puppy in order 
+    to be added) and arrange communication and collection.`;
   const connectWith: ConnectionsContext = {
     connectionOne: "Dog Owners",
     connectionTwo: "Food Suppliers",
