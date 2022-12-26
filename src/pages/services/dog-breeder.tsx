@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import ServicesPage from "../../components/ServicesPage/ServicesPage";
+import ServicesPage from "../../components/ServicesPages/ServicesPage";
 
 interface ImageContext {
   source: string;
