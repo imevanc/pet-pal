@@ -1,4 +1,6 @@
-const DogTrainer: React.FC = () => {
+import type { NextPage } from "next";
+
+const DogTrainer: NextPage = () => {
   return (
     <div className="w-full mt-6 lg:mt-0 h-screen">
       <div className="mx-auto max-w-7xl lg:h-[80%] lg:flex lg:justify-center">
