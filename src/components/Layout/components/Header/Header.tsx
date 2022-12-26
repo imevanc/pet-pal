@@ -1,7 +1,7 @@
 import React from "react";
 import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import Logo from "../Logo";
+import Logo from "./Logo";
 import NavBar from "./NavBar";
 import NonVerifiedUserNavBar from "./NonVerifiedUserNavBar";
 import ProfileDropDown from "./ProfileDropDown";

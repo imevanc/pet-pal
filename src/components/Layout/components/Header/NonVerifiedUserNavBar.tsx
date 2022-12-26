@@ -38,6 +38,7 @@ const NonVerifiedUserNavBar: React.FC = () => {
       });
     }
   }, [path]);
+
   const selectedClass: string =
     "inline-flex items-center border-b-2 border-lime-500 px-1 pt-1 text-lg font-medium text-gray-900";
   const nonSelectedClass: string =
