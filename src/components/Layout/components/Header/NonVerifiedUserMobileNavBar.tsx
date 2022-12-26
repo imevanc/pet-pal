@@ -2,7 +2,7 @@ import React from "react";
 import { Disclosure } from "@headlessui/react";
 import { useRouter } from "next/router";
 
-interface Paths {
+interface PathsState {
   home: string;
   team: string;
   announcements: string;
@@ -10,7 +10,7 @@ interface Paths {
 
 const NonVerifiedUserMobileNavBar: React.FC = () => {
   const path: string = useRouter().pathname;
-  const [paths, setPath] = React.useState<Paths>({
+  const [paths, setPath] = React.useState<PathsState>({
     home: "",
     team: "",
     announcements: "",
