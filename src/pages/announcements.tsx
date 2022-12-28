@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import Link from "next/link";
 import React from "react";
 import {
   CheckIcon,
@@ -9,6 +10,86 @@ import { classNames } from "../utils/classNames";
 
 const Announcements: NextPage = () => {
   const timeline = [
+    {
+      id: 1,
+      content: "Evan",
+      target: "has the idea.",
+      href: "#",
+      date: "Sep 20",
+      datetime: "2020-09-20",
+      icon: UserIcon,
+      iconBackground: "bg-gray-400",
+    },
+    {
+      id: 1,
+      content: "Evan",
+      target: "has the idea.",
+      href: "#",
+      date: "Sep 20",
+      datetime: "2020-09-20",
+      icon: UserIcon,
+      iconBackground: "bg-gray-400",
+    },
+    {
+      id: 1,
+      content: "Evan",
+      target: "has the idea.",
+      href: "#",
+      date: "Sep 20",
+      datetime: "2020-09-20",
+      icon: UserIcon,
+      iconBackground: "bg-gray-400",
+    },
+    {
+      id: 1,
+      content: "Evan",
+      target: "has the idea.",
+      href: "#",
+      date: "Sep 20",
+      datetime: "2020-09-20",
+      icon: UserIcon,
+      iconBackground: "bg-gray-400",
+    },
+    {
+      id: 1,
+      content: "Evan",
+      target: "has the idea.",
+      href: "#",
+      date: "Sep 20",
+      datetime: "2020-09-20",
+      icon: UserIcon,
+      iconBackground: "bg-gray-400",
+    },
+    {
+      id: 1,
+      content: "Evan",
+      target: "has the idea.",
+      href: "#",
+      date: "Sep 20",
+      datetime: "2020-09-20",
+      icon: UserIcon,
+      iconBackground: "bg-gray-400",
+    },
+    {
+      id: 1,
+      content: "Evan",
+      target: "has the idea.",
+      href: "#",
+      date: "Sep 20",
+      datetime: "2020-09-20",
+      icon: UserIcon,
+      iconBackground: "bg-gray-400",
+    },
+    {
+      id: 1,
+      content: "Evan",
+      target: "has the idea.",
+      href: "#",
+      date: "Sep 20",
+      datetime: "2020-09-20",
+      icon: UserIcon,
+      iconBackground: "bg-gray-400",
+    },
     {
       id: 1,
       content: "Evan",
@@ -99,16 +180,65 @@ const Announcements: NextPage = () => {
       icon: HandThumbUpIcon,
       iconBackground: "bg-blue-500",
     },
+    {
+      id: 5,
+      content: "Evan",
+      target: "is working on the draft website.",
+      href: "#",
+      date: "Sep 30",
+      datetime: "2020-09-30",
+      icon: HandThumbUpIcon,
+      iconBackground: "bg-blue-500",
+    },
+    {
+      id: 5,
+      content: "Evan",
+      target: "is working on the draft website.",
+      href: "#",
+      date: "Sep 30",
+      datetime: "2020-09-30",
+      icon: HandThumbUpIcon,
+      iconBackground: "bg-blue-500",
+    },
+    {
+      id: 5,
+      content: "Evan",
+      target: "is working on the draft website.",
+      href: "#",
+      date: "Sep 30",
+      datetime: "2020-09-30",
+      icon: HandThumbUpIcon,
+      iconBackground: "bg-blue-500",
+    },
   ];
+  const [currentPage, setCurrentPage] = React.useState<number>(1);
+  const [recordsPerPage] = React.useState<number>(3);
+
+  const indexOfLastRecord: number = currentPage * recordsPerPage;
+  const indexOfFirstRecord: number = indexOfLastRecord - recordsPerPage;
+  const currentRecords = timeline.slice(indexOfFirstRecord, indexOfLastRecord);
+
+  const nPages: number = Math.ceil(timeline.length / recordsPerPage);
+  const pageNumbers: number[] = [...Array.from(Array(nPages + 1).keys())].slice(
+    1
+  );
+
+  const nextPage = (): void => {
+    if (currentPage !== nPages) setCurrentPage(currentPage + 1);
+  };
+  const prevPage = (): void => {
+    if (currentPage !== 1) setCurrentPage(currentPage - 1);
+  };
+
   return (
-    <div className="mx-auto max-w-7xl pt-8 px-4 sm:px-6 lg:px-8 lg:pt-22 h-[92vh] overflow-y-scroll md:overflow-y-auto">
+    <div className="mx-auto max-w-7xl pt-8 px-4 sm:px-6 lg:px-8 lg:pt-12 h-[92vh] overflow-y-scroll md:overflow-y-auto">
       <div className="h-full flex flex-col justify-between">
         <div className="flow-root">
           <ul role="list" className="-mb-8">
-            {timeline.map((event, eventIdx) => (
-              <li key={event.id}>
+            {currentRecords.map((event, eventIdx) => (
+              <li key={eventIdx}>
                 <div className="relative pb-8">
-                  {eventIdx !== timeline.length - 1 ? (
+                  {eventIdx !== currentRecords.length - 1 ? (
                     <span
                       className="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200"
                       aria-hidden="true"
@@ -156,24 +286,33 @@ const Announcements: NextPage = () => {
         >
           <div className="hidden sm:block">
             <p className="text-sm text-gray-700">
-              Showing <span className="font-medium">1</span> to{" "}
-              <span className="font-medium">10</span> of{" "}
-              <span className="font-medium">20</span> results
+              Showing <span className="font-medium">Page {currentPage}</span>{" "}
+              <span className="font-medium">out of {pageNumbers.length}</span>
             </p>
           </div>
           <div className="flex flex-1 justify-between sm:justify-end">
-            <a
+            <Link
+              // href={{ pathname: "/announcements", query: { patch: "test" } }}
               href="#"
-              className="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
             >
-              Previous
-            </a>
-            <a
+              <button
+                onClick={prevPage}
+                className="relative mr-8 w-24 inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
+              >
+                <p className="w-full text-center">Previous</p>
+              </button>
+            </Link>
+            <Link
+              // href={{ pathname: "/announcements", query: { patch: "test" } }}
               href="#"
-              className="relative ml-3 inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
             >
-              Next
-            </a>
+              <button
+                onClick={nextPage}
+                className="relative w-24 inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
+              >
+                <p className="w-full text-center">Next</p>
+              </button>
+            </Link>
           </div>
         </nav>
       </div>
