@@ -291,28 +291,20 @@ const Announcements: NextPage = () => {
             </p>
           </div>
           <div className="flex flex-1 justify-between sm:justify-end">
-            <Link
-              // href={{ pathname: "/announcements", query: { patch: "test" } }}
-              href="#"
+            <button
+              disabled={currentPage === 1}
+              onClick={prevPage}
+              className="relative ml-10 w-24 inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 disabled:bg-gray-200"
             >
-              <button
-                onClick={prevPage}
-                className="relative mr-8 w-24 inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
-              >
-                <p className="w-full text-center">Previous</p>
-              </button>
-            </Link>
-            <Link
-              // href={{ pathname: "/announcements", query: { patch: "test" } }}
-              href="#"
+              <p className="w-full text-center\">Previous</p>
+            </button>
+            <button
+              disabled={currentPage === nPages}
+              onClick={nextPage}
+              className="relative ml-10 w-24 inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 disabled:bg-gray-200"
             >
-              <button
-                onClick={nextPage}
-                className="relative w-24 inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
-              >
-                <p className="w-full text-center">Next</p>
-              </button>
-            </Link>
+              <p className="w-full text-center\">Next</p>
+            </button>
           </div>
         </nav>
       </div>
