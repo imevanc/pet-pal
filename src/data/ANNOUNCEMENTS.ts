@@ -16,7 +16,7 @@ export const ANNOUNCEMENTS: ANNOUNCEMENT[] = [
     date: "Sep 20",
     datetime: "2020-09-20",
     icon: PencilSquareIcon,
-    iconBackground: "bg-gray-400",
+    iconBackground: "bg-gray-100",
   },
   {
     content: "Evan",
@@ -24,7 +24,7 @@ export const ANNOUNCEMENTS: ANNOUNCEMENT[] = [
     date: "Sep 20",
     datetime: "2020-09-20",
     icon: CheckBadgeIcon,
-    iconBackground: "bg-gray-400",
+    iconBackground: "bg-gray-100",
   },
   {
     content: "Evan",
@@ -32,7 +32,7 @@ export const ANNOUNCEMENTS: ANNOUNCEMENT[] = [
     date: "Sep 20",
     datetime: "2020-09-20",
     icon: PencilSquareIcon,
-    iconBackground: "bg-gray-400",
+    iconBackground: "bg-gray-100",
   },
   {
     content: "Evan",
@@ -40,7 +40,7 @@ export const ANNOUNCEMENTS: ANNOUNCEMENT[] = [
     date: "Sep 20",
     datetime: "2020-09-20",
     icon: CheckBadgeIcon,
-    iconBackground: "bg-gray-400",
+    iconBackground: "bg-gray-100",
   },
   {
     content: "Evan",
@@ -48,7 +48,7 @@ export const ANNOUNCEMENTS: ANNOUNCEMENT[] = [
     date: "Sep 20",
     datetime: "2020-09-20",
     icon: PencilSquareIcon,
-    iconBackground: "bg-gray-400",
+    iconBackground: "bg-gray-100",
   },
   {
     content: "Evan",
@@ -56,7 +56,7 @@ export const ANNOUNCEMENTS: ANNOUNCEMENT[] = [
     date: "Sep 20",
     datetime: "2020-09-20",
     icon: CheckBadgeIcon,
-    iconBackground: "bg-gray-400",
+    iconBackground: "bg-gray-100",
   },
   {
     content: "Evan",
@@ -64,7 +64,7 @@ export const ANNOUNCEMENTS: ANNOUNCEMENT[] = [
     date: "Sep 20",
     datetime: "2020-09-20",
     icon: PencilSquareIcon,
-    iconBackground: "bg-gray-400",
+    iconBackground: "bg-gray-100",
   },
   {
     content: "Evan",
@@ -72,7 +72,7 @@ export const ANNOUNCEMENTS: ANNOUNCEMENT[] = [
     date: "Sep 20",
     datetime: "2020-09-20",
     icon: CheckBadgeIcon,
-    iconBackground: "bg-gray-400",
+    iconBackground: "bg-gray-100",
   },
   {
     content: "Evan",
@@ -80,7 +80,7 @@ export const ANNOUNCEMENTS: ANNOUNCEMENT[] = [
     date: "Sep 20",
     datetime: "2020-09-20",
     icon: PencilSquareIcon,
-    iconBackground: "bg-gray-400",
+    iconBackground: "bg-gray-100",
   },
   {
     content: "Evan",
@@ -88,7 +88,7 @@ export const ANNOUNCEMENTS: ANNOUNCEMENT[] = [
     date: "Sep 22",
     datetime: "2020-09-22",
     icon: CheckBadgeIcon,
-    iconBackground: "bg-blue-500",
+    iconBackground: "bg-gray-100",
   },
   {
     content: "Evan",
@@ -96,7 +96,7 @@ export const ANNOUNCEMENTS: ANNOUNCEMENT[] = [
     date: "Sep 28",
     datetime: "2020-09-28",
     icon: PencilSquareIcon,
-    iconBackground: "bg-green-500",
+    iconBackground: "bg-gray-100",
   },
   {
     content: "Evan",
@@ -104,7 +104,7 @@ export const ANNOUNCEMENTS: ANNOUNCEMENT[] = [
     date: "Sep 30",
     datetime: "2020-09-30",
     icon: CheckBadgeIcon,
-    iconBackground: "bg-blue-500",
+    iconBackground: "bg-gray-100",
   },
   {
     content: "Evan",
@@ -112,7 +112,7 @@ export const ANNOUNCEMENTS: ANNOUNCEMENT[] = [
     date: "Sep 30",
     datetime: "2020-09-30",
     icon: PencilSquareIcon,
-    iconBackground: "bg-blue-500",
+    iconBackground: "bg-gray-100",
   },
   {
     content: "Evan",
@@ -120,7 +120,7 @@ export const ANNOUNCEMENTS: ANNOUNCEMENT[] = [
     date: "Sep 30",
     datetime: "2020-09-30",
     icon: CheckBadgeIcon,
-    iconBackground: "bg-blue-500",
+    iconBackground: "bg-gray-100",
   },
   {
     content: "Evan",
@@ -128,7 +128,7 @@ export const ANNOUNCEMENTS: ANNOUNCEMENT[] = [
     date: "Sep 30",
     datetime: "2020-09-30",
     icon: PencilSquareIcon,
-    iconBackground: "bg-blue-500",
+    iconBackground: "bg-gray-100",
   },
   {
     content: "Evan",
@@ -136,7 +136,7 @@ export const ANNOUNCEMENTS: ANNOUNCEMENT[] = [
     date: "Sep 30",
     datetime: "2020-09-30",
     icon: CheckBadgeIcon,
-    iconBackground: "bg-blue-500",
+    iconBackground: "bg-gray-100",
   },
   {
     content: "Evan",
@@ -144,7 +144,7 @@ export const ANNOUNCEMENTS: ANNOUNCEMENT[] = [
     date: "Sep 30",
     datetime: "2020-09-30",
     icon: PencilSquareIcon,
-    iconBackground: "bg-blue-500",
+    iconBackground: "bg-gray-100",
   },
   {
     content: "Evan",
@@ -152,7 +152,7 @@ export const ANNOUNCEMENTS: ANNOUNCEMENT[] = [
     date: "Sep 30",
     datetime: "2020-09-30",
     icon: CheckBadgeIcon,
-    iconBackground: "bg-blue-500",
+    iconBackground: "bg-gray-100",
   },
   {
     content: "Evan",
@@ -160,7 +160,7 @@ export const ANNOUNCEMENTS: ANNOUNCEMENT[] = [
     date: "Sep 30",
     datetime: "2020-09-30",
     icon: PencilSquareIcon,
-    iconBackground: "bg-blue-500",
+    iconBackground: "bg-gray-100",
   },
   {
     content: "Evan",
@@ -168,6 +168,6 @@ export const ANNOUNCEMENTS: ANNOUNCEMENT[] = [
     date: "Sep 30",
     datetime: "2020-09-30",
     icon: CheckBadgeIcon,
-    iconBackground: "bg-blue-500",
+    iconBackground: "bg-gray-100",
   },
 ];
