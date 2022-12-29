@@ -8,11 +8,11 @@ interface Person {
   linkedinUrl: string;
 }
 
-interface Props {
+interface PersonProps {
   person: Person;
 }
 
-const TeamMemberContainer: React.FC<Props> = ({ person }) => {
+const TeamMemberContainer: React.FC<PersonProps> = ({ person }) => {
   return (
     <li>
       <div className="space-y-4">
