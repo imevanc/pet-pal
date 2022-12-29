@@ -1,18 +1,14 @@
 import Announcements from "./components/Announcements";
 import Pagination from "./components/Pagination";
-import {
-  CheckIcon,
-  HandThumbUpIcon,
-  UserIcon,
-} from "@heroicons/react/20/solid";
+import { PencilSquareIcon, CheckBadgeIcon } from "@heroicons/react/20/solid";
 
-interface CurrentRecord {
+interface Announcement {
   content: string;
   target: string;
   date: string;
   datetime: string;
-  icon: typeof CheckIcon | typeof HandThumbUpIcon | typeof UserIcon;
   iconBackground: string;
+  icon: typeof PencilSquareIcon | typeof CheckBadgeIcon;
 }
 
 interface CurrentPageState {
@@ -33,7 +29,7 @@ interface SetPageButtons {
 }
 
 interface AnnouncementsPageProps {
-  currentRecords: CurrentRecord[];
+  currentAnnouncements: Announcement[];
   currentPageState: CurrentPageState;
   setPageButtons: SetPageButtons;
   pageNumbers: number[];
@@ -41,17 +37,16 @@ interface AnnouncementsPageProps {
 }
 
 const AnnouncementsPage: React.FC<AnnouncementsPageProps> = ({
-  currentRecords,
+  currentAnnouncements,
   currentPageState,
   setPageButtons,
   pageNumbers,
   nPages,
 }) => {
-  console.log(currentRecords);
   return (
     <div className="mx-auto max-w-7xl pt-8 px-4 sm:px-6 lg:px-8 lg:pt-12 h-[92vh] overflow-y-scroll md:overflow-y-auto">
       <div className="h-full flex flex-col justify-between">
-        <Announcements currentRecords={currentRecords} />
+        <Announcements currentAnnouncements={currentAnnouncements} />
         <Pagination
           currentPageState={currentPageState}
           setPageButtons={setPageButtons}

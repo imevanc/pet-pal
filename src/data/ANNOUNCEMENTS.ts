@@ -1,0 +1,173 @@
+import { PencilSquareIcon, CheckBadgeIcon } from "@heroicons/react/20/solid";
+
+interface ANNOUNCEMENT {
+  content: string;
+  target: string;
+  date: string;
+  datetime: string;
+  icon: typeof PencilSquareIcon | typeof CheckBadgeIcon;
+  iconBackground: string;
+}
+
+export const ANNOUNCEMENTS: ANNOUNCEMENT[] = [
+  {
+    content: "Evan",
+    target: "has the idea.",
+    date: "Sep 20",
+    datetime: "2020-09-20",
+    icon: PencilSquareIcon,
+    iconBackground: "bg-gray-400",
+  },
+  {
+    content: "Evan",
+    target: "has the idea.",
+    date: "Sep 20",
+    datetime: "2020-09-20",
+    icon: CheckBadgeIcon,
+    iconBackground: "bg-gray-400",
+  },
+  {
+    content: "Evan",
+    target: "has the idea.",
+    date: "Sep 20",
+    datetime: "2020-09-20",
+    icon: PencilSquareIcon,
+    iconBackground: "bg-gray-400",
+  },
+  {
+    content: "Evan",
+    target: "has the idea.",
+    date: "Sep 20",
+    datetime: "2020-09-20",
+    icon: CheckBadgeIcon,
+    iconBackground: "bg-gray-400",
+  },
+  {
+    content: "Evan",
+    target: "has the idea.",
+    date: "Sep 20",
+    datetime: "2020-09-20",
+    icon: PencilSquareIcon,
+    iconBackground: "bg-gray-400",
+  },
+  {
+    content: "Evan",
+    target: "has the idea.",
+    date: "Sep 20",
+    datetime: "2020-09-20",
+    icon: CheckBadgeIcon,
+    iconBackground: "bg-gray-400",
+  },
+  {
+    content: "Evan",
+    target: "has the idea.",
+    date: "Sep 20",
+    datetime: "2020-09-20",
+    icon: PencilSquareIcon,
+    iconBackground: "bg-gray-400",
+  },
+  {
+    content: "Evan",
+    target: "has the idea.",
+    date: "Sep 20",
+    datetime: "2020-09-20",
+    icon: CheckBadgeIcon,
+    iconBackground: "bg-gray-400",
+  },
+  {
+    content: "Evan",
+    target: "has the idea.",
+    date: "Sep 20",
+    datetime: "2020-09-20",
+    icon: PencilSquareIcon,
+    iconBackground: "bg-gray-400",
+  },
+  {
+    content: "Evan",
+    target: "is working on designs.",
+    date: "Sep 22",
+    datetime: "2020-09-22",
+    icon: CheckBadgeIcon,
+    iconBackground: "bg-blue-500",
+  },
+  {
+    content: "Evan",
+    target: "is creating the list of the tech stack.",
+    date: "Sep 28",
+    datetime: "2020-09-28",
+    icon: PencilSquareIcon,
+    iconBackground: "bg-green-500",
+  },
+  {
+    content: "Evan",
+    target: "is working on the draft website.",
+    date: "Sep 30",
+    datetime: "2020-09-30",
+    icon: CheckBadgeIcon,
+    iconBackground: "bg-blue-500",
+  },
+  {
+    content: "Evan",
+    target: "is working on the draft website.",
+    date: "Sep 30",
+    datetime: "2020-09-30",
+    icon: PencilSquareIcon,
+    iconBackground: "bg-blue-500",
+  },
+  {
+    content: "Evan",
+    target: "is working on the draft website.",
+    date: "Sep 30",
+    datetime: "2020-09-30",
+    icon: CheckBadgeIcon,
+    iconBackground: "bg-blue-500",
+  },
+  {
+    content: "Evan",
+    target: "is working on the draft website.",
+    date: "Sep 30",
+    datetime: "2020-09-30",
+    icon: PencilSquareIcon,
+    iconBackground: "bg-blue-500",
+  },
+  {
+    content: "Evan",
+    target: "is working on the draft website.",
+    date: "Sep 30",
+    datetime: "2020-09-30",
+    icon: CheckBadgeIcon,
+    iconBackground: "bg-blue-500",
+  },
+  {
+    content: "Evan",
+    target: "is working on the draft website.",
+    date: "Sep 30",
+    datetime: "2020-09-30",
+    icon: PencilSquareIcon,
+    iconBackground: "bg-blue-500",
+  },
+  {
+    content: "Evan",
+    target: "is working on the draft website.",
+    date: "Sep 30",
+    datetime: "2020-09-30",
+    icon: CheckBadgeIcon,
+    iconBackground: "bg-blue-500",
+  },
+  {
+    content: "Evan",
+    target: "is working on the draft website.",
+    date: "Sep 30",
+    datetime: "2020-09-30",
+    icon: PencilSquareIcon,
+    iconBackground: "bg-blue-500",
+  },
+  {
+    content: "Evan",
+    target: "is working on the draft website.",
+    date: "Sep 30",
+    datetime: "2020-09-30",
+    icon: CheckBadgeIcon,
+    iconBackground: "bg-blue-500",
+  },
+];
