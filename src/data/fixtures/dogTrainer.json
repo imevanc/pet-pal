@@ -1,0 +1,13 @@
+{
+  "heading": "Expand Your Dog Owners Network.",
+  "paragraph": "You run classes, 121s or home consultations? We are here for you! Enlist into our application as a qualified dog trainer & your local dog owners can reserve your services. Late show ups, cancellations & delays? Dog Owners pay per minute, so everyone is happy!",
+  "connectWith": {
+    "connectionOne": "Dog Owners",
+    "connectionTwo": "Food Suppliers",
+    "connectionThree": "Dog Breeders"
+  },
+  "image": {
+    "source": "/dog-trainer.jpg",
+    "alternative": "dog-trainer-photo"
+  }
+}
