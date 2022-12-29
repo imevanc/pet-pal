@@ -1,7 +1,7 @@
 import React from "react";
 import { Menu, Transition } from "@headlessui/react";
 import { UserCircleIcon } from "@heroicons/react/24/outline";
-import { classNames } from "../../../../utils/classNames";
+import { classNames } from "../../../utils/classNames";
 
 const ProfileDropDown: React.FC = () => {
   return (

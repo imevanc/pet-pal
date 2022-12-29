@@ -1,35 +1,19 @@
-interface CurrentPageState {
-  currentPage: number;
-  setCurrentPage: React.Dispatch<React.SetStateAction<number>>;
-}
-
-interface SetPageButtons {
-  nextPage: (
-    currentPage: number,
-    setCurrentPage: React.Dispatch<React.SetStateAction<number>>,
-    nPages: number
-  ) => void;
-  prevPage: (
-    currentPage: number,
-    setCurrentPage: React.Dispatch<React.SetStateAction<number>>
-  ) => void;
-}
+import { CurrentPageStateIF } from "../../../interfaces/CurrentPageStateIF";
+import { prevPage } from "../../../utils/prevPage";
+import { nextPage } from "../../../utils/nextPage";
 
 interface PaginationProps {
-  currentPageState: CurrentPageState;
-  setPageButtons: SetPageButtons;
+  currentPageState: CurrentPageStateIF;
   pageNumbers: number[];
   nPages: number;
 }
 
 const Pagination: React.FC<PaginationProps> = ({
   currentPageState,
-  setPageButtons,
   pageNumbers,
   nPages,
 }) => {
   const { currentPage, setCurrentPage } = { ...currentPageState };
-  const { nextPage, prevPage } = { ...setPageButtons };
 
   return (
     <nav

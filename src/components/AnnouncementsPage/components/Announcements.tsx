@@ -1,18 +1,9 @@
 import { classNames } from "../../../utils/classNames";
 import React from "react";
-import { PencilSquareIcon, CheckBadgeIcon } from "@heroicons/react/20/solid";
-
-interface CurrentRecord {
-  content: string;
-  target: string;
-  date: string;
-  datetime: string;
-  iconBackground: string;
-  icon: typeof PencilSquareIcon | typeof CheckBadgeIcon;
-}
+import { AnnouncementIF } from "../../../interfaces/AnnouncementIF";
 
 interface AnnouncementsPageProps {
-  currentAnnouncements: CurrentRecord[];
+  currentAnnouncements: AnnouncementIF[];
 }
 
 const Announcements: React.FC<AnnouncementsPageProps> = ({

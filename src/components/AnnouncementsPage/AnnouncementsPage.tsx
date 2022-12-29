@@ -1,37 +1,11 @@
 import Announcements from "./components/Announcements";
 import Pagination from "./components/Pagination";
-import { PencilSquareIcon, CheckBadgeIcon } from "@heroicons/react/20/solid";
-
-interface Announcement {
-  content: string;
-  target: string;
-  date: string;
-  datetime: string;
-  iconBackground: string;
-  icon: typeof PencilSquareIcon | typeof CheckBadgeIcon;
-}
-
-interface CurrentPageState {
-  currentPage: number;
-  setCurrentPage: React.Dispatch<React.SetStateAction<number>>;
-}
-
-interface SetPageButtons {
-  nextPage: (
-    currentPage: number,
-    setCurrentPage: React.Dispatch<React.SetStateAction<number>>,
-    nPages: number
-  ) => void;
-  prevPage: (
-    currentPage: number,
-    setCurrentPage: React.Dispatch<React.SetStateAction<number>>
-  ) => void;
-}
+import { AnnouncementIF } from "../../interfaces/AnnouncementIF";
+import { CurrentPageStateIF } from "../../interfaces/CurrentPageStateIF";
 
 interface AnnouncementsPageProps {
-  currentAnnouncements: Announcement[];
-  currentPageState: CurrentPageState;
-  setPageButtons: SetPageButtons;
+  currentAnnouncements: AnnouncementIF[];
+  currentPageState: CurrentPageStateIF;
   pageNumbers: number[];
   nPages: number;
 }
@@ -39,7 +13,6 @@ interface AnnouncementsPageProps {
 const AnnouncementsPage: React.FC<AnnouncementsPageProps> = ({
   currentAnnouncements,
   currentPageState,
-  setPageButtons,
   pageNumbers,
   nPages,
 }) => {
@@ -49,7 +22,6 @@ const AnnouncementsPage: React.FC<AnnouncementsPageProps> = ({
         <Announcements currentAnnouncements={currentAnnouncements} />
         <Pagination
           currentPageState={currentPageState}
-          setPageButtons={setPageButtons}
           pageNumbers={pageNumbers}
           nPages={nPages}
         />
