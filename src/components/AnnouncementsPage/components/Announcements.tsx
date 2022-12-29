@@ -1,31 +1,30 @@
 import { classNames } from "../../../utils/classNames";
-import {
-  CheckIcon,
-  HandThumbUpIcon,
-  UserIcon,
-} from "@heroicons/react/20/solid";
+import React from "react";
+import { PencilSquareIcon, CheckBadgeIcon } from "@heroicons/react/20/solid";
 
 interface CurrentRecord {
   content: string;
   target: string;
   date: string;
   datetime: string;
-  icon: typeof CheckIcon | typeof HandThumbUpIcon | typeof UserIcon;
   iconBackground: string;
+  icon: typeof PencilSquareIcon | typeof CheckBadgeIcon;
 }
 
-interface CurrentRecordsProps {
-  currentRecords: CurrentRecord[];
+interface AnnouncementsPageProps {
+  currentAnnouncements: CurrentRecord[];
 }
 
-const Announcements: React.FC<CurrentRecordsProps> = ({ currentRecords }) => {
+const Announcements: React.FC<AnnouncementsPageProps> = ({
+  currentAnnouncements,
+}) => {
   return (
     <div className="flow-root">
       <ul role="list" className="-mb-8">
-        {currentRecords.map((event, eventIdx) => (
-          <li key={eventIdx}>
+        {currentAnnouncements.map((announcement, announcementIdx) => (
+          <li key={announcementIdx}>
             <div className="relative pb-8">
-              {eventIdx !== currentRecords.length - 1 ? (
+              {announcementIdx !== currentAnnouncements.length - 1 ? (
                 <span
                   className="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200"
                   aria-hidden="true"
@@ -35,23 +34,27 @@ const Announcements: React.FC<CurrentRecordsProps> = ({ currentRecords }) => {
                 <div>
                   <span
                     className={classNames(
-                      event.iconBackground,
+                      announcement.iconBackground,
                       "h-8 w-8 rounded-full flex items-center justify-center ring-8 ring-white"
                     )}
                   >
-                    <event.icon
-                      className="h-5 w-5 text-white"
+                    <announcement.icon
+                      className="h-5 w-5 text-lime-700"
                       aria-hidden="true"
                     />
                   </span>
                 </div>
                 <div className="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
                   <div className="text-sm text-gray-500">
-                    {event.content}{" "}
-                    <p className="font-medium text-gray-900">{event.target}</p>
+                    {announcement.content}{" "}
+                    <p className="font-medium text-gray-900">
+                      {announcement.target}
+                    </p>
                   </div>
                   <div className="whitespace-nowrap text-right text-sm text-gray-500">
-                    <time dateTime={event.datetime}>{event.date}</time>
+                    <time dateTime={announcement.datetime}>
+                      {announcement.date}
+                    </time>
                   </div>
                 </div>
               </div>

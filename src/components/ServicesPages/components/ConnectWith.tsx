@@ -1,16 +1,7 @@
 import React from "react";
+import { ConnectWithIF } from "../../../interfaces/ConnectWithIF";
 
-interface ConnectionsContext {
-  connectionOne: string;
-  connectionTwo: string;
-  connectionThree: string;
-}
-
-interface ConnectWithProps {
-  connectWith: ConnectionsContext;
-}
-
-const ConnectWith: React.FC<ConnectWithProps> = ({ connectWith }) => {
+const ConnectWith: React.FC<ConnectWithIF> = ({ connectWith }) => {
   return (
     <React.Fragment>
       <p className="text-2xl font-bold italic mt-10 min-[454px]:mt-10">

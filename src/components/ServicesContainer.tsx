@@ -1,39 +1,10 @@
 import React from "react";
 import Link from "next/link";
+import servicesContainer from "../data/fixtures/servicesContainer.json";
+import { ServicesContainerIF } from "../interfaces/ServicesContainerIF";
 
 const ServicesContainer: React.FC = () => {
-  const services = [
-    {
-      title: "Dog Breeder",
-      href: "/services/dog-breeder",
-      category: { name: "Article", href: "#" },
-      imageUrl: "/dog-breeder.jpg",
-    },
-    {
-      title: "Dog Sitter",
-      href: "/services/dog-sitter",
-      category: { name: "Video", href: "#" },
-      imageUrl: "/dog-sitter.jpg",
-    },
-    {
-      title: "Dog Trainer",
-      href: "/services/dog-trainer",
-      category: { name: "Case Study", href: "#" },
-      imageUrl: "/dog-trainer.jpg",
-    },
-    {
-      title: "Food Supplier",
-      href: "/services/food-supplier",
-      category: { name: "Case Study", href: "#" },
-      imageUrl: "/food-supplier.jpg",
-    },
-    {
-      title: "Dog Owner",
-      href: "/services/dog-owner",
-      category: { name: "Case Study", href: "#" },
-      imageUrl: "/dog-owner.jpg",
-    },
-  ];
+  const services: ServicesContainerIF = servicesContainer;
   return (
     <React.Fragment>
       <div className="mx-auto w-full sm:px-6 py-4 mt-8 lg:py-6 flex flex-col items-center">
@@ -45,9 +16,9 @@ const ServicesContainer: React.FC = () => {
         </p>
         <div className="flex flex-col w-full max-w-5xl pb-5 pt-4">
           <div className="m-auto grid w-full max-w-lg gap-5 lg:max-w-none lg:grid-cols-3">
-            {services.map((service, idx) => {
+            {services.services.map((service, idx) => {
               let pos = "";
-              if (idx === services.length - 1) {
+              if (idx === services.services.length - 1) {
                 pos = "lg:col-start-2 lg:col-end-4";
               }
               return (

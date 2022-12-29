@@ -1,0 +1,34 @@
+{
+  "services": [
+    {
+      "title": "Dog Breeder",
+      "href": "/services/dog-breeder",
+      "category": { "name": "Article", "href": "#" },
+      "imageUrl": "/dog-breeder.jpg"
+    },
+    {
+      "title": "Dog Sitter",
+      "href": "/services/dog-sitter",
+      "category": { "name": "Video", "href": "#" },
+      "imageUrl": "/dog-sitter.jpg"
+    },
+    {
+      "title": "Dog Trainer",
+      "href": "/services/dog-trainer",
+      "category": { "name": "Case Study", "href": "#" },
+      "imageUrl": "/dog-trainer.jpg"
+    },
+    {
+      "title": "Food Supplier",
+      "href": "/services/food-supplier",
+      "category": { "name": "Case Study", "href": "#" },
+      "imageUrl": "/food-supplier.jpg"
+    },
+    {
+      "title": "Dog Owner",
+      "href": "/services/dog-owner",
+      "category": { "name": "Case Study", "href": "#" },
+      "imageUrl": "/dog-owner.jpg"
+    }
+  ]
+}

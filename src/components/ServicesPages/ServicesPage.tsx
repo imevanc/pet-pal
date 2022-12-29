@@ -2,26 +2,9 @@ import Heading from "./components/Heading";
 import Paragraph from "./components/Paragraph";
 import Image from "./components/Image";
 import ConnectWith from "./components/ConnectWith";
+import { ServicesPageIF } from "../../interfaces/ServicesPageIF";
 
-interface ImageContext {
-  source: string;
-  alternative: string;
-}
-
-interface ConnectionsContext {
-  connectionOne: string;
-  connectionTwo: string;
-  connectionThree: string;
-}
-
-interface ServicesContextProps {
-  heading: string;
-  paragraph: string;
-  connectWith: ConnectionsContext;
-  image: ImageContext;
-}
-
-const ServicesPage: React.FC<ServicesContextProps> = ({
+const ServicesPage: React.FC<ServicesPageIF> = ({
   heading,
   paragraph,
   connectWith,

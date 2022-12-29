@@ -1,0 +1,13 @@
+{
+  "heading": "Socialise, Learn & Become A Responsible Dog Owner.",
+  "paragraph": "Does your dog react unsual and you do not know what to do? We have been there! Use our platform to connect with dog trainers that can help you with different dog issues. Do you like group dog walks or want to avoid some local dogs? You can use our platform and connect with other dog owners globally.",
+  "connectWith": {
+    "connectionOne": "Dog Trainers",
+    "connectionTwo": "Food Suppliers",
+    "connectionThree": "Dog Sitters"
+  },
+  "image": {
+    "source": "/dog-owner.jpg",
+    "alternative": "dog-owner-photo"
+  }
+}
