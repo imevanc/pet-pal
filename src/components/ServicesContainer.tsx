@@ -1,39 +1,21 @@
 import React from "react";
 import Link from "next/link";
+import Services from "../data/fixtures/Services.json";
+
+interface Category {
+  name: string;
+  href: string;
+}
+
+interface Service {
+  title: string;
+  href: string;
+  category: Category;
+  imageUrl: string;
+}
 
 const ServicesContainer: React.FC = () => {
-  const services = [
-    {
-      title: "Dog Breeder",
-      href: "/services/dog-breeder",
-      category: { name: "Article", href: "#" },
-      imageUrl: "/dog-breeder.jpg",
-    },
-    {
-      title: "Dog Sitter",
-      href: "/services/dog-sitter",
-      category: { name: "Video", href: "#" },
-      imageUrl: "/dog-sitter.jpg",
-    },
-    {
-      title: "Dog Trainer",
-      href: "/services/dog-trainer",
-      category: { name: "Case Study", href: "#" },
-      imageUrl: "/dog-trainer.jpg",
-    },
-    {
-      title: "Food Supplier",
-      href: "/services/food-supplier",
-      category: { name: "Case Study", href: "#" },
-      imageUrl: "/food-supplier.jpg",
-    },
-    {
-      title: "Dog Owner",
-      href: "/services/dog-owner",
-      category: { name: "Case Study", href: "#" },
-      imageUrl: "/dog-owner.jpg",
-    },
-  ];
+  const services: Service[] = Services.services;
   return (
     <React.Fragment>
       <div className="mx-auto w-full sm:px-6 py-4 mt-8 lg:py-6 flex flex-col items-center">
