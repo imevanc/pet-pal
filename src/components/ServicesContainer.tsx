@@ -1,21 +1,10 @@
 import React from "react";
 import Link from "next/link";
-import Services from "../data/fixtures/Services.json";
-
-interface Category {
-  name: string;
-  href: string;
-}
-
-interface Service {
-  title: string;
-  href: string;
-  category: Category;
-  imageUrl: string;
-}
+import servicesContainer from "../data/fixtures/servicesContainer.json";
+import { ServicesContainerIF } from "../interfaces/ServicesContainerIF";
 
 const ServicesContainer: React.FC = () => {
-  const services: Service[] = Services.services;
+  const services: ServicesContainerIF = servicesContainer;
   return (
     <React.Fragment>
       <div className="mx-auto w-full sm:px-6 py-4 mt-8 lg:py-6 flex flex-col items-center">
@@ -27,9 +16,9 @@ const ServicesContainer: React.FC = () => {
         </p>
         <div className="flex flex-col w-full max-w-5xl pb-5 pt-4">
           <div className="m-auto grid w-full max-w-lg gap-5 lg:max-w-none lg:grid-cols-3">
-            {services.map((service, idx) => {
+            {services.services.map((service, idx) => {
               let pos = "";
-              if (idx === services.length - 1) {
+              if (idx === services.services.length - 1) {
                 pos = "lg:col-start-2 lg:col-end-4";
               }
               return (
