@@ -1,0 +1,13 @@
+{
+  "heading": "Upscale Your Game.",
+  "paragraph": "No more waiting list notebooks or last minute puppy purchase cancellations. Our platform gives you the power to compare prospective owners against your criteria, add them to your waiting list (ie they need to pay upfront for the puppy in order to be added) and arrange communication and collection.",
+  "connectWith": {
+    "connectionOne": "Dog Owners",
+    "connectionTwo": "Food Suppliers",
+    "connectionThree": "Dog Walkers"
+  },
+  "image": {
+    "source": "/dog-breeder.jpg",
+    "alternative": "dog-breeder-photo"
+  }
+}
