@@ -1,13 +1,10 @@
-interface ImageContext {
-  source: string;
-  alternative: string;
+import { ImageIF } from "../../../interfaces/ImageIF";
+
+interface ImagePropsIF {
+  image: ImageIF;
 }
 
-interface ImageProps {
-  image: ImageContext;
-}
-
-const Image: React.FC<ImageProps> = ({ image }) => {
+const Image: React.FC<ImagePropsIF> = ({ image }) => {
   return (
     <div className="mt-2 lg:mt-0">
       <div className="sm:w-full sm:overflow-hidden sm:rounded-lg">
