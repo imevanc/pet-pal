@@ -1,4 +1,21 @@
+import React from "react";
+import axios from "axios";
+
 const NewsletterContainer: React.FC = () => {
+  const [email, setEmail] = React.useState<string>("");
+  const handleSubmit = async (email: string): Promise<any> => {
+    try {
+      const payload = { email_address: email };
+      const data = await axios.post("/api/createEmailSubscriber", payload);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
+    event.preventDefault();
+    setEmail(event?.target?.value);
+  };
+
   return (
     <div className="bg-white pt-2">
       <div className="mx-auto max-w-5xl py-6 sm:px-6 lg:py-6">
@@ -12,11 +29,13 @@ const NewsletterContainer: React.FC = () => {
             </p>
           </div>
           <div className="mt-8 sm:w-full sm:max-w-md xl:mt-0 xl:ml-8">
-            <form className="sm:flex">
+            <form className="sm:flex" onSubmit={() => handleSubmit(email)}>
               <label htmlFor="email-address" className="sr-only">
                 Email address
               </label>
               <input
+                value={email}
+                onChange={handleChange}
                 id="email-address"
                 name="email-address"
                 type="email"
