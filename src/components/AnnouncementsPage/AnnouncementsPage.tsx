@@ -17,14 +17,16 @@ const AnnouncementsPage: React.FC<AnnouncementsPageProps> = ({
   nPages,
 }) => {
   return (
-    <div className="mx-auto max-w-7xl pt-8 px-4 sm:px-6 lg:px-8 lg:pt-12 h-[92vh] overflow-y-scroll md:overflow-y-auto">
-      <div className="h-full flex flex-col justify-between">
-        <Announcements currentAnnouncements={currentAnnouncements} />
-        <Pagination
-          currentPageState={currentPageState}
-          pageNumbers={pageNumbers}
-          nPages={nPages}
-        />
+    <div className="grow shrink-0">
+      <div className="mx-auto max-w-7xl pt-4 px-4 sm:px-6 lg:px-8">
+        <div className="h-full flex flex-col justify-between">
+          <Announcements currentAnnouncements={currentAnnouncements} />
+          <Pagination
+            currentPageState={currentPageState}
+            pageNumbers={pageNumbers}
+            nPages={nPages}
+          />
+        </div>
       </div>
     </div>
   );

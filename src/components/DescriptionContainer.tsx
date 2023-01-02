@@ -3,7 +3,7 @@ import Image from "next/image";
 const DescriptionContainer: React.FC = () => {
   return (
     <div className="flex flex-col md:flex-row items-center md:items-start md:justify-center">
-      <div className="max-w-3xl w-full md:pt-10">
+      <div className="max-w-3xl w-full md:pt-4">
         <div className="mx-auto max-w-prose">
           <h1>
             <span className="mt-2 block text-left text-3xl font-bold leading-8 tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
@@ -20,11 +20,11 @@ const DescriptionContainer: React.FC = () => {
           </p>
         </div>
       </div>
-      <div className="rounded-full shadow-2xl pt-10 md:pt-10">
+      <div className="rounded-full shadow-2xl pt-4">
         <Image
           className="rounded-full shadow-2xl"
-          width={320}
-          height={320}
+          width={280}
+          height={280}
           src="/lab-puppy.jpg"
           alt="lab"
         />

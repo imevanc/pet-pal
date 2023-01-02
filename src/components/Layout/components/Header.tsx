@@ -49,7 +49,7 @@ const Header: React.FC = () => {
       </Disclosure>
     </div>
   ) : (
-    <div className="w-full sticky top-0 flex items-center justify-center bg-white">
+    <div className="z-40 w-full sticky top-0 flex items-center justify-center bg-white">
       <Disclosure as="nav" className="w-full max-w-8xl bg-white">
         {({ open }) => (
           <React.Fragment>

@@ -1,4 +1,5 @@
 import React from "react";
+import FooterContainer from "../FooterContainer";
 import Header from "./components/Header";
 
 interface ChildrenProps {
@@ -7,10 +8,11 @@ interface ChildrenProps {
 
 const Layout: React.FC<ChildrenProps> = ({ children }) => {
   return (
-    <React.Fragment>
+    <div className="flex flex-col min-h-[100vh]">
       <Header />
       {children}
-    </React.Fragment>
+      <FooterContainer />
+    </div>
   );
 };
 
