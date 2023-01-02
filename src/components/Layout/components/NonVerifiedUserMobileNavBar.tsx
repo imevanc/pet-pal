@@ -1,6 +1,7 @@
 import React from "react";
 import { Disclosure } from "@headlessui/react";
 import { useRouter } from "next/router";
+import { classNames } from "../../../utils/classNames";
 
 interface PathsState {
   home: string;
@@ -50,11 +51,12 @@ const NonVerifiedUserMobileNavBar: React.FC = () => {
         <Disclosure.Button
           as="a"
           href="/"
-          className={
-            paths.home === "selected" ? selectedClass : nonSelectedClass
-          }
+          className={classNames(
+            paths.home === "selected" ? selectedClass : nonSelectedClass,
+            "italic font-bold text-xl"
+          )}
         >
-          Sign In / Sign Up
+          Sign In
         </Disclosure.Button>
         <Disclosure.Button
           as="a"

@@ -9,7 +9,6 @@ import NonVerifiedUserMobileNavBar from "./NonVerifiedUserMobileNavBar";
 import MobileNavBar from "./MobileNavBar";
 import NotificationsButton from "./NotificationsButton";
 import SignInButton from "./SignInButton";
-import SignUpButton from "./SignUpButton";
 
 const Header: React.FC = () => {
   const isUser = (userVerified?: boolean): boolean => {
@@ -70,8 +69,7 @@ const Header: React.FC = () => {
                   <Logo />
                   <NonVerifiedUserNavBar />
                 </div>
-                <div className="hidden sm:ml-6 sm:flex sm:space-x-2 md:space-x-8 sm:items-center pr-2 sm:pr-0">
-                  <SignUpButton />
+                <div className="hidden sm:ml-6 sm:flex sm:items-center">
                   <SignInButton />
                 </div>
               </div>
