@@ -1,7 +1,6 @@
 import type { NextPage } from "next";
 import ContainerContainer from "../components/ContactContainer";
 import DescriptionContainer from "../components/DescriptionContainer";
-import FooterContainer from "../components/FooterContainer";
 import NewsletterContainer from "../components/NewsletterContainer";
 import ServicesContainer from "../components/ServicesContainer";
 
@@ -12,7 +11,6 @@ const Home: NextPage = () => {
       <ServicesContainer />
       <NewsletterContainer />
       <ContainerContainer />
-      <FooterContainer />
     </div>
   );
 };
