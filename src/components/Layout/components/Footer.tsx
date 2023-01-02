@@ -1,4 +1,6 @@
-const FooterContainer: React.FC = () => {
+import { getYear } from "../../../utils/getYear";
+
+const Footer: React.FC = () => {
   const socialNets = [
     {
       name: "Facebook",
@@ -66,7 +68,7 @@ const FooterContainer: React.FC = () => {
         </div>
         <div className="mt-8 md:order-1 md:mt-0">
           <p className="text-center text-base text-gray-400">
-            &copy; 2023 Pet Pal. All rights reserved.
+            &copy; {getYear()} Pet Pal. All rights reserved.
           </p>
         </div>
       </div>
@@ -74,4 +76,4 @@ const FooterContainer: React.FC = () => {
   );
 };
 
-export default FooterContainer;
+export default Footer;
