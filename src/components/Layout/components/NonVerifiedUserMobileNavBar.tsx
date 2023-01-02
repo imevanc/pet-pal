@@ -1,41 +1,56 @@
 import React from "react";
 import { Disclosure } from "@headlessui/react";
 import { useRouter } from "next/router";
+import servicesPaths from "../../../data/fixtures/servicesPaths.json";
 import { classNames } from "../../../utils/classNames";
 
 interface PathsState {
   home: string;
   team: string;
   announcements: string;
+  services: string;
 }
 
 const NonVerifiedUserMobileNavBar: React.FC = () => {
   const path: string = useRouter().pathname;
-  const [paths, setPath] = React.useState<PathsState>({
+  const [paths, setPaths] = React.useState<PathsState>({
     home: "",
     team: "",
     announcements: "",
+    services: "",
   });
+
   React.useEffect((): void => {
     if (path === "/") {
-      setPath({
+      setPaths({
         home: "selected",
         team: "nonSelected",
         announcements: "nonSelected",
+        services: "nonSelected",
       });
     }
     if (path === "/team") {
-      setPath({
+      setPaths({
         home: "nonSelected",
         team: "selected",
         announcements: "nonSelected",
+        services: "nonSelected",
       });
     }
     if (path === "/announcements") {
-      setPath({
+      setPaths({
         home: "nonSelected",
         team: "nonSelected",
         announcements: "selected",
+        services: "nonSelected",
+      });
+    }
+    if (path in servicesPaths) {
+      setPaths({
+        home: "nonSelected",
+        team: "nonSelected",
+        announcements: "nonSelected",
+        services: "selected",
       });
     }
   }, [path]);
@@ -62,7 +77,7 @@ const NonVerifiedUserMobileNavBar: React.FC = () => {
           as="a"
           href="/"
           className={
-            paths.team === "selected" ? selectedClass : nonSelectedClass
+            paths.home === "selected" ? selectedClass : nonSelectedClass
           }
         >
           Home
@@ -86,6 +101,15 @@ const NonVerifiedUserMobileNavBar: React.FC = () => {
           }
         >
           Announcements
+        </Disclosure.Button>
+        <Disclosure.Button
+          as="a"
+          href="/services"
+          className={
+            paths.services === "selected" ? selectedClass : nonSelectedClass
+          }
+        >
+          Services
         </Disclosure.Button>
       </div>
     </Disclosure.Panel>
