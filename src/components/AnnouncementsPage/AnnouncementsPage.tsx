@@ -17,7 +17,7 @@ const AnnouncementsPage: React.FC<AnnouncementsPageProps> = ({
   nPages,
 }) => {
   return (
-    <div className="mx-auto max-w-7xl pt-8 px-4 sm:px-6 lg:px-8 lg:pt-12 h-[92vh] overflow-y-scroll md:overflow-y-auto">
+    <div className="mx-auto max-w-7xl pt-4 px-4 sm:px-6 lg:px-8 h-[90vh]">
       <div className="h-full flex flex-col justify-between">
         <Announcements currentAnnouncements={currentAnnouncements} />
         <Pagination

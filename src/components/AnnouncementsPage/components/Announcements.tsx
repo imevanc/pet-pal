@@ -11,7 +11,7 @@ const Announcements: React.FC<AnnouncementsPageProps> = ({
 }) => {
   return (
     <div className="flow-root">
-      <ul role="list" className="-mb-8">
+      <ul role="list" className="-mb-4">
         {currentAnnouncements.map((announcement, announcementIdx) => (
           <li key={announcementIdx}>
             <div className="relative pb-8">
