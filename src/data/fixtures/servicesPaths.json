@@ -1,4 +1,5 @@
 {
+  "/services": "/services",
   "/services/dog-breeder": "/services/dog-breeder",
   "/services/dog-ownwer": "/services/dog-owner",
   "/services/dog-sitter": "/services/dog-sitter",

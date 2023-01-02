@@ -7,7 +7,7 @@ const ServicesContainer: React.FC = () => {
   const services: ServicesContainerIF = servicesContainer;
   return (
     <React.Fragment>
-      <div className="mx-auto w-full sm:px-6 py-4 mt-8 lg:py-6 flex flex-col items-center">
+      <div className="mx-auto w-full sm:px-6 mt-6 flex flex-col items-center">
         <p className="text-center text-3xl sm:text-4xl lg:text-5xl font-bold">
           Meet the platform that
         </p>
