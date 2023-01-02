@@ -1,15 +1,7 @@
 import { PencilSquareIcon, CheckBadgeIcon } from "@heroicons/react/20/solid";
+import { AnnouncementIF } from "../interfaces/AnnouncementIF";
 
-interface ANNOUNCEMENT {
-  content: string;
-  target: string;
-  date: string;
-  datetime: string;
-  icon: typeof PencilSquareIcon | typeof CheckBadgeIcon;
-  iconBackground: string;
-}
-
-export const ANNOUNCEMENTS: ANNOUNCEMENT[] = [
+export const ANNOUNCEMENTS: AnnouncementIF[] = [
   {
     content: "Evan",
     target: "has the idea.",
