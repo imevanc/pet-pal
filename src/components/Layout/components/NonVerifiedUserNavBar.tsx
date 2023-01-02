@@ -1,44 +1,59 @@
 import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import servicesPaths from "../../../data/fixtures/servicesPaths.json";
 
 interface PathsState {
   home: string;
   team: string;
   announcements: string;
+  services: string;
 }
 
 const NonVerifiedUserNavBar: React.FC = () => {
   const path: string = useRouter().pathname;
-  const [paths, setPath] = React.useState<PathsState>({
+  const [paths, setPaths] = React.useState<PathsState>({
     home: "",
     team: "",
     announcements: "",
+    services: "",
   });
+
   React.useEffect((): void => {
     if (path === "/") {
-      setPath({
+      setPaths({
         home: "selected",
         team: "nonSelected",
         announcements: "nonSelected",
+        services: "nonSelected",
       });
     }
     if (path === "/team") {
-      setPath({
+      setPaths({
         home: "nonSelected",
         team: "selected",
         announcements: "nonSelected",
+        services: "nonSelected",
       });
     }
     if (path === "/announcements") {
-      setPath({
+      setPaths({
         home: "nonSelected",
         team: "nonSelected",
         announcements: "selected",
+        services: "nonSelected",
+      });
+    }
+    if (path in servicesPaths) {
+      setPaths({
+        home: "nonSelected",
+        team: "nonSelected",
+        announcements: "nonSelected",
+        services: "selected",
       });
     }
   }, [path]);
-
+  console.log(path);
   const selectedClass: string =
     "inline-flex items-center border-b-2 border-lime-500 px-1 pt-1 text-lg font-medium text-gray-900";
   const nonSelectedClass: string =
@@ -65,6 +80,14 @@ const NonVerifiedUserNavBar: React.FC = () => {
         }
       >
         Announcements
+      </Link>
+      <Link
+        href="/services"
+        className={
+          paths.services === "selected" ? selectedClass : nonSelectedClass
+        }
+      >
+        Services
       </Link>
     </div>
   );
