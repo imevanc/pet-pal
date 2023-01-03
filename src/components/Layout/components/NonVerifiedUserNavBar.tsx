@@ -51,6 +51,13 @@ const NonVerifiedUserNavBar: React.FC = () => {
         announcements: "nonSelected",
         services: "selected",
       });
+    } else {
+      setPaths({
+        home: "nonSelected",
+        team: "nonSelected",
+        announcements: "nonSelected",
+        services: "nonSelected",
+      });
     }
   }, [path]);
 
