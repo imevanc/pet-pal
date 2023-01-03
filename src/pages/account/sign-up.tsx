@@ -1,18 +1,10 @@
 import type { NextPage } from "next";
 import Link from "next/link";
-import FacebookIcon from "../components/Layout/components/FacebookICon";
-import InstagramIcon from "../components/Layout/components/InstagramIcon";
-import TwitterIcon from "../components/Layout/components/TwitterIcon";
 
 const SignUp: NextPage = () => {
   return (
     <div className="flex min-h-full flex-col justify-center py-4 grow shrink-0 px-4 sm:px-6 lg:px-8">
       <div className="bg-lime-100 sm:mx-auto sm:w-full sm:max-w-md">
-        {/* <img
-          className="mx-auto mt-4 h-14 sm:h-16 w-auto"
-          src="/pet-pal-logo.png"
-          alt="Pet Pal"
-        /> */}
         <h2 className="my-3 text-center text-3xl font-bold tracking-tight text-gray-900">
           Sign up for Pet Pal
         </h2>
@@ -124,7 +116,7 @@ const SignUp: NextPage = () => {
                   htmlFor="TnCs"
                   className="ml-2 block text-sm text-gray-600"
                 >
-                  By signing up, I agree to Pet Pal's{" "}
+                  By signing up, I agree to Pet Pal{"'"}s{" "}
                   <span className="text-lime-600 underline">
                     Terms of Service
                   </span>{" "}
@@ -161,7 +153,7 @@ const SignUp: NextPage = () => {
             </div>
             <div className="flex justify-center">
               <p className="italic bg-white px-2 text-2xl font-bold text-lime-500 hover:text-lime-600">
-                <Link href="/sign-in">Sign in here</Link>
+                <Link href="/account/sign-in">Sign in here</Link>
               </p>
             </div>
           </div>

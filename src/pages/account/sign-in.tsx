@@ -1,8 +1,8 @@
 import type { NextPage } from "next";
 import Link from "next/link";
-import FacebookIcon from "../components/Layout/components/FacebookICon";
-import InstagramIcon from "../components/Layout/components/InstagramIcon";
-import TwitterIcon from "../components/Layout/components/TwitterIcon";
+import FacebookIcon from "../../components/Layout/components/FacebookICon";
+import InstagramIcon from "../../components/Layout/components/InstagramIcon";
+import TwitterIcon from "../../components/Layout/components/TwitterIcon";
 
 const SignIn: NextPage = () => {
   return (
@@ -142,13 +142,13 @@ const SignIn: NextPage = () => {
               </div>
               <div className="relative flex justify-center text-sm">
                 <span className="bg-white px-2 text-gray-500">
-                  Don't have a Pet Pal account?
+                  Don{"'"}t have a Pet Pal account?
                 </span>
               </div>
             </div>
             <div className="flex justify-center">
               <p className="italic bg-white px-2 text-2xl font-bold text-lime-500 hover:text-lime-600">
-                <Link href="/sign-up">Sign up now</Link>
+                <Link href="/account/sign-up">Sign up now</Link>
               </p>
             </div>
           </div>
