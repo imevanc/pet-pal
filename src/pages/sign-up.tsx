@@ -20,7 +20,7 @@ const SignUp: NextPage = () => {
 
       <div className="sm:mx-auto sm:w-full sm:max-w-md rounded-lg shadow-xl">
         <div className="bg-white py-6 px-4 sm:px-10">
-          <form className="space-y-6" action="#" method="POST">
+          <form className="space-y-3" action="#" method="POST">
             <div>
               <label
                 htmlFor="first-name"
