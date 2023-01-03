@@ -1,14 +1,15 @@
 import type { NextPage } from "next";
+import Link from "next/link";
 import FacebookIcon from "../components/Layout/components/FacebookICon";
 import InstagramIcon from "../components/Layout/components/InstagramIcon";
 import TwitterIcon from "../components/Layout/components/TwitterIcon";
 
 const SignIn: NextPage = () => {
   return (
-    <div className="flex min-h-full flex-col justify-center py-12 sm:px-6 lg:px-8">
+    <div className="flex min-h-full flex-col justify-center py-4 grow shrink-0 px-4 sm:px-6 lg:px-8">
       <div className="bg-lime-100 sm:mx-auto sm:w-full sm:max-w-md">
         <img
-          className="mx-auto mt-4 h-16 w-auto"
+          className="mx-auto mt-4 h-14 sm:h-16 w-auto"
           src="/pet-pal-logo.png"
           alt="Pet Pal"
         />
@@ -17,8 +18,8 @@ const SignIn: NextPage = () => {
         </h2>
       </div>
 
-      <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-        <div className="bg-white py-8 px-4  sm:px-10">
+      <div className="sm:mx-auto sm:w-full sm:max-w-md rounded-lg shadow-xl">
+        <div className="bg-white py-6 px-4 sm:px-10">
           <form className="space-y-6" action="#" method="POST">
             <div>
               <label
@@ -38,7 +39,6 @@ const SignIn: NextPage = () => {
                 />
               </div>
             </div>
-
             <div>
               <label
                 htmlFor="password"
@@ -87,7 +87,7 @@ const SignIn: NextPage = () => {
             <div>
               <button
                 type="submit"
-                className="flex w-full justify-center rounded-md border border-transparent bg-lime-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-lime-700 focus:outline-none focus:ring-2 focus:ring-lime-500 focus:ring-offset-2"
+                className="flex w-full justify-center rounded-md border border-transparent bg-lime-600 py-2 px-4 text-lg font-bold text-white shadow-sm hover:bg-lime-700 focus:outline-none focus:ring-2 focus:ring-lime-500 focus:ring-offset-2"
               >
                 Sign in
               </button>
@@ -105,7 +105,6 @@ const SignIn: NextPage = () => {
                 </span>
               </div>
             </div>
-
             <div className="mt-6 grid grid-cols-3 gap-3">
               <div>
                 <a
@@ -136,6 +135,21 @@ const SignIn: NextPage = () => {
                   <InstagramIcon className={"h-6 w-6"} aria-hidden={"true"} />
                 </a>
               </div>
+            </div>
+            <div className="mt-6 relative">
+              <div className="absolute inset-0 flex items-center">
+                <div className="w-full border-t border-gray-300" />
+              </div>
+              <div className="relative flex justify-center text-sm">
+                <span className="bg-white px-2 text-gray-500">
+                  Don't have a Pet Pal account?
+                </span>
+              </div>
+            </div>
+            <div className="flex justify-center">
+              <p className="italic bg-white px-2 text-2xl font-bold text-lime-500 hover:text-lime-600">
+                <Link href="#">Sign up now</Link>
+              </p>
             </div>
           </div>
         </div>
