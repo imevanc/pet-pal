@@ -27,24 +27,21 @@ const NonVerifiedUserNavBar: React.FC = () => {
         announcements: "nonSelected",
         services: "nonSelected",
       });
-    }
-    if (path === "/team") {
+    } else if (path === "/team") {
       setPaths({
         home: "nonSelected",
         team: "selected",
         announcements: "nonSelected",
         services: "nonSelected",
       });
-    }
-    if (path === "/announcements") {
+    } else if (path === "/announcements") {
       setPaths({
         home: "nonSelected",
         team: "nonSelected",
         announcements: "selected",
         services: "nonSelected",
       });
-    }
-    if (path in servicesPaths) {
+    } else if (path in servicesPaths) {
       setPaths({
         home: "nonSelected",
         team: "nonSelected",

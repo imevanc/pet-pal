@@ -148,7 +148,7 @@ const SignIn: NextPage = () => {
             </div>
             <div className="flex justify-center">
               <p className="italic bg-white px-2 text-2xl font-bold text-lime-500 hover:text-lime-600">
-                <Link href="#">Sign up now</Link>
+                <Link href="/sign-up">Sign up now</Link>
               </p>
             </div>
           </div>
