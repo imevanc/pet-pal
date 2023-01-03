@@ -69,7 +69,7 @@ const Header: React.FC = () => {
                   <Logo />
                   <NonVerifiedUserNavBar />
                 </div>
-                <div className="hidden sm:ml-6 sm:flex sm:items-center">
+                <div className="absolute inset-y-0 top-2 right-1 sm:right-0 sm:ml-6 sm:flex sm:items-center">
                   <SignInButton />
                 </div>
               </div>

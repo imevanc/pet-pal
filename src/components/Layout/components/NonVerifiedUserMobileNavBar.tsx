@@ -52,6 +52,13 @@ const NonVerifiedUserMobileNavBar: React.FC = () => {
         announcements: "nonSelected",
         services: "selected",
       });
+    } else {
+      setPaths({
+        home: "nonSelected",
+        team: "nonSelected",
+        announcements: "nonSelected",
+        services: "nonSelected",
+      });
     }
   }, [path]);
 
@@ -63,16 +70,6 @@ const NonVerifiedUserMobileNavBar: React.FC = () => {
   return (
     <Disclosure.Panel className="sm:hidden">
       <div className="space-y-1 pt-2 pb-4">
-        <Disclosure.Button
-          as="a"
-          href="/"
-          className={classNames(
-            paths.home === "selected" ? selectedClass : nonSelectedClass,
-            "italic font-bold text-xl"
-          )}
-        >
-          Sign In
-        </Disclosure.Button>
         <Disclosure.Button
           as="a"
           href="/"
