@@ -4,6 +4,7 @@ import InstagramIcon from "../../components/Layout/components/InstagramIcon";
 import TwitterIcon from "../../components/Layout/components/TwitterIcon";
 import SignInForm from "./components/SignInForm";
 import SocialNetButton from "./components/SocialNetButton";
+import signIn from "../../data/fixtures/signIn.json";
 
 const SignInPage: React.FC = () => {
   return (
@@ -15,7 +16,7 @@ const SignInPage: React.FC = () => {
           alt="Pet Pal"
         />
         <h2 className="my-3 text-center text-3xl font-bold tracking-tight text-gray-900">
-          Sign in to your account
+          {signIn.heading}
         </h2>
       </div>
 
@@ -30,7 +31,7 @@ const SignInPage: React.FC = () => {
               </div>
               <div className="relative flex justify-center text-sm">
                 <span className="bg-white px-2 text-gray-500">
-                  Or continue with
+                  {signIn.spanButton}
                 </span>
               </div>
             </div>
@@ -45,13 +46,13 @@ const SignInPage: React.FC = () => {
               </div>
               <div className="relative flex justify-center text-sm">
                 <span className="bg-white px-2 text-gray-500">
-                  Don{"'"}t have a Pet Pal account?
+                  {signIn.spanSignUp}
                 </span>
               </div>
             </div>
             <div className="flex justify-center">
               <p className="italic bg-white px-2 text-2xl font-bold text-lime-500 hover:text-lime-600">
-                <Link href="/account/sign-up">Sign up now</Link>
+                <Link href="/account/sign-up">{signIn.link}</Link>
               </p>
             </div>
           </div>
