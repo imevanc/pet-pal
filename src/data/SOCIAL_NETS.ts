@@ -3,7 +3,7 @@ import GithubIcon from "../components/Layout/components/GithubIcon";
 import InstagramIcon from "../components/Layout/components/InstagramIcon";
 import TwitterIcon from "../components/Layout/components/TwitterIcon";
 
-export const SOCIALNETS = [
+export const SOCIAL_NETS = [
   {
     name: "Facebook",
     href: "#",
