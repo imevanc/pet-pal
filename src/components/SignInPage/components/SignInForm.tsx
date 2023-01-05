@@ -10,7 +10,7 @@ const SignInForm: React.FC = () => {
       <CustomInput label={"Email address"} name={"email"} />
       <CustomInput label={"Password"} name={"password"} />
       <div className="flex items-center justify-between">
-        <CustomCheckBox checkBoxLabel={signIn.rememberMe} />
+        <CustomCheckBox checkBoxLabel={signIn.rememberMe} id={"remember-me"} />
         <div className="text-sm">
           <Link href="#">
             <p className="font-medium text-lime-600 hover:text-lime-500">

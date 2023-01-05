@@ -4,7 +4,7 @@ import { AnnouncementIF } from "../interfaces/AnnouncementIF";
 export const ANNOUNCEMENTS: AnnouncementIF[] = [
   {
     content: "Evan",
-    target: "has the idea.",
+    target: "bla bla bla",
     date: "Sep 20",
     datetime: "2020-09-20",
     icon: PencilSquareIcon,
@@ -12,7 +12,7 @@ export const ANNOUNCEMENTS: AnnouncementIF[] = [
   },
   {
     content: "Evan",
-    target: "has the idea.",
+    target: "bla bla bla",
     date: "Sep 20",
     datetime: "2020-09-20",
     icon: CheckBadgeIcon,
@@ -20,7 +20,7 @@ export const ANNOUNCEMENTS: AnnouncementIF[] = [
   },
   {
     content: "Evan",
-    target: "has the idea.",
+    target: "bla bla bla",
     date: "Sep 20",
     datetime: "2020-09-20",
     icon: PencilSquareIcon,
@@ -28,7 +28,7 @@ export const ANNOUNCEMENTS: AnnouncementIF[] = [
   },
   {
     content: "Evan",
-    target: "has the idea.",
+    target: "bla bla bla",
     date: "Sep 20",
     datetime: "2020-09-20",
     icon: CheckBadgeIcon,
@@ -36,7 +36,7 @@ export const ANNOUNCEMENTS: AnnouncementIF[] = [
   },
   {
     content: "Evan",
-    target: "has the idea.",
+    target: "bla bla bla",
     date: "Sep 20",
     datetime: "2020-09-20",
     icon: PencilSquareIcon,
@@ -44,7 +44,7 @@ export const ANNOUNCEMENTS: AnnouncementIF[] = [
   },
   {
     content: "Evan",
-    target: "has the idea.",
+    target: "bla bla bla",
     date: "Sep 20",
     datetime: "2020-09-20",
     icon: CheckBadgeIcon,
@@ -52,7 +52,7 @@ export const ANNOUNCEMENTS: AnnouncementIF[] = [
   },
   {
     content: "Evan",
-    target: "has the idea.",
+    target: "bla bla bla",
     date: "Sep 20",
     datetime: "2020-09-20",
     icon: PencilSquareIcon,
@@ -60,7 +60,7 @@ export const ANNOUNCEMENTS: AnnouncementIF[] = [
   },
   {
     content: "Evan",
-    target: "has the idea.",
+    target: "bla bla bla",
     date: "Sep 20",
     datetime: "2020-09-20",
     icon: CheckBadgeIcon,
@@ -68,7 +68,7 @@ export const ANNOUNCEMENTS: AnnouncementIF[] = [
   },
   {
     content: "Evan",
-    target: "has the idea.",
+    target: "bla bla bla",
     date: "Sep 20",
     datetime: "2020-09-20",
     icon: PencilSquareIcon,
@@ -76,7 +76,7 @@ export const ANNOUNCEMENTS: AnnouncementIF[] = [
   },
   {
     content: "Evan",
-    target: "is working on designs.",
+    target: "bla bla bla",
     date: "Sep 22",
     datetime: "2020-09-22",
     icon: CheckBadgeIcon,
@@ -84,7 +84,7 @@ export const ANNOUNCEMENTS: AnnouncementIF[] = [
   },
   {
     content: "Evan",
-    target: "is creating the list of the tech stack.",
+    target: "bla bla bla",
     date: "Sep 28",
     datetime: "2020-09-28",
     icon: PencilSquareIcon,
@@ -92,7 +92,7 @@ export const ANNOUNCEMENTS: AnnouncementIF[] = [
   },
   {
     content: "Evan",
-    target: "is working on the draft website.",
+    target: "bla bla bla",
     date: "Sep 30",
     datetime: "2020-09-30",
     icon: CheckBadgeIcon,
@@ -100,7 +100,7 @@ export const ANNOUNCEMENTS: AnnouncementIF[] = [
   },
   {
     content: "Evan",
-    target: "is working on the draft website.",
+    target: "bla bla bla",
     date: "Sep 30",
     datetime: "2020-09-30",
     icon: PencilSquareIcon,
@@ -108,7 +108,7 @@ export const ANNOUNCEMENTS: AnnouncementIF[] = [
   },
   {
     content: "Evan",
-    target: "is working on the draft website.",
+    target: "bla bla bla",
     date: "Sep 30",
     datetime: "2020-09-30",
     icon: CheckBadgeIcon,
@@ -116,7 +116,7 @@ export const ANNOUNCEMENTS: AnnouncementIF[] = [
   },
   {
     content: "Evan",
-    target: "is working on the draft website.",
+    target: "bla bla bla",
     date: "Sep 30",
     datetime: "2020-09-30",
     icon: PencilSquareIcon,
@@ -124,7 +124,7 @@ export const ANNOUNCEMENTS: AnnouncementIF[] = [
   },
   {
     content: "Evan",
-    target: "is working on the draft website.",
+    target: "bla bla bla",
     date: "Sep 30",
     datetime: "2020-09-30",
     icon: CheckBadgeIcon,
@@ -132,7 +132,7 @@ export const ANNOUNCEMENTS: AnnouncementIF[] = [
   },
   {
     content: "Evan",
-    target: "is working on the draft website.",
+    target: "bla bla bla",
     date: "Sep 30",
     datetime: "2020-09-30",
     icon: PencilSquareIcon,
@@ -140,7 +140,7 @@ export const ANNOUNCEMENTS: AnnouncementIF[] = [
   },
   {
     content: "Evan",
-    target: "is working on the draft website.",
+    target: "bla bla bla",
     date: "Sep 30",
     datetime: "2020-09-30",
     icon: CheckBadgeIcon,
@@ -148,7 +148,7 @@ export const ANNOUNCEMENTS: AnnouncementIF[] = [
   },
   {
     content: "Evan",
-    target: "is working on the draft website.",
+    target: "bla bla bla",
     date: "Sep 30",
     datetime: "2020-09-30",
     icon: PencilSquareIcon,
@@ -156,7 +156,7 @@ export const ANNOUNCEMENTS: AnnouncementIF[] = [
   },
   {
     content: "Evan",
-    target: "is working on the draft website.",
+    target: "bla bla bla",
     date: "Sep 30",
     datetime: "2020-09-30",
     icon: CheckBadgeIcon,
