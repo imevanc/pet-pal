@@ -1,8 +1,8 @@
-interface CheckBoxPropsIF {
+interface CustomCheckBoxPropsIF {
   label: string;
 }
 
-const CheckBox: React.FC<CheckBoxPropsIF> = ({ label }) => {
+const CustomCheckBox: React.FC<CustomCheckBoxPropsIF> = ({ label }) => {
   return (
     <div className="flex items-center">
       <input
@@ -18,4 +18,4 @@ const CheckBox: React.FC<CheckBoxPropsIF> = ({ label }) => {
   );
 };
 
-export default CheckBox;
+export default CustomCheckBox;
