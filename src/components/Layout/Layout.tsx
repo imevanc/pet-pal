@@ -2,11 +2,11 @@ import React from "react";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 
-interface ChildrenProps {
+interface ChildrenPropsIF {
   children: React.ReactNode;
 }
 
-const Layout: React.FC<ChildrenProps> = ({ children }) => {
+const Layout: React.FC<ChildrenPropsIF> = ({ children }) => {
   return (
     <div className="flex flex-col min-h-[100vh]">
       <Header />

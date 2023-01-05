@@ -1,11 +1,11 @@
 import { SocialNetIconIF } from "../../../interfaces/SocialNetIconIF";
 
-interface SocialNetButtonProps {
+interface SocialNetButtonPropsIF {
   SocialNetIcon: React.FC<SocialNetIconIF>;
   signInHref: string;
 }
 
-const SocialNetButton: React.FC<SocialNetButtonProps> = ({
+const SocialNetButton: React.FC<SocialNetButtonPropsIF> = ({
   SocialNetIcon,
   signInHref,
 }) => {
