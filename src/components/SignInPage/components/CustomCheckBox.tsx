@@ -1,8 +1,8 @@
 interface CustomCheckBoxPropsIF {
-  label: string;
+  checkBoxLabel: string;
 }
 
-const CustomCheckBox: React.FC<CustomCheckBoxPropsIF> = ({ label }) => {
+const CustomCheckBox: React.FC<CustomCheckBoxPropsIF> = ({ checkBoxLabel }) => {
   return (
     <div className="flex items-center">
       <input
@@ -12,7 +12,7 @@ const CustomCheckBox: React.FC<CustomCheckBoxPropsIF> = ({ label }) => {
         className="h-4 w-4 rounded border-gray-300 text-lime-600 focus:ring-lime-500"
       />
       <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
-        {label}
+        {checkBoxLabel}
       </label>
     </div>
   );
