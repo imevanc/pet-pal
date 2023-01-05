@@ -3,14 +3,14 @@ import Pagination from "./components/Pagination";
 import { AnnouncementIF } from "../../interfaces/AnnouncementIF";
 import { CurrentPageStateIF } from "../../interfaces/CurrentPageStateIF";
 
-interface AnnouncementsPageProps {
+interface AnnouncementsPagePropsIF {
   currentAnnouncements: AnnouncementIF[];
   currentPageState: CurrentPageStateIF;
   pageNumbers: number[];
   nPages: number;
 }
 
-const AnnouncementsPage: React.FC<AnnouncementsPageProps> = ({
+const AnnouncementsPage: React.FC<AnnouncementsPagePropsIF> = ({
   currentAnnouncements,
   currentPageState,
   pageNumbers,

@@ -2,13 +2,13 @@ import { CurrentPageStateIF } from "../../../interfaces/CurrentPageStateIF";
 import { prevPage } from "../../../utils/prevPage";
 import { nextPage } from "../../../utils/nextPage";
 
-interface PaginationProps {
+interface PaginationPropsIF {
   currentPageState: CurrentPageStateIF;
   pageNumbers: number[];
   nPages: number;
 }
 
-const Pagination: React.FC<PaginationProps> = ({
+const Pagination: React.FC<PaginationPropsIF> = ({
   currentPageState,
   pageNumbers,
   nPages,
