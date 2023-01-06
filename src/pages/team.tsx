@@ -1,23 +1,10 @@
 import type { NextPage } from "next";
 import TeamMemberContainer from "../components/TeamMemberContainer";
+import members from "../data/fixtures/members.json";
+import { PersonIF } from "../interfaces/PersonIF";
 
 const Team: NextPage = () => {
-  const team = [
-    {
-      name: "Bruno Evanson",
-      role: "CEO",
-      imageUrl: "/bruno.jpeg",
-      twitterUrl: "#",
-      linkedinUrl: "#",
-    },
-    {
-      name: "Evan C",
-      role: "Software Engineer",
-      imageUrl: "/evan.jpeg",
-      twitterUrl: "#",
-      linkedinUrl: "#",
-    },
-  ];
+  const team: PersonIF[] = members.people;
   return (
     <div className="grow shrink-0">
       <div className="mx-auto max-w-7xl py-4 px-4 sm:px-6 lg:px-8">

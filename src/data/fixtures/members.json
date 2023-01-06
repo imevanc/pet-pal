@@ -1,0 +1,18 @@
+{
+  "people": [
+    {
+      "name": "Bruno Evanson",
+      "role": "CEO",
+      "imageUrl": "/bruno.jpeg",
+      "twitterUrl": "#",
+      "facebookUrl": "#"
+    },
+    {
+      "name": "Evan C",
+      "role": "Software Engineer",
+      "imageUrl": "/evan.jpeg",
+      "twitterUrl": "#",
+      "facebookUrl": "#"
+    }
+  ]
+}
