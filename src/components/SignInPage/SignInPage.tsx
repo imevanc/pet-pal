@@ -1,10 +1,10 @@
 import Link from "next/link";
-import FacebookIcon from "../Layout/components/FacebookIcon";
-import InstagramIcon from "../Layout/components/InstagramIcon";
-import TwitterIcon from "../Layout/components/TwitterIcon";
 import SignInForm from "./components/SignInForm";
 import SocialNetButton from "./components/SocialNetButton";
 import signIn from "../../data/fixtures/signIn.json";
+import FacebookIcon from "../Layout/components/FacebookIcon";
+import InstagramIcon from "../Layout/components/InstagramIcon";
+import TwitterIcon from "../Layout/components/TwitterIcon";
 
 const SignInPage: React.FC = () => {
   return (
