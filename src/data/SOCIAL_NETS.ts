@@ -1,4 +1,4 @@
-import FacebookIcon from "../components/Layout/components/FacebookICon";
+import FacebookIcon from "../components/Layout/components/FacebookIcon";
 import GithubIcon from "../components/Layout/components/GithubIcon";
 import InstagramIcon from "../components/Layout/components/InstagramIcon";
 import TwitterIcon from "../components/Layout/components/TwitterIcon";

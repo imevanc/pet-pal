@@ -1,5 +1,5 @@
 import Link from "next/link";
-import FacebookIcon from "../../components/Layout/components/FacebookICon";
+import FacebookIcon from "../Layout/components/FacebookIcon";
 import InstagramIcon from "../../components/Layout/components/InstagramIcon";
 import TwitterIcon from "../../components/Layout/components/TwitterIcon";
 import SignInForm from "./components/SignInForm";
