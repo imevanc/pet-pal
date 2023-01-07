@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import CustomInput from "../../SignInPage/components/CustomInput";
 
 const NewsletterForm: React.FC = () => {
   const [email, setEmail] = React.useState<string>("");
@@ -18,19 +19,16 @@ const NewsletterForm: React.FC = () => {
 
   return (
     <form className="sm:flex" onSubmit={() => handleSubmit(email)}>
-      <label htmlFor="email-address" className="sr-only">
-        Email address
-      </label>
-      <input
+      <CustomInput
+        label={"Email address"}
+        name={"email"}
         value={email}
         onChange={handleChange}
-        id="email-address"
-        name="email-address"
-        type="email"
-        autoComplete="email"
-        required
-        className="w-full rounded-md border-white px-5 py-3 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-lime-700"
-        placeholder="Enter your email"
+        labelClassName={"sr-only"}
+        inputClassName={
+          "w-full rounded-md border-white px-5 py-3 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-lime-700"
+        }
+        placeholder={"Enter Your Email"}
       />
       <button
         type="submit"
