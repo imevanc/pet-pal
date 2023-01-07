@@ -1,4 +1,5 @@
 import Image from "next/image";
+import descriptionContainer from "../data/fixtures/descriptionContainers.json";
 
 const DescriptionContainer: React.FC = () => {
   return (
@@ -7,16 +8,16 @@ const DescriptionContainer: React.FC = () => {
         <div className="mx-auto max-w-prose">
           <h1>
             <span className="mt-2 block text-left text-3xl font-bold leading-8 tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
-              All about dogs
+              {descriptionContainer.heading.firstSpan}
               <br />
-              <span className="text-lime-600">in one place</span>
+              <span className="text-lime-600">
+                {descriptionContainer.heading.secondSpan}
+              </span>
             </span>
           </h1>
           <p className="mt-8 text-lg text-left leading-8 text-gray-500 sm:text-xl lg:text-2xl">
-            Our mission is to connect the different parts of the dog industry in
-            one place. People and organisations can choose between our account
-            types and have instant communication with other users -{" "}
-            <span>From our dog family to yours.</span>
+            {descriptionContainer.paragraph}{" "}
+            <span>{descriptionContainer.paragraphSpan}</span>
           </p>
         </div>
       </div>

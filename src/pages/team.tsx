@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import TeamMemberContainer from "../components/TeamMemberContainer";
 import members from "../data/fixtures/members.json";
 import { PersonIF } from "../interfaces/PersonIF";
+import teamPage from "../data/fixtures/teamPage.json";
 
 const Team: NextPage = () => {
   const team: PersonIF[] = members.people;
@@ -11,11 +12,9 @@ const Team: NextPage = () => {
         <div className="space-y-12">
           <div className="space-y-5 sm:space-y-4 md:max-w-xl lg:max-w-3xl xl:max-w-none">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              Our Team
+              {teamPage.heading}
             </h2>
-            <p className="text-xl text-gray-500">
-              From our dog family to yours.
-            </p>
+            <p className="text-xl text-gray-500">{teamPage.paragraph}</p>
           </div>
           <ul
             role="list"
