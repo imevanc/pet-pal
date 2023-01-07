@@ -1,6 +1,6 @@
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/outline";
 
-const ContainerContainer: React.FC = () => {
+const ContactContainer: React.FC = () => {
   return (
     <div className="bg-white">
       <div className="mx-auto max-w-5xl sm:px-6 lg:py-6 lg:grid lg:grid-cols-5">
@@ -142,4 +142,4 @@ const ContainerContainer: React.FC = () => {
   );
 };
 
-export default ContainerContainer;
+export default ContactContainer;
