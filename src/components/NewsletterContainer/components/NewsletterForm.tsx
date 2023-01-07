@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import CustomInput from "../../SignInPage/components/CustomInput";
+import CustomFormButton from "../../SignInPage/components/CustomFormButton";
 
 const NewsletterForm: React.FC = () => {
   const [email, setEmail] = React.useState<string>("");
@@ -30,12 +31,12 @@ const NewsletterForm: React.FC = () => {
         }
         placeholder={"Enter Your Email"}
       />
-      <button
-        type="submit"
-        className="mt-3 flex w-full items-center justify-center rounded-md border border-transparent bg-lime-500 px-5 py-3 text-base font-medium text-white shadow hover:bg-lime-400 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-lime-700 sm:mt-0 sm:ml-3 sm:w-auto sm:flex-shrink-0"
-      >
-        Notify me
-      </button>
+      <CustomFormButton
+        buttonLabel={"Notify me"}
+        buttonClassName={
+          "mt-3 flex w-full items-center justify-center rounded-md border border-transparent bg-lime-500 px-5 py-3 text-base font-medium text-white shadow hover:bg-lime-400 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-lime-700 sm:mt-0 sm:ml-3 sm:w-auto sm:flex-shrink-0"
+        }
+      />
     </form>
   );
 };
