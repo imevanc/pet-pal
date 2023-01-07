@@ -7,6 +7,7 @@
 Our mission is to connect the different parts of the dog industry in one place. <br/> People and organisations can choose between our account types and have instant communication with other users. <br/>
 <span>From our dog family to yours.</span>
 
+A Hosted Version of Pet Pal is available here: https://pet-pal.vercel.app/
 </div>
 
 ## Sign up as a _ and enjoy a big network of dog industry services 
