@@ -1,8 +1,5 @@
 {
-  "heading": "Sign in to your account",
-  "spanButton": "Or continue with",
-  "spanSignUp": "Don't have a Pet Pal account?",
-  "link": "Sign up now",
-  "rememberMe": "Remember me",
-  "retrievePasswordLink": "Forgot your password?"
+  "heading": "Sign In to your account",
+  "subHeading": "or Sign Up for Pet Pal",
+  "spanButton": "Or continue with"
 }
