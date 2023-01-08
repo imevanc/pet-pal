@@ -1,4 +1,3 @@
-import Link from "next/link";
 import SignInForm from "./components/SignInForm";
 import SocialNetButton from "./components/SocialNetButton";
 import signIn from "../../data/fixtures/signIn.json";
@@ -18,6 +17,9 @@ const SignInPage: React.FC = () => {
         <h2 className="my-3 text-center text-3xl font-bold tracking-tight text-gray-900">
           {signIn.heading}
         </h2>
+        <h4 className="my-3 text-center text-3xl font-bold tracking-tight text-gray-900">
+          {signIn.subHeading}
+        </h4>
       </div>
 
       <div className="sm:mx-auto sm:w-full sm:max-w-md rounded-lg shadow-xl">
@@ -36,24 +38,21 @@ const SignInPage: React.FC = () => {
               </div>
             </div>
             <div className="mt-6 grid grid-cols-3 gap-3">
-              <SocialNetButton SocialNetIcon={FacebookIcon} signInHref="#" />
-              <SocialNetButton SocialNetIcon={TwitterIcon} signInHref="#" />
-              <SocialNetButton SocialNetIcon={InstagramIcon} signInHref="#" />
-            </div>
-            <div className="mt-6 relative">
-              <div className="absolute inset-0 flex items-center">
-                <div className="w-full border-t border-gray-300" />
-              </div>
-              <div className="relative flex justify-center text-sm">
-                <span className="bg-white px-2 text-gray-500">
-                  {signIn.spanSignUp}
-                </span>
-              </div>
-            </div>
-            <div className="flex justify-center">
-              <p className="italic bg-white px-2 text-2xl font-bold text-lime-500 hover:text-lime-600">
-                <Link href="/account/sign-up">{signIn.link}</Link>
-              </p>
+              <SocialNetButton
+                SocialNetIcon={FacebookIcon}
+                signInHref="#"
+                socialNet={"Facebook"}
+              />
+              <SocialNetButton
+                SocialNetIcon={TwitterIcon}
+                signInHref="#"
+                socialNet={"Twitter"}
+              />
+              <SocialNetButton
+                SocialNetIcon={InstagramIcon}
+                signInHref="#"
+                socialNet={"Instagram"}
+              />
             </div>
           </div>
         </div>
