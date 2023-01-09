@@ -2,7 +2,7 @@ import { Magic } from "magic-sdk";
 import { OAuthExtension } from "@magic-ext/oauth";
 
 // Create client-side Magic instance
-const createMagic = (key) => {
+const createMagic = (key: string) => {
   return (
     typeof window != "undefined" &&
     new Magic(key, {
