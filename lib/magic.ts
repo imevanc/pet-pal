@@ -11,4 +11,6 @@ const createMagic = (key: string) => {
   );
 };
 
-export const magic = createMagic(process.env.NEXT_PUBLIC_MAGIC_PUBLISHABLE_KEY);
+export const magic = createMagic(
+  JSON.stringify(process.env.NEXT_PUBLIC_MAGIC_PUBLISHABLE_KEY)
+);

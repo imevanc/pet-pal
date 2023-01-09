@@ -15,6 +15,7 @@
     "@headlessui/react": "^1.7.5",
     "@heroicons/react": "^2.0.13",
     "@magic-ext/oauth": "^7.1.0",
+    "@magic-ext/webauthn": "^7.1.0",
     "@magic-sdk/types": "^11.1.0",
     "@next-auth/prisma-adapter": "^1.0.5",
     "@prisma/client": "^4.8.1",
