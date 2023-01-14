@@ -3,7 +3,7 @@ import ContactContainer from "../components/ContactContainer";
 import DescriptionContainer from "../components/DescriptionContainer";
 import NewsletterContainer from "../components/NewsletterContainer/NewsletterContainer";
 import ServicesContainer from "../components/ServicesContainer";
-import { useUser } from "../../lib/hooks";
+// import { useUser } from "../../lib/hooks";
 
 const Home: NextPage = () => {
   // const user = useUser();
