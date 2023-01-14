@@ -5,7 +5,7 @@ import { useUser } from "../../../../lib/hooks";
 import { Magic } from "magic-sdk";
 import Router from "next/router";
 
-interface HTMLInputElementIF<T extends HTMLInputElement> extends EventTarget {
+interface HTMLFormElementIF<T extends HTMLFormElement> extends EventTarget {
   target: T;
   currentTarget: T;
   email: T;
@@ -18,9 +18,7 @@ const SignInForm: React.FC = () => {
     if (error instanceof Error) return error.message;
     return String(error);
   };
-  const handleSubmit = async (
-    event: React.ChangeEvent<HTMLInputElementIF<HTMLInputElement>>
-  ): Promise<any> => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (errorMsg) setErrorMsg("");
 
