@@ -9,12 +9,12 @@ import NonVerifiedUserMobileNavBar from "./NonVerifiedUserMobileNavBar";
 import MobileNavBar from "./MobileNavBar";
 import NotificationsButton from "./NotificationsButton";
 import SignInButton from "./SignInButton";
+import { useUser } from "../../../../lib/hooks";
 
 const Header: React.FC = () => {
-  const isUser = (userVerified?: boolean): boolean => {
-    return false;
-  };
-  return isUser() ? (
+  const user = useUser();
+  // console.log({ user });
+  return user ? (
     <div className="w-full sticky top-0 flex items-center justify-center bg-white">
       <Disclosure as="nav" className="w-full max-w-8xl bg-white">
         {({ open }) => (
