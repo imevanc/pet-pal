@@ -2,6 +2,7 @@ import React from "react";
 import { Menu, Transition } from "@headlessui/react";
 import { UserCircleIcon } from "@heroicons/react/24/outline";
 import { classNames } from "../../../utils/classNames";
+import Link from "next/link";
 
 const ProfileDropDown: React.FC = () => {
   return (
@@ -50,7 +51,7 @@ const ProfileDropDown: React.FC = () => {
           </Menu.Item>
           <Menu.Item>
             {({ active }) => (
-              <a
+              <Link
                 href="/api/logout"
                 className={classNames(
                   active ? "bg-gray-100" : "",
@@ -58,7 +59,7 @@ const ProfileDropDown: React.FC = () => {
                 )}
               >
                 Sign out
-              </a>
+              </Link>
             )}
           </Menu.Item>
         </Menu.Items>
