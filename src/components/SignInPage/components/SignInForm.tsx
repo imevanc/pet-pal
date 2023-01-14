@@ -4,20 +4,12 @@ import React from "react";
 import { useUser } from "../../../../lib/hooks";
 import { Magic } from "magic-sdk";
 import Router from "next/router";
-
-interface HTMLFormElementIF<T extends HTMLFormElement> extends EventTarget {
-  target: T;
-  currentTarget: T;
-  email: T;
-}
+import { getErrorMessage } from "../../../utils/getErrorMessage";
 
 const SignInForm: React.FC = () => {
   useUser({ redirectTo: "/", redirectIfFound: true });
   const [errorMsg, setErrorMsg] = React.useState<string>("");
-  const getErrorMessage = (error: unknown): string => {
-    if (error instanceof Error) return error.message;
-    return String(error);
-  };
+
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (errorMsg) setErrorMsg("");
