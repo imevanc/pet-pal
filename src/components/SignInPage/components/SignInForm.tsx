@@ -14,7 +14,10 @@ interface HTMLInputElementIF<T extends HTMLInputElement> extends EventTarget {
 const SignInForm: React.FC = () => {
   useUser({ redirectTo: "/", redirectIfFound: true });
   const [errorMsg, setErrorMsg] = React.useState<string>("");
-
+  const getErrorMessage = (error: unknown): string => {
+    if (error instanceof Error) return error.message;
+    return String(error);
+  };
   const handleSubmit = async (
     event: React.ChangeEvent<HTMLInputElementIF<HTMLInputElement>>
   ): Promise<any> => {
@@ -45,7 +48,7 @@ const SignInForm: React.FC = () => {
       }
     } catch (error) {
       console.error("An unexpected error happened occurred:", error);
-      setErrorMsg(error.message);
+      setErrorMsg(getErrorMessage(error));
     }
   };
   return (
