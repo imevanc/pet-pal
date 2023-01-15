@@ -2,14 +2,7 @@ import React from "react";
 import { Disclosure } from "@headlessui/react";
 import { useRouter } from "next/router";
 import servicesPaths from "../../../data/fixtures/servicesPaths.json";
-import { classNames } from "../../../utils/classNames";
-
-interface PathsState {
-  home: string;
-  team: string;
-  announcements: string;
-  services: string;
-}
+import { PathsState } from "../../../interfaces/PathsState";
 
 const NonVerifiedUserMobileNavBar: React.FC = () => {
   const path: string = useRouter().pathname;
