@@ -2,13 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import servicesPaths from "../../../data/fixtures/servicesPaths.json";
-
-interface PathsState {
-  home: string;
-  team: string;
-  announcements: string;
-  services: string;
-}
+import { PathsState } from "../../../interfaces/PathsState";
 
 const NonVerifiedUserNavBar: React.FC = () => {
   const path: string = useRouter().pathname;
