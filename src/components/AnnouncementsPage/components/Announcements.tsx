@@ -2,11 +2,11 @@ import { classNames } from "../../../utils/classNames";
 import React from "react";
 import { AnnouncementIF } from "../../../interfaces/AnnouncementIF";
 
-interface AnnouncementsPagePropsIF {
+interface AnnouncementsPropsIF {
   currentAnnouncements: AnnouncementIF[];
 }
 
-const Announcements: React.FC<AnnouncementsPagePropsIF> = ({
+const Announcements: React.FC<AnnouncementsPropsIF> = ({
   currentAnnouncements,
 }) => {
   return (
