@@ -3,6 +3,7 @@ import { removeTokenCookie } from "../../../lib/auth-cookies";
 import { getLoginSession } from "../../../lib/auth";
 
 export default async function logout(req, res) {
+  console.log("fefe");
   try {
     const session = await getLoginSession(req);
 
