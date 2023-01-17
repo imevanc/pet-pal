@@ -1,5 +1,5 @@
 import { PersonIF } from "../interfaces/PersonIF";
-import TwitterIcon from "../components/Layout/components/TwitterIcon";
+import GoogleIcon from "../components/Layout/components/GoogleIcon";
 import FacebookIcon from "./Layout/components/FacebookIcon";
 import Link from "next/link";
 
@@ -27,11 +27,11 @@ const TeamMemberContainer: React.FC<PersonPropsIF> = ({ person }) => {
           <ul role="list" className="flex space-x-5">
             <li>
               <Link
-                href={person.twitterUrl}
+                href={person.googleUrl}
                 className="text-gray-400 hover:text-gray-500"
               >
-                <span className="sr-only">Twitter</span>
-                <TwitterIcon className={"w-5 h-5"} ariaHidden={true} />
+                <span className="sr-only">Google</span>
+                <GoogleIcon className={"w-5 h-5"} ariaHidden={true} />
               </Link>
             </li>
             <li>

@@ -1,8 +1,11 @@
 import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
+import { PrismaAdapter } from "@next-auth/prisma-adapter";
+import prisma from "../../../../lib/prismadb";
 
 export default NextAuth({
-  //   secret: process.env.TOKEN_SECRET,
+  adapter: PrismaAdapter(prisma),
+  secret: process.env.NEXTAUTH_SECRET,
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_ID,
@@ -16,4 +19,13 @@ export default NextAuth({
       },
     }),
   ],
+  callbacks: {
+    async redirect({ url, baseUrl }) {
+      return "/";
+    },
+  },
+
+  pages: {
+    signIn: "/account/sign-in",
+  },
 });

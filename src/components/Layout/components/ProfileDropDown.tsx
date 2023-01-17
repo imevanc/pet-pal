@@ -3,8 +3,9 @@ import { Menu, Transition } from "@headlessui/react";
 import { UserCircleIcon } from "@heroicons/react/24/outline";
 import { classNames } from "../../../utils/classNames";
 import Link from "next/link";
+import { signOut } from "next-auth/react";
 
-const ProfileDropDown: React.FC = () => {
+const ProfileDropDown: React.FC<{ session: any }> = ({ session }) => {
   return (
     <Menu as="div" className="relative ml-3">
       <div>
@@ -50,17 +51,33 @@ const ProfileDropDown: React.FC = () => {
             )}
           </Menu.Item>
           <Menu.Item>
-            {({ active }) => (
-              <Link
-                href="/api/logout"
-                className={classNames(
-                  active ? "border-lime-500 bg-lime-50" : "border-transparent",
-                  "block border-l-4 px-4 py-2 text-lg font-medium text-gray-800"
-                )}
-              >
-                Sign out
-              </Link>
-            )}
+            {({ active }) => {
+              return session ? (
+                <div
+                  className={classNames(
+                    active
+                      ? "border-lime-500 bg-lime-50"
+                      : "border-transparent",
+                    "cursor-pointer block border-l-4 px-4 py-2 text-lg font-medium text-gray-800"
+                  )}
+                  onClick={() => signOut()}
+                >
+                  Sign out
+                </div>
+              ) : (
+                <Link
+                  href="/api/logout"
+                  className={classNames(
+                    active
+                      ? "border-lime-500 bg-lime-50"
+                      : "border-transparent",
+                    "block border-l-4 px-4 py-2 text-lg font-medium text-gray-800"
+                  )}
+                >
+                  Sign out
+                </Link>
+              );
+            }}
           </Menu.Item>
         </Menu.Items>
       </Transition>
