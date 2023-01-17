@@ -1,7 +1,7 @@
 import FacebookIcon from "../components/Layout/components/FacebookIcon";
 import GithubIcon from "../components/Layout/components/GithubIcon";
 import InstagramIcon from "../components/Layout/components/InstagramIcon";
-import TwitterIcon from "../components/Layout/components/TwitterIcon";
+import GoogleIcon from "../components/Layout/components/GoogleIcon";
 
 export const SOCIAL_NETS = [
   {
@@ -15,9 +15,9 @@ export const SOCIAL_NETS = [
     icon: InstagramIcon,
   },
   {
-    name: "Twitter",
+    name: "Google",
     href: "#",
-    icon: TwitterIcon,
+    icon: GoogleIcon,
   },
   {
     name: "GitHub",
