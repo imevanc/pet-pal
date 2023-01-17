@@ -10,10 +10,13 @@ import MobileNavBar from "./MobileNavBar";
 import NotificationsButton from "./NotificationsButton";
 import SignInButton from "./SignInButton";
 import { useUser } from "../../../../lib/hooks";
+import { useSession, signIn, signOut } from "next-auth/react";
 
 const Header: React.FC = () => {
+  const { data: session } = useSession();
   const user = useUser();
-  return user ? (
+  const isSignedIn = user || session;
+  return isSignedIn ? (
     <div className="w-full sticky top-0 flex items-center justify-center bg-white">
       <Disclosure as="nav" className="w-full max-w-8xl bg-white">
         {({ open }) => (
