@@ -3,6 +3,7 @@ import Layout from "../components/Layout/Layout";
 import "../styles/tailwind.css";
 import React from "react";
 import { SessionProvider } from "next-auth/react";
+// import UserContext from "../../context/UserContext";
 import type { AppProps } from "next/app";
 
 const App = ({ Component, pageProps }: AppProps) => {
