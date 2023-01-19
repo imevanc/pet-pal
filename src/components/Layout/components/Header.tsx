@@ -10,11 +10,13 @@ import MobileNavBar from "./MobileNavBar";
 import NotificationsButton from "./NotificationsButton";
 import SignInButton from "./SignInButton";
 import { useUser } from "../../../../lib/hooks";
+import { useSession } from "next-auth/react";
 
 const Header: React.FC = () => {
+  const { data: session } = useSession();
   const user = useUser();
-  // console.log({ user });
-  return user ? (
+  const isSignedIn = user || session;
+  return isSignedIn ? (
     <div className="w-full sticky top-0 flex items-center justify-center bg-white">
       <Disclosure as="nav" className="w-full max-w-8xl bg-white">
         {({ open }) => (
@@ -38,7 +40,7 @@ const Header: React.FC = () => {
                 </div>
                 <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                   <NotificationsButton />
-                  <ProfileDropDown />
+                  <ProfileDropDown session={session} />
                 </div>
               </div>
             </div>

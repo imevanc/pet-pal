@@ -3,9 +3,10 @@ import SocialNetButton from "./components/SocialNetButton";
 import signIn from "../../data/fixtures/signIn.json";
 import FacebookIcon from "../Layout/components/FacebookIcon";
 import InstagramIcon from "../Layout/components/InstagramIcon";
-import TwitterIcon from "../Layout/components/TwitterIcon";
+import GoogleIcon from "../Layout/components/GoogleIcon";
+import { SignInIF } from "../../interfaces/SignInIF";
 
-const SignInPage: React.FC = () => {
+const SignInPage: React.FC<SignInIF> = ({ providers }) => {
   return (
     <div className="flex min-h-full flex-col justify-center py-4 grow shrink-0 px-4 sm:px-6 lg:px-8">
       <div className="bg-lime-100 sm:mx-auto sm:w-full sm:max-w-md">
@@ -39,18 +40,18 @@ const SignInPage: React.FC = () => {
             </div>
             <div className="mt-6 grid grid-cols-3 gap-3">
               <SocialNetButton
+                provider={providers.facebook}
                 SocialNetIcon={FacebookIcon}
-                signInHref="#"
                 socialNet={"Facebook"}
               />
               <SocialNetButton
-                SocialNetIcon={TwitterIcon}
-                signInHref="#"
-                socialNet={"Twitter"}
+                provider={providers.google}
+                SocialNetIcon={GoogleIcon}
+                socialNet={"Google"}
               />
               <SocialNetButton
+                provider={providers.instagram}
                 SocialNetIcon={InstagramIcon}
-                signInHref="#"
                 socialNet={"Instagram"}
               />
             </div>

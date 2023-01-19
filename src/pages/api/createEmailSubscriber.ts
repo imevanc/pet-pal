@@ -9,7 +9,6 @@ const handler = async (
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ): Promise<any> => {
-  console.log("HI HI HI HI");
   const { email_address } = req.body;
 
   if (!email_address) {

@@ -3,14 +3,15 @@ import { Menu, Transition } from "@headlessui/react";
 import { UserCircleIcon } from "@heroicons/react/24/outline";
 import { classNames } from "../../../utils/classNames";
 import Link from "next/link";
+import { signOut } from "next-auth/react";
 
-const ProfileDropDown: React.FC = () => {
+const ProfileDropDown: React.FC<{ session: any }> = ({ session }) => {
   return (
     <Menu as="div" className="relative ml-3">
       <div>
         <Menu.Button className="flex rounded-full bg-white text-sm focus:outline-none focus:ring-2 focus:ring-lime-500 focus:ring-offset-2">
           <span className="sr-only">Open user menu</span>
-          <UserCircleIcon className="h-8 w-8 rounded-full text-gray-400" />
+          <UserCircleIcon className="h-9 w-9 rounded-full text-gray-400 hover:text-gray-600" />
         </Menu.Button>
       </div>
       <Transition
@@ -25,42 +26,58 @@ const ProfileDropDown: React.FC = () => {
         <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
           <Menu.Item>
             {({ active }) => (
-              <a
-                href="#"
+              <Link
+                href="/account/profile"
                 className={classNames(
-                  active ? "bg-gray-100" : "",
-                  "block px-4 py-2 text-sm text-gray-700"
+                  active ? "border-lime-500 bg-lime-50" : "border-transparent",
+                  "block border-l-4 px-4 py-2 text-lg font-medium text-gray-800"
                 )}
               >
                 Your Profile
-              </a>
-            )}
-          </Menu.Item>
-          <Menu.Item>
-            {({ active }) => (
-              <a
-                href="#"
-                className={classNames(
-                  active ? "bg-gray-100" : "",
-                  "block px-4 py-2 text-sm text-gray-700"
-                )}
-              >
-                Settings
-              </a>
+              </Link>
             )}
           </Menu.Item>
           <Menu.Item>
             {({ active }) => (
               <Link
-                href="/api/logout"
+                href="/account/settings"
                 className={classNames(
-                  active ? "bg-gray-100" : "",
-                  "block px-4 py-2 text-sm text-gray-700"
+                  active ? "border-lime-500 bg-lime-50" : "border-transparent",
+                  "block border-l-4 px-4 py-2 text-lg font-medium text-gray-800"
                 )}
               >
-                Sign out
+                Settings
               </Link>
             )}
+          </Menu.Item>
+          <Menu.Item>
+            {({ active }) => {
+              return session ? (
+                <div
+                  className={classNames(
+                    active
+                      ? "border-lime-500 bg-lime-50"
+                      : "border-transparent",
+                    "cursor-pointer block border-l-4 px-4 py-2 text-lg font-medium text-gray-800"
+                  )}
+                  onClick={() => signOut()}
+                >
+                  Sign out
+                </div>
+              ) : (
+                <Link
+                  href="/api/logout"
+                  className={classNames(
+                    active
+                      ? "border-lime-500 bg-lime-50"
+                      : "border-transparent",
+                    "block border-l-4 px-4 py-2 text-lg font-medium text-gray-800"
+                  )}
+                >
+                  Sign out
+                </Link>
+              );
+            }}
           </Menu.Item>
         </Menu.Items>
       </Transition>

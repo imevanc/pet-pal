@@ -4,14 +4,14 @@
       "name": "Bruno Evanson",
       "role": "CEO",
       "imageUrl": "/bruno.jpeg",
-      "twitterUrl": "#",
+      "googleUrl": "#",
       "facebookUrl": "#"
     },
     {
       "name": "Evan C",
       "role": "Software Engineer",
       "imageUrl": "/evan.jpeg",
-      "twitterUrl": "#",
+      "googleUrl": "#",
       "facebookUrl": "#"
     }
   ]
