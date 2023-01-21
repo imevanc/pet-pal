@@ -29,7 +29,9 @@ const Home: NextPage = () => {
     };
     const fetchUserByEmail = async (email: string): Promise<any> => {
       try {
-        const fetchedUser = await axios.post(`/api/getUserByEmail`, email);
+        const fetchedUser = await axios.post(`/api/getUserByEmail`, {
+          email,
+        });
         if (fetchedUser.data) {
           setUser(fetchedUser.data);
         }
@@ -44,7 +46,6 @@ const Home: NextPage = () => {
       fetchUserByEmail(user.email);
     }
   }, [session, setUser, user]);
-  console.log(user);
   return (
     <div className="flex flex-col justify-between bg-white px-6">
       <DescriptionContainer />
