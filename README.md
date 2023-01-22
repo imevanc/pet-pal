@@ -19,3 +19,5 @@ A Hosted Version of Pet Pal is available here: https://pet-pal.vercel.app/
   <li>Dog Trainer: Expand your dog owners network.</li>
   <li>Dog Sitter: Boarding, home visits & similar services with a click of button.</li>
 </ol>
+
+### The Database is hosted on Superbase
