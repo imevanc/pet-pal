@@ -5,6 +5,7 @@ import FacebookIcon from "../Layout/components/FacebookIcon";
 import InstagramIcon from "../Layout/components/InstagramIcon";
 import GoogleIcon from "../Layout/components/GoogleIcon";
 import { SignInIF } from "../../interfaces/SignInIF";
+import React from "react";
 
 const SignInPage: React.FC<SignInIF> = ({ providers }) => {
   return (
