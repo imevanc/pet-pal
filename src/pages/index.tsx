@@ -11,8 +11,8 @@ import { useUser } from "../../lib/hooks";
 
 const Home: NextPage = () => {
   const { data: session } = useSession();
-  const { setUser } = useUserData();
-  const user = useUser();
+  const { user, setUser } = useUserData();
+  const magicUser = useUser();
 
   React.useEffect((): void => {
     const fetchProviderUserByEmail = async (email: string): Promise<any> => {
@@ -42,10 +42,10 @@ const Home: NextPage = () => {
     if (session) {
       fetchProviderUserByEmail(JSON.stringify(session.user?.email));
     }
-    if (user?.email) {
-      fetchUserByEmail(user.email);
+    if (magicUser?.email) {
+      fetchUserByEmail(magicUser.email);
     }
-  }, [session, setUser, user]);
+  }, [session, setUser, magicUser]);
   return (
     <div className="flex flex-col justify-between bg-white px-6">
       <DescriptionContainer />
