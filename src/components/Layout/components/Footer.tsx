@@ -21,8 +21,13 @@ const Footer: React.FC = () => {
         <div className="mt-8 md:order-1 md:mt-0">
           <p className="text-center text-base text-gray-400">
             &copy; {getYear()} Pet Pal. All rights reserved.
-            <Link href="/legal/policy">Privacy Policy</Link>
           </p>
+          <div className="text-center text-base text-gray-400 flex justify-center items-center">
+            <Link href="#">Terms of Service</Link>
+            <Link className="pl-4" href="/legal/policy">
+              Privacy Policy
+            </Link>
+          </div>
         </div>
       </div>
     </div>
