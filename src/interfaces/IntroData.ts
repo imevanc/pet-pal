@@ -1,10 +1,10 @@
 export interface IntroData {
-  heading: string;
-  paragraph: {
-    item1: string;
-    item2: string;
-    item3: string;
-    item4: string;
-    item5: string;
+  Heading: string;
+  Paragraph: {
+    Item1: string;
+    Item2: string;
+    Item3: string;
+    Item4: string;
+    Item5: string;
   };
 }

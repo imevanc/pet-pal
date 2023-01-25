@@ -1,4 +1,4 @@
-const Main: React.FC = () => {
+const MainPolicy: React.FC = () => {
   return (
     <div className="prose prose-lg prose-lime mx-auto mt-10 text-gray-500">
       <h3>Information We Collect</h3>
@@ -597,4 +597,4 @@ const Main: React.FC = () => {
   );
 };
 
-export default Main;
+export default MainPolicy;

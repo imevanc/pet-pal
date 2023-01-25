@@ -1,6 +1,6 @@
 import DotMeshSvg from "./components/DotMeshSvg";
 import Intro from "./components/Intro";
-import Main from "./components/Main";
+import MainPolicy from "./components/MainPolicy";
 import privacyPolicy from "../../data/fixtures/privacyPolicy.json";
 
 interface ContentSectionPropsIF {
@@ -15,7 +15,7 @@ const ContentSection: React.FC<ContentSectionPropsIF> = ({ content }) => {
       <DotMeshSvg />
       <div className="relative px-6 lg:px-8">
         <Intro introData={contentWithData?.Intro} />
-        <Main />
+        <MainPolicy />
       </div>
     </div>
   );
