@@ -9,9 +9,9 @@ interface ContentSectionPropsIF {
 
 const ContentSection: React.FC<ContentSectionPropsIF> = ({ content }) => {
   const contentWithData = content === "policy" ? privacyPolicy : null;
-  console.log(contentWithData);
+
   return (
-    <div className="relative overflow-hidden bg-white py-16">
+    <div className="relative overflow-hidden bg-white pt-6 pb-16">
       <DotMeshSvg />
       <div className="relative px-6 lg:px-8">
         <Intro introData={contentWithData?.Intro} />
