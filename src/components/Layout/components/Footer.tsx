@@ -1,5 +1,6 @@
 import { getYear } from "../../../utils/getYear";
 import { SOCIAL_NETS } from "../../../data/SOCIAL_NETS";
+import Link from "next/link";
 
 const Footer: React.FC = () => {
   return (
@@ -20,6 +21,7 @@ const Footer: React.FC = () => {
         <div className="mt-8 md:order-1 md:mt-0">
           <p className="text-center text-base text-gray-400">
             &copy; {getYear()} Pet Pal. All rights reserved.
+            <Link href="/legal/policy">Privacy Policy</Link>
           </p>
         </div>
       </div>
