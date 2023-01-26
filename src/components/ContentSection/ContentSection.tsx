@@ -1,19 +1,16 @@
 import DotMeshSvg from "./components/DotMeshSvg";
 import Intro from "./components/Intro";
-import MainPolicy from "./components/MainPolicy";
-import privacyPolicy from "../../data/fixtures/privacyPolicy.json";
-import termsOfService from "../../data/fixtures/termsOfService.json";
+import { CONTENT_WITH_DATA } from "../../data/CONTENT_WITH_DATA";
 import { IntroSectionIF } from "../../interfaces/IntroSectionIF";
-import MainTerms from "./components/MainTerms";
+import { MAIN_CONTENT } from "../../data/MAIN_CONTENT";
 
 interface ContentSectionPropsIF {
   content: string;
 }
 
 const ContentSection: React.FC<ContentSectionPropsIF> = ({ content }) => {
-  const contentWithData: IntroSectionIF =
-    content === "policy" ? privacyPolicy : termsOfService;
-  const MainContent: React.FC = content === "policy" ? MainPolicy : MainTerms;
+  const contentWithData: IntroSectionIF = CONTENT_WITH_DATA[content];
+  const MainContent: React.FC = MAIN_CONTENT[content];
   return (
     <div className="relative overflow-hidden bg-white pt-6 pb-16">
       <DotMeshSvg />
