@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
             &copy; {getYear()} Pet Pal. All rights reserved.
           </p>
           <div className="text-center text-base text-gray-400 flex justify-center items-center">
-            <Link href="#">Terms of Service</Link>
+            <Link href="/legal/terms">Terms of Service</Link>
             <Link className="pl-4" href="/legal/policy">
               Privacy Policy
             </Link>
