@@ -10,14 +10,16 @@ Our mission is to connect the different parts of the dog industry in one place. 
 A Hosted Version of Pet Pal is available here: https://pet-pal.vercel.app/
 </div>
 
-## Sign up as a _ and enjoy a big network of dog industry services 
+## Sign up and enjoy our big dog industry network
+
+You can sign up with your email address or use your social media accounts. We're currently accepting google, facebook and instagram accounts for signing up for Pet Pal.
 
 <ol>
-  <li>Dog Owner: Prospective and current dog owners interact with others and contact professionals about dog services.</li>
-  <li>Dog Breeder: Dog breeders advertise their litres and receive communications from other users.</li>
-  <li>Food Supplier: Revolutionising services where dog owners and breeders find their local raw and no-raw food stockist.</li>
-  <li>Dog Trainer: Expand your dog owners network.</li>
-  <li>Dog Sitter: Boarding, home visits & similar services with a click of button.</li>
+  <li>Dog Owner: Socialise, Learn & Become A Responsible Dog Owner. Prospective and current dog owners interact with others and contact professionals about dog services.</li>
+  <li>Dog Breeder: Upscale Your Game. Dog breeders advertise their litters and receive communications from other users.</li>
+  <li>Food Supplier: Food Marketing & Social Media Promotions Are Difficult. Revolutionising services where dog owners and breeders find their local raw and no-raw food stockist.</li>
+  <li>Dog Trainer: Expand Your Dog Owners Network. Expand your dog owners network.</li>
+  <li>Dog Sitter: Sick Of Having Delays & Cancellations From Dog Owners? Boarding, home visits & similar services with a click of button.</li>
 </ol>
 
 ### The Database is hosted on Superbase
