@@ -1,4 +1,5 @@
 import React from "react";
+import CookieBanner from "./components/CookieBanner";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 
@@ -12,6 +13,7 @@ const Layout: React.FC<ChildrenPropsIF> = ({ children }) => {
       <Header />
       {children}
       <Footer />
+      <CookieBanner />
     </div>
   );
 };
