@@ -23,3 +23,7 @@ You can sign up with your email address or use your social media accounts. We're
 </ol>
 
 ### The Database is hosted on Superbase
+
+### License
+
+Pet-Pal is licensed under MIT license. Please see [Pet-Pal license](https://github.com/imevanc/pet-pal/blob/main/LICENSE.md), for more information.
