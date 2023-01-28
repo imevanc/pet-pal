@@ -51,7 +51,7 @@ const CookieBanner: React.FC = () => {
                             cookie
                           </Link>{" "}
                           and{" "}
-                          <Link href="/legal/privacy" className="text-lime-600">
+                          <Link href="/legal/policy" className="text-lime-600">
                             privacy
                           </Link>{" "}
                           policies.
