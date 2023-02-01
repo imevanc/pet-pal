@@ -4,8 +4,11 @@ import { UserCircleIcon } from "@heroicons/react/24/outline";
 import { classNames } from "../../../utils/classNames";
 import Link from "next/link";
 import { signOut } from "next-auth/react";
+import Cookies from "js-cookie";
+import { useUser } from "../../../../lib/hooks";
 
-const ProfileDropDown: React.FC<{ session: any }> = ({ session }) => {
+const ProfileDropDown: React.FC = () => {
+  const userFromSocial = useUser();
   return (
     <Menu as="div" className="relative ml-3">
       <div>
@@ -33,7 +36,7 @@ const ProfileDropDown: React.FC<{ session: any }> = ({ session }) => {
                   "block border-l-4 px-4 py-2 text-lg font-medium text-gray-800"
                 )}
               >
-                Your Profile
+                Profile
               </Link>
             )}
           </Menu.Item>
@@ -52,7 +55,7 @@ const ProfileDropDown: React.FC<{ session: any }> = ({ session }) => {
           </Menu.Item>
           <Menu.Item>
             {({ active }) => {
-              return session ? (
+              return userFromSocial ? (
                 <div
                   className={classNames(
                     active
@@ -60,7 +63,10 @@ const ProfileDropDown: React.FC<{ session: any }> = ({ session }) => {
                       : "border-transparent",
                     "cursor-pointer block border-l-4 px-4 py-2 text-lg font-medium text-gray-800"
                   )}
-                  onClick={() => signOut()}
+                  onClick={() => {
+                    Cookies.remove("user");
+                    signOut();
+                  }}
                 >
                   Sign out
                 </div>

@@ -5,11 +5,9 @@ import { useUser } from "../../../../lib/hooks";
 import { Magic } from "magic-sdk";
 import Router from "next/router";
 import { getErrorMessage } from "../../../utils/getErrorMessage";
-import { useUserFoundRedirectTo } from "../../../hooks/useUserFoundRedirectTo";
 
 const SignInForm: React.FC = () => {
   useUser({ redirectTo: "/", redirectIfFound: true });
-  useUserFoundRedirectTo("/");
   const [errorMsg, setErrorMsg] = React.useState<string>("");
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
