@@ -33,7 +33,7 @@ const ProfileDropDown: React.FC<{ session: any }> = ({ session }) => {
                   "block border-l-4 px-4 py-2 text-lg font-medium text-gray-800"
                 )}
               >
-                Your Profile
+                Profile
               </Link>
             )}
           </Menu.Item>
