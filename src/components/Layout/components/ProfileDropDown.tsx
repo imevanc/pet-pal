@@ -63,7 +63,9 @@ const ProfileDropDown: React.FC = () => {
                   )}
                   onClick={() => {
                     Cookies.remove("user");
-                    signOut();
+                    signOut({
+                      callbackUrl: `${window.location.origin}/`,
+                    });
                   }}
                 >
                   Sign out

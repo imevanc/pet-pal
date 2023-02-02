@@ -3,12 +3,13 @@ import SignInPage from "../../components/SignInPage/SignInPage";
 import { getProviders } from "next-auth/react";
 import { SignInIF } from "../../interfaces/SignInIF";
 import Cookies from "js-cookie";
-import Router from "next/router";
+import { useRouter } from "next/router";
 
 const SignIn: NextPage<SignInIF> = ({ providers }) => {
   const userCookie = Cookies.get("user");
+  const router = useRouter();
   if (userCookie) {
-    Router.push("/dashboard");
+    router.replace("/account/dashboard");
   }
   return <SignInPage providers={providers} />;
 };
