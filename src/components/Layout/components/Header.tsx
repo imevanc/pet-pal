@@ -12,9 +12,13 @@ import SignInButton from "./SignInButton";
 import Cookies from "js-cookie";
 
 const Header: React.FC = () => {
-  const userCookie = Cookies.get("user");
+  const [session, setSession] = React.useState<string | undefined>();
 
-  return userCookie ? (
+  React.useEffect((): void => {
+    setSession(Cookies.get("user"));
+  }, []);
+
+  return session ? (
     <div className="w-full sticky top-0 flex items-center justify-center bg-white">
       <Disclosure as="nav" className="w-full max-w-8xl bg-white">
         {({ open }) => (

@@ -5,10 +5,8 @@ import { classNames } from "../../../utils/classNames";
 import Link from "next/link";
 import { signOut } from "next-auth/react";
 import Cookies from "js-cookie";
-import { useUser } from "../../../../lib/hooks";
 
 const ProfileDropDown: React.FC = () => {
-  const userFromSocial = useUser();
   return (
     <Menu as="div" className="relative ml-3">
       <div>
@@ -55,7 +53,7 @@ const ProfileDropDown: React.FC = () => {
           </Menu.Item>
           <Menu.Item>
             {({ active }) => {
-              return userFromSocial ? (
+              return (
                 <div
                   className={classNames(
                     active
@@ -70,18 +68,6 @@ const ProfileDropDown: React.FC = () => {
                 >
                   Sign out
                 </div>
-              ) : (
-                <Link
-                  href="/api/logout"
-                  className={classNames(
-                    active
-                      ? "border-lime-500 bg-lime-50"
-                      : "border-transparent",
-                    "block border-l-4 px-4 py-2 text-lg font-medium text-gray-800"
-                  )}
-                >
-                  Sign out
-                </Link>
               );
             }}
           </Menu.Item>
