@@ -10,6 +10,7 @@ import MobileNavBar from "./MobileNavBar";
 import NotificationsButton from "./NotificationsButton";
 import SignInButton from "./SignInButton";
 import Cookies from "js-cookie";
+import { useSession } from "next-auth/react";
 
 const Header: React.FC = () => {
   const [session, setSession] = React.useState<string | undefined>();
@@ -18,7 +19,9 @@ const Header: React.FC = () => {
     setSession(Cookies.get("user"));
   }, []);
 
-  return session ? (
+  const { data: user } = useSession();
+
+  return user ? (
     <div className="w-full sticky top-0 flex items-center justify-center bg-white">
       <Disclosure as="nav" className="w-full max-w-8xl bg-white">
         {({ open }) => (

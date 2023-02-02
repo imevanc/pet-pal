@@ -4,7 +4,7 @@ const NavBar: React.FC = () => {
   return (
     <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
       <Link
-        href="/dashboard"
+        href="/account/dashboard"
         className="inline-flex items-center border-b-2 border-lime-500 px-1 pt-1 text-lg font-medium text-gray-900"
       >
         Dashboard
