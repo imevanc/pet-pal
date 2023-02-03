@@ -6,7 +6,7 @@ const MobileNavBar: React.FC = () => {
       <div className="space-y-1 pt-2 pb-4">
         <Disclosure.Button
           as="a"
-          href="#"
+          href="/account/dashboard"
           className="block border-l-4 border-lime-500 bg-lime-50 py-2 pl-3 pr-4 text-base font-medium text-lime-700"
         >
           Dashboard
