@@ -1,8 +1,12 @@
 import type { NextPage } from "next";
-import ProfilePage from "../../components/ProfilePage/ProfilePage";
+import AuthorizationWrapper from "../../components/AuthorizationWrapper";
 
 const Profile: NextPage = () => {
-  return <ProfilePage />;
+  return (
+    <AuthorizationWrapper>
+      <div>My Profile</div>
+    </AuthorizationWrapper>
+  );
 };
 
 export default Profile;

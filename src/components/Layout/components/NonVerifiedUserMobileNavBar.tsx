@@ -2,11 +2,11 @@ import React from "react";
 import { Disclosure } from "@headlessui/react";
 import { useRouter } from "next/router";
 import servicesPaths from "../../../data/fixtures/servicesPaths.json";
-import { PathsState } from "../../../interfaces/PathsState";
+import { PathsStateIF } from "../../../interfaces/PathsStateIF";
 
 const NonVerifiedUserMobileNavBar: React.FC = () => {
   const path: string = useRouter().pathname;
-  const [paths, setPaths] = React.useState<PathsState>({
+  const [paths, setPaths] = React.useState<PathsStateIF>({
     home: "",
     team: "",
     announcements: "",

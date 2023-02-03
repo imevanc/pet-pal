@@ -1,12 +1,13 @@
 import type { NextPage } from "next";
 import AuthorizationWrapper from "../../components/AuthorizationWrapper";
+import DashboardPage from "../../components/DashboardPage/DashboardPage";
 
-const Dashboard: NextPage = () => {
+const Dashboards: NextPage = () => {
   return (
     <AuthorizationWrapper>
-      <div>Dashboard</div>
+      <DashboardPage />
     </AuthorizationWrapper>
   );
 };
 
-export default Dashboard;
+export default Dashboards;
