@@ -6,6 +6,7 @@ import InstagramIcon from "../Layout/components/InstagramIcon";
 import GoogleIcon from "../Layout/components/GoogleIcon";
 import { SignInIF } from "../../interfaces/SignInIF";
 import React from "react";
+import Link from "next/link";
 
 const SignInPage: React.FC<SignInIF> = ({ providers }) => {
   return (
@@ -27,7 +28,6 @@ const SignInPage: React.FC<SignInIF> = ({ providers }) => {
       <div className="sm:mx-auto sm:w-full sm:max-w-md rounded-lg shadow-xl">
         <div className="bg-white py-6 px-4 sm:px-10">
           <SignInForm />
-
           <div className="mt-6">
             <div className="relative">
               <div className="absolute inset-0 flex items-center">
@@ -55,6 +55,27 @@ const SignInPage: React.FC<SignInIF> = ({ providers }) => {
                 SocialNetIcon={InstagramIcon}
                 socialNet={"Instagram"}
               />
+            </div>
+          </div>
+          <div className="relative mt-4 py-4">
+            <div className="absolute inset-0 flex items-center">
+              <span className="bg-white text-xs px-2 text-gray-500">
+                {signIn.firstPartOfAgreement}{" "}
+                <Link
+                  className="bg-white text-lime-500 underline"
+                  href="/legal/terms"
+                >
+                  Terms of Service
+                </Link>{" "}
+                &{" "}
+                <Link
+                  className="bg-white text-lime-500 underline"
+                  href="/legal/policy"
+                >
+                  {" "}
+                  Privacy Policy
+                </Link>
+              </span>
             </div>
           </div>
         </div>
