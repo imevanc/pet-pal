@@ -1,5 +1,7 @@
 {
   "heading": "Sign In to your account",
   "subHeading": "or Sign Up for Pet Pal",
-  "spanButton": "Or continue with"
+  "spanButton": "Or continue with",
+  "firstPartOfAgreement": "By signing up, I agree to Pet Pal's",
+  "secondPartOfAgreement": ", confirm that I am 18 years of age or older, and consent to receiving email communication."
 }
