@@ -4,7 +4,6 @@ import { UserCircleIcon } from "@heroicons/react/24/outline";
 import { classNames } from "../../../utils/classNames";
 import Link from "next/link";
 import { signOut } from "next-auth/react";
-import Cookies from "js-cookie";
 
 const ProfileDropDown: React.FC = () => {
   return (
@@ -62,7 +61,6 @@ const ProfileDropDown: React.FC = () => {
                     "cursor-pointer block border-l-4 px-4 py-2 text-lg font-medium text-gray-800"
                   )}
                   onClick={() => {
-                    Cookies.remove("user");
                     signOut({
                       callbackUrl: `${window.location.origin}/`,
                     });

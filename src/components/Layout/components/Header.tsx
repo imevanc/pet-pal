@@ -9,19 +9,9 @@ import NonVerifiedUserMobileNavBar from "./NonVerifiedUserMobileNavBar";
 import MobileNavBar from "./MobileNavBar";
 import NotificationsButton from "./NotificationsButton";
 import SignInButton from "./SignInButton";
-import Cookies from "js-cookie";
 import { useSession } from "next-auth/react";
-import { useUserContext } from "../../../hooks/useUserContext";
 
 const Header: React.FC = () => {
-  const user1 = useUserContext();
-  console.log({ user1 });
-  const [session, setSession] = React.useState<string | undefined>();
-
-  React.useEffect((): void => {
-    setSession(Cookies.get("user"));
-  }, []);
-
   const { data: user } = useSession();
 
   return user ? (
