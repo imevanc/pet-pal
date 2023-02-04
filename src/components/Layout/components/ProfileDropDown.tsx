@@ -11,7 +11,7 @@ const ProfileDropDown: React.FC = () => {
       <div>
         <Menu.Button className="flex rounded-full bg-white text-sm focus:outline-none focus:ring-2 focus:ring-lime-500 focus:ring-offset-2">
           <span className="sr-only">Open user menu</span>
-          <UserCircleIcon className="h-9 w-9 rounded-full text-gray-400 hover:text-gray-600" />
+          <UserCircleIcon className="h-9 w-9 rounded-full text-gray-500 hover:text-gray-700" />
         </Menu.Button>
       </div>
       <Transition
