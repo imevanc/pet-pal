@@ -4,15 +4,6 @@ import { getRole } from "../../../utils/getRole";
 
 const ProfileCard: React.FC = () => {
   const user = useUserContext();
-  console.log(user?.image);
-  //   const user = {
-  //     name: "Whitney Francis",
-  //     email: "whitney@example.com",
-  //     status: "Bruno loves walks",
-  //     imageUrl:
-  //       "https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=256&h=256&q=80",
-  //   };
-  //   console.log(userData);
   return (
     <div className="mx-auto max-w-3xl sm:px-6 md:flex md:items-center md:justify-between md:space-x-5 lg:max-w-7xl lg:px-8">
       <div className="flex items-center space-x-5">
