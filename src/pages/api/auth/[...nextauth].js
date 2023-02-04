@@ -20,7 +20,6 @@ export default NextAuth({
       },
     }),
   ],
-
   pages: {
     signIn: "/account/sign-in",
   },
