@@ -7,10 +7,12 @@ import {
 } from "@heroicons/react/20/solid";
 import { classNames } from "../../utils/classNames";
 import MyPetsCard from "./components/MyPetsCard";
+import ProfileCard from "./components/ProfileCard";
 
 const user = {
   name: "Whitney Francis",
   email: "whitney@example.com",
+  status: "Bruno loves walks",
   imageUrl:
     "https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=256&h=256&q=80",
 };
@@ -90,50 +92,7 @@ const Dashboard: React.FC = () => {
   return (
     <div className="min-h-full">
       <div className="py-4 smg:py-10 mx-4">
-        <div className="mx-auto max-w-3xl sm:px-6 md:flex md:items-center md:justify-between md:space-x-5 lg:max-w-7xl lg:px-8">
-          <div className="flex items-center space-x-5">
-            <div className="flex-shrink-0">
-              <div className="relative">
-                <img
-                  className="h-16 w-16 rounded-full"
-                  src="https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
-                  alt=""
-                />
-                <span
-                  className="absolute inset-0 rounded-full shadow-inner"
-                  aria-hidden="true"
-                />
-              </div>
-            </div>
-            <div>
-              <h1 className="text-2xl font-bold text-gray-900">
-                Ricardo Cooper
-              </h1>
-              <p className="text-sm font-medium text-gray-500">
-                Applied for{" "}
-                <a href="#" className="text-gray-900">
-                  Front End Developer
-                </a>{" "}
-                on <time dateTime="2020-08-25">August 25, 2020</time>
-              </p>
-            </div>
-          </div>
-          <div className="justify-stretch mt-6 flex flex-col-reverse space-y-4 space-y-reverse sm:flex-row-reverse sm:justify-end sm:space-y-0 sm:space-x-3 sm:space-x-reverse md:mt-0 md:flex-row md:space-x-3">
-            <button
-              type="button"
-              className="inline-flex items-center justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-lime-500 focus:ring-offset-2 focus:ring-offset-gray-100"
-            >
-              Disqualify
-            </button>
-            <button
-              type="button"
-              className="inline-flex items-center justify-center rounded-md border border-transparent bg-lime-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-lime-700 focus:outline-none focus:ring-2 focus:ring-lime-500 focus:ring-offset-2 focus:ring-offset-gray-100"
-            >
-              Advance to offer
-            </button>
-          </div>
-        </div>
-
+        <ProfileCard />
         <div className="mx-auto mt-8 grid max-w-3xl grid-cols-1 gap-6 sm:px-6 lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-3">
           <MyPetsCard />
           <div className="space-y-6 lg:col-span-1 lg:col-start-3">
