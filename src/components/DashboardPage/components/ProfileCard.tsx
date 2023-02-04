@@ -31,8 +31,7 @@ const ProfileCard: React.FC = () => {
         <div>
           <h1 className="text-2xl font-bold text-gray-900">{user?.name}</h1>
           <p className="text-baseline font-medium text-gray-500">
-            {/* {user?.status} */}
-            Bruno loves walks
+            {user?.status}
           </p>
         </div>
       </div>
