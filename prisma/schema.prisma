@@ -46,6 +46,7 @@ model User {
   city           String?
   postcode       String?
   country        String?
+  role           UserRole  @default(DOG_OWNER)
   accounts       Account[]
   sessions       Session[]
 }
@@ -56,4 +57,12 @@ model VerificationToken {
   expires    DateTime
 
   @@unique([identifier, token])
+}
+
+enum UserRole {
+  DOG_OWNER
+  DOG_TRAINER
+  DOG_SITTER
+  FOOD_SUPPLIER
+  DOG_BREEDER
 }

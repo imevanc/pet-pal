@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useUserContext } from "../../../hooks/useUserContext";
+import { getRole } from "../../../utils/getRole";
 
 const ProfileCard: React.FC = () => {
   const user = useUserContext();
@@ -31,7 +32,8 @@ const ProfileCard: React.FC = () => {
         <div>
           <h1 className="text-2xl font-bold text-gray-900">{user?.name}</h1>
           <p className="text-baseline font-medium text-gray-500">
-            {user?.status}
+            <span>{user?.status} - </span>
+            <span>{getRole(user?.role)}</span>
           </p>
         </div>
       </div>
