@@ -11,6 +11,7 @@ const SignIn: NextPage<SignInIF> = ({ providers }) => {
   if (user) {
     router.replace(`/account/${user?.role}/${user?.id}/dashboard`);
   }
+
   return <SignInPage providers={providers} />;
 };
 
