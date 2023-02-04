@@ -1,17 +1,12 @@
 import React from "react";
-import { Menu, Popover, Transition } from "@headlessui/react";
 import {
-  ArrowLongLeftIcon,
   CheckIcon,
   HandThumbUpIcon,
-  HomeIcon,
-  MagnifyingGlassIcon,
-  PaperClipIcon,
   QuestionMarkCircleIcon,
   UserIcon,
 } from "@heroicons/react/20/solid";
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { classNames } from "../../utils/classNames";
+import MyPetsCard from "./components/MyPetsCard";
 
 const user = {
   name: "Whitney Francis",
@@ -19,26 +14,7 @@ const user = {
   imageUrl:
     "https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=256&h=256&q=80",
 };
-const navigation = [
-  { name: "Dashboard", href: "#" },
-  { name: "Jobs", href: "#" },
-  { name: "Applicants", href: "#" },
-  { name: "Company", href: "#" },
-];
-const breadcrumbs = [
-  { name: "Jobs", href: "#", current: false },
-  { name: "Front End Developer", href: "#", current: false },
-  { name: "Applicants", href: "#", current: true },
-];
-const userNavigation = [
-  { name: "Your Profile", href: "#" },
-  { name: "Settings", href: "#" },
-  { name: "Sign out", href: "#" },
-];
-const attachments = [
-  { name: "resume_front_end_developer.pdf", href: "#" },
-  { name: "coverletter_front_end_developer.pdf", href: "#" },
-];
+
 const eventTypes = {
   applied: { icon: UserIcon, bgColorClass: "bg-gray-400" },
   advanced: { icon: HandThumbUpIcon, bgColorClass: "bg-lime-500" },
@@ -110,7 +86,7 @@ const comments = [
   },
 ];
 
-const ProfilePage: React.FC = () => {
+const Dashboard: React.FC = () => {
   return (
     <div className="min-h-full">
       <div className="py-4 smg:py-10 mx-4">
@@ -159,115 +135,7 @@ const ProfilePage: React.FC = () => {
         </div>
 
         <div className="mx-auto mt-8 grid max-w-3xl grid-cols-1 gap-6 sm:px-6 lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-3">
-          <div className="space-y-6 lg:col-span-2 lg:col-start-1">
-            {/* Description list*/}
-            <section aria-labelledby="applicant-information-title">
-              <div className="bg-white shadow-2xl sm:rounded-lg">
-                <div className="px-4 py-5 sm:px-6">
-                  <h2
-                    id="applicant-information-title"
-                    className="text-lg font-medium leading-6 text-gray-900"
-                  >
-                    Applicant Information
-                  </h2>
-                  <p className="mt-1 max-w-2xl text-sm text-gray-500">
-                    Personal details and application.
-                  </p>
-                </div>
-                <div className="border-t border-gray-200 px-4 py-5 sm:px-6">
-                  <dl className="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2">
-                    <div className="sm:col-span-1">
-                      <dt className="text-sm font-medium text-gray-500">
-                        Application for
-                      </dt>
-                      <dd className="mt-1 text-sm text-gray-900">
-                        Backend Developer
-                      </dd>
-                    </div>
-                    <div className="sm:col-span-1">
-                      <dt className="text-sm font-medium text-gray-500">
-                        Email address
-                      </dt>
-                      <dd className="mt-1 text-sm text-gray-900">
-                        ricardocooper@example.com
-                      </dd>
-                    </div>
-                    <div className="sm:col-span-1">
-                      <dt className="text-sm font-medium text-gray-500">
-                        Salary expectation
-                      </dt>
-                      <dd className="mt-1 text-sm text-gray-900">$120,000</dd>
-                    </div>
-                    <div className="sm:col-span-1">
-                      <dt className="text-sm font-medium text-gray-500">
-                        Phone
-                      </dt>
-                      <dd className="mt-1 text-sm text-gray-900">
-                        +1 555-555-5555
-                      </dd>
-                    </div>
-                    <div className="sm:col-span-2">
-                      <dt className="text-sm font-medium text-gray-500">
-                        About
-                      </dt>
-                      <dd className="mt-1 text-sm text-gray-900">
-                        Fugiat ipsum ipsum deserunt culpa aute sint do nostrud
-                        anim incididunt cillum culpa consequat. Excepteur qui
-                        ipsum aliquip consequat sint. Sit id mollit nulla mollit
-                        nostrud in ea officia proident. Irure nostrud pariatur
-                        mollit ad adipisicing reprehenderit deserunt qui eu.
-                      </dd>
-                    </div>
-                    <div className="sm:col-span-2">
-                      <dt className="text-sm font-medium text-gray-500">
-                        Attachments
-                      </dt>
-                      <dd className="mt-1 text-sm text-gray-900">
-                        <ul
-                          role="list"
-                          className="divide-y divide-gray-200 rounded-md border border-gray-200"
-                        >
-                          {attachments.map((attachment) => (
-                            <li
-                              key={attachment.name}
-                              className="flex items-center justify-between py-3 pl-3 pr-4 text-sm"
-                            >
-                              <div className="flex w-0 flex-1 items-center">
-                                <PaperClipIcon
-                                  className="h-5 w-5 flex-shrink-0 text-gray-400"
-                                  aria-hidden="true"
-                                />
-                                <span className="ml-2 w-0 flex-1 truncate">
-                                  {attachment.name}
-                                </span>
-                              </div>
-                              <div className="ml-4 flex-shrink-0">
-                                <a
-                                  href={attachment.href}
-                                  className="font-medium text-lime-600 hover:text-lime-500"
-                                >
-                                  Download
-                                </a>
-                              </div>
-                            </li>
-                          ))}
-                        </ul>
-                      </dd>
-                    </div>
-                  </dl>
-                </div>
-                <div>
-                  <a
-                    href="#"
-                    className="block bg-gray-50 px-4 py-4 text-center text-sm font-medium text-gray-500 hover:text-gray-700 sm:rounded-b-lg"
-                  >
-                    Read full application
-                  </a>
-                </div>
-              </div>
-            </section>
-          </div>
-
+          <MyPetsCard />
           <div className="space-y-6 lg:col-span-1 lg:col-start-3">
             <section aria-labelledby="timeline-title">
               <div className="bg-white px-4 py-5 shadow-2xl sm:rounded-lg sm:px-6">
@@ -523,4 +391,4 @@ const ProfilePage: React.FC = () => {
   );
 };
 
-export default ProfilePage;
+export default Dashboard;

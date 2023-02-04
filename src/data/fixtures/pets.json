@@ -1,0 +1,31 @@
+{
+  "pets": [
+    {
+      "id": "1",
+      "name": "Bruno",
+      "imageUrl": "/bruno-petcard.jpeg",
+      "breed": "Labrador Retriever",
+      "sex": "Male",
+      "age": "1 year 9 months old",
+      "weight": "10 kg"
+    },
+    {
+      "id": "2",
+      "name": "Bruno",
+      "imageUrl": "/bruno-petcard.jpeg",
+      "breed": "Labrador Retriever",
+      "sex": "Male",
+      "age": "1 year 9 months old",
+      "weight": "10 kg"
+    },
+    {
+      "id": "3",
+      "name": "Bruno",
+      "imageUrl": "/bruno-petcard.jpeg",
+      "breed": "Labrador Retriever",
+      "sex": "Male",
+      "age": "1 year 9 months old",
+      "weight": "10 kg"
+    }
+  ]
+}
