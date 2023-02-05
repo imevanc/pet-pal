@@ -3,8 +3,9 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider          = "postgresql"
+  url               = env("DATABASE_URL")
+  shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
 }
 
 model Account {
@@ -39,14 +40,14 @@ model User {
   email          String?   @unique
   emailVerified  DateTime?
   image          String?
-  status         String?
-  age            String?
   addressLineOne String?
   addressLineTwo String?
+  age            String?
   city           String?
-  postcode       String?
   country        String?
+  postcode       String?
   role           UserRole  @default(DOG_OWNER)
+  status         String?
   accounts       Account[]
   sessions       Session[]
 }
