@@ -2,16 +2,18 @@ import { Disclosure } from "@headlessui/react";
 import React from "react";
 import { useRouter } from "next/router";
 import { PathsStateIF } from "../../../interfaces/PathsStateIF";
+import { useUserContext } from "../../../hooks/useUserContext";
 
 const MobileNavBar: React.FC = () => {
-  const path: string = useRouter().pathname;
+  const user = useUserContext();
+  const path: string = useRouter().asPath;
   const [paths, setPaths] = React.useState<PathsStateIF>({
     dashboard: "",
     appointments: "",
   });
 
   React.useEffect((): void => {
-    if (path === "/account/dashboard") {
+    if (path === `/account/${user?.role}/${user?.id}/dashboard`) {
       setPaths({
         dashboard: "selected",
         appointments: "nonSelected",
@@ -27,7 +29,7 @@ const MobileNavBar: React.FC = () => {
         appointments: "nonSelected",
       });
     }
-  }, [path]);
+  }, [path, user]);
 
   const selectedClass: string =
     "block border-l-4 border-lime-500 bg-lime-50 py-2 pl-3 pr-4 text-base font-medium text-lime-700";
@@ -48,14 +50,12 @@ const MobileNavBar: React.FC = () => {
         </Disclosure.Button>
         <Disclosure.Button
           as="a"
-          href="/account/announcements"
+          href="/account/appointments"
           className={
-            paths.announcements === "selected"
-              ? selectedClass
-              : nonSelectedClass
+            paths.appointments === "selected" ? selectedClass : nonSelectedClass
           }
         >
-          Announcements
+          Appointments
         </Disclosure.Button>
       </div>
     </Disclosure.Panel>
