@@ -2,16 +2,18 @@ import Link from "next/link";
 import React from "react";
 import { useRouter } from "next/router";
 import { PathsStateIF } from "../../../interfaces/PathsStateIF";
+import { useUserContext } from "../../../hooks/useUserContext";
 
 const NavBar: React.FC = () => {
-  const path: string = useRouter().pathname;
+  const user = useUserContext();
+  const path: string = useRouter().asPath;
   const [paths, setPaths] = React.useState<PathsStateIF>({
     dashboard: "",
     appointments: "",
   });
 
   React.useEffect((): void => {
-    if (path === "/account/dashboard") {
+    if (path === `/account/${user?.role}/${user?.id}/dashboard`) {
       setPaths({
         dashboard: "selected",
         appointments: "nonSelected",
@@ -27,7 +29,7 @@ const NavBar: React.FC = () => {
         appointments: "nonSelected",
       });
     }
-  }, [path]);
+  }, [path, user]);
 
   const selectedClass: string =
     "inline-flex items-center border-b-2 border-lime-500 px-1 pt-1 text-lg font-medium text-gray-900";
@@ -40,17 +42,17 @@ const NavBar: React.FC = () => {
         className={
           paths.dashboard === "selected" ? selectedClass : nonSelectedClass
         }
-        href="/account/dashboard"
+        href={`/account/${user?.role}/${user?.id}/dashboard`}
       >
         Dashboard
       </Link>
       <Link
         className={
-          paths.announcements === "selected" ? selectedClass : nonSelectedClass
+          paths.appointments === "selected" ? selectedClass : nonSelectedClass
         }
-        href="/account/announcements"
+        href="/account/appointments"
       >
-        Announcements
+        Appointments
       </Link>
     </div>
   );
