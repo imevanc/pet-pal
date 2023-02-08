@@ -1,8 +1,4 @@
-import {
-  PencilSquareIcon,
-  EyeIcon,
-  XCircleIcon,
-} from "@heroicons/react/20/solid";
+import { PencilSquareIcon, EyeIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
 import { PetIF } from "../../../interfaces/PetIF";
 
@@ -53,15 +49,6 @@ const PetCard: React.FC<PetCardPropsIF> = ({ pet }) => {
             >
               <EyeIcon className="h-5 w-5" aria-hidden="true" />
               <span className="ml-3">View</span>
-            </Link>
-          </div>
-          <div className="-ml-px flex w-0 flex-1">
-            <Link
-              href="#"
-              className="relative inline-flex w-0 flex-1 items-center justify-center rounded-br-lg border border-transparent py-4 text-baseline font-medium text-gray-500 hover:text-gray-700"
-            >
-              <XCircleIcon className="h-5 w-5" aria-hidden="true" />
-              <span className="ml-3">Remove</span>
             </Link>
           </div>
         </div>
