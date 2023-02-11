@@ -1,46 +1,22 @@
-import {
-  CreditCardIcon,
-  SquaresPlusIcon,
-  UserCircleIcon,
-} from "@heroicons/react/24/outline";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import { classNames } from "../../utils/classNames";
 import React from "react";
 import { PathsStateIF } from "../../interfaces/PathsStateIF";
 import { stringToBool } from "../../utils/stringToBool";
+import { ProfileNavigationIF } from "../../interfaces/ProfileNavigationIF";
+import { getProfileNavigation } from "../../utils/getProfileNavigation";
 
 const EditProfilePage: React.FC = () => {
   const router = useRouter();
-  console.log(router);
+
   const [paths, setPaths] = React.useState<PathsStateIF>({
     account: "",
     planAndBilling: "",
     settings: "",
   });
-  const navigation = [
-    {
-      name: "Account",
-      queryName: "account",
-      href: "#",
-      icon: UserCircleIcon,
-      current: `${paths.account === "selected"}`,
-    },
-    {
-      name: "Plan & Billing",
-      queryName: "planAndBilling",
-      href: "#",
-      icon: CreditCardIcon,
-      current: `${paths.planAndBilling === "selected"}`,
-    },
-    {
-      name: "Settings",
-      queryName: "settings",
-      href: "#",
-      icon: SquaresPlusIcon,
-      current: `${paths.settings === "selected"}`,
-    },
-  ];
+
+  const navigation: ProfileNavigationIF = getProfileNavigation(paths);
+
   const handleClick = (queryName: string): void => {
     router.replace({
       query: { ...router.query, editProfileItem: queryName },
@@ -74,7 +50,7 @@ const EditProfilePage: React.FC = () => {
         <div className="lg:grid lg:grid-cols-12 lg:gap-x-5">
           <aside className="py-6 px-2 sm:px-6 lg:col-span-3 lg:py-0 lg:px-0">
             <nav className="space-y-1">
-              {navigation.map((item) => {
+              {navigation.navigation.map((item) => {
                 return (
                   <button
                     key={item.name}
