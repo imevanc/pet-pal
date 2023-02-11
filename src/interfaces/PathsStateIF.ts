@@ -5,4 +5,7 @@ export interface PathsStateIF {
   services?: string;
   dashboard?: string;
   appointments?: string;
+  account?: string;
+  planAndBilling?: string;
+  settings?: string;
 }
