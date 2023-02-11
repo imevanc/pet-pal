@@ -1,3 +1,3 @@
-export const stringToBool = (str: string): boolean => {
+export const stringToBool = (str?: string): boolean => {
   return str === "true";
 };
