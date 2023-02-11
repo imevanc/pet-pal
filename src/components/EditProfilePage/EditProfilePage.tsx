@@ -10,7 +10,7 @@ const EditProfilePage: React.FC = () => {
   const router = useRouter();
 
   const [paths, setPaths] = React.useState<PathsStateIF>({
-    account: "",
+    profile: "",
     planAndBilling: "",
     settings: "",
   });
@@ -23,21 +23,21 @@ const EditProfilePage: React.FC = () => {
     });
   };
   React.useEffect((): void => {
-    if (router.query.editProfileItem === "account") {
+    if (router.query.editProfileItem === "profile") {
       setPaths({
-        account: "selected",
+        profile: "selected",
         planAndBilling: "nonSelected",
         settings: "nonSelected",
       });
     } else if (router.query.editProfileItem === "planAndBilling") {
       setPaths({
-        account: "nonSelected",
+        profile: "nonSelected",
         planAndBilling: "selected",
         settings: "nonSelected",
       });
     } else {
       setPaths({
-        account: "nonSelected",
+        profile: "nonSelected",
         planAndBilling: "nonSelected",
         settings: "selected",
       });
