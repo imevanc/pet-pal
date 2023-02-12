@@ -2,33 +2,33 @@ import { useRouter } from "next/router";
 import React from "react";
 import { PathsStateIF } from "../../interfaces/PathsStateIF";
 import NavigationTabs from "./components/NavigationTabs";
-import Profile from "./components/Profile";
+import PersonalInformation from "./components/PersonalInformation";
 
 const EditProfilePage: React.FC = () => {
   const router = useRouter();
 
   const [paths, setPaths] = React.useState<PathsStateIF>({
-    profile: "",
+    personalInformation: "",
     planAndBilling: "",
     settings: "",
   });
 
   React.useEffect((): void => {
-    if (router.query.editProfileItem === "profile") {
+    if (router.query.editProfileItem === "personalInformation") {
       setPaths({
-        profile: "selected",
+        personalInformation: "selected",
         planAndBilling: "nonSelected",
         settings: "nonSelected",
       });
     } else if (router.query.editProfileItem === "planAndBilling") {
       setPaths({
-        profile: "nonSelected",
+        personalInformation: "nonSelected",
         planAndBilling: "selected",
         settings: "nonSelected",
       });
     } else {
       setPaths({
-        profile: "nonSelected",
+        personalInformation: "nonSelected",
         planAndBilling: "nonSelected",
         settings: "selected",
       });
@@ -41,7 +41,7 @@ const EditProfilePage: React.FC = () => {
         <div className="lg:grid lg:grid-cols-12 lg:gap-x-5">
           <NavigationTabs paths={paths} />
           <div className="space-y-6 sm:px-6 lg:col-span-9 lg:px-0 m-2">
-            <Profile />
+            <PersonalInformation />
             <form action="#" method="POST">
               <div className="shadow sm:overflow-hidden sm:rounded-md">
                 <div className="space-y-6 bg-white py-6 px-4 sm:p-6">

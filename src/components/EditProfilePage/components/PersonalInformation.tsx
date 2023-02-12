@@ -1,4 +1,4 @@
-const Profile: React.FC = () => {
+const PersonalInformation: React.FC = () => {
   return (
     <form action="#" method="POST">
       <div className="shadow sm:overflow-hidden sm:rounded-md">
@@ -191,4 +191,4 @@ const Profile: React.FC = () => {
   );
 };
 
-export default Profile;
+export default PersonalInformation;
