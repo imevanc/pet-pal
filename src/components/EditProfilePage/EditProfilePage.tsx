@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import React from "react";
 import { PathsStateIF } from "../../interfaces/PathsStateIF";
+import ConditionalTilesWrapper from "./components/ConditionalTilesWrapper";
 import NavigationTabs from "./components/NavigationTabs";
 import PersonalInformation from "./components/PersonalInformation";
 import PlanAndBilling from "./components/PlanAndBilling";
@@ -43,9 +44,11 @@ const EditProfilePage: React.FC = () => {
         <div className="lg:grid lg:grid-cols-12 lg:gap-x-5">
           <NavigationTabs paths={paths} />
           <div className="space-y-6 sm:px-6 lg:col-span-9 lg:px-0 m-2">
-            <PersonalInformation />
-            <PlanAndBilling />
-            <Settings />
+            <ConditionalTilesWrapper>
+              <PersonalInformation />
+              <PlanAndBilling />
+              <Settings />
+            </ConditionalTilesWrapper>
           </div>
         </div>
       </div>
