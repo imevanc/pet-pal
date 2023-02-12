@@ -8,7 +8,7 @@ export const getProfileNavigation = (
 ): ProfileNavigationIF => {
   const navigationWithCurrent = { ...navigation };
   navigationWithCurrent.navigation[0]["current"] = `${
-    paths.profile === "selected"
+    paths.personalInformation === "selected"
   }`;
   navigationWithCurrent.navigation[1]["current"] = `${
     paths.planAndBilling === "selected"

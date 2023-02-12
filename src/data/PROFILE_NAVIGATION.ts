@@ -8,8 +8,8 @@ import { ProfileNavigationIF } from "../interfaces/ProfileNavigationIF";
 export const PROFILE_NAVIGATION: ProfileNavigationIF = {
   navigation: [
     {
-      name: "Profile",
-      queryName: "profile",
+      name: "Personal Information",
+      queryName: "personalInformation",
       icon: UserCircleIcon,
     },
     {
