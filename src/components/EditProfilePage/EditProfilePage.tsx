@@ -3,6 +3,7 @@ import React from "react";
 import { PathsStateIF } from "../../interfaces/PathsStateIF";
 import NavigationTabs from "./components/NavigationTabs";
 import PersonalInformation from "./components/PersonalInformation";
+import PlanAndBilling from "./components/PlanAndBilling";
 
 const EditProfilePage: React.FC = () => {
   const router = useRouter();
@@ -42,6 +43,7 @@ const EditProfilePage: React.FC = () => {
           <NavigationTabs paths={paths} />
           <div className="space-y-6 sm:px-6 lg:col-span-9 lg:px-0 m-2">
             <PersonalInformation />
+            <PlanAndBilling />
             <form action="#" method="POST">
               <div className="shadow sm:overflow-hidden sm:rounded-md">
                 <div className="space-y-6 bg-white py-6 px-4 sm:p-6">
