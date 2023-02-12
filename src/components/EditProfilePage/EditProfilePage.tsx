@@ -105,6 +105,7 @@ const EditProfilePage: React.FC = () => {
                         type="text"
                         name="first-name"
                         id="first-name"
+                        placeholder="First name"
                         autoComplete="given-name"
                         className="mt-1 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:border-lime-500 focus:outline-none focus:ring-lime-500 sm:text-sm"
                       />
@@ -121,6 +122,7 @@ const EditProfilePage: React.FC = () => {
                         type="text"
                         name="last-name"
                         id="last-name"
+                        placeholder="Last name"
                         autoComplete="family-name"
                         className="mt-1 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:border-lime-500 focus:outline-none focus:ring-lime-500 sm:text-sm"
                       />
@@ -128,15 +130,17 @@ const EditProfilePage: React.FC = () => {
 
                     <div className="col-span-6 sm:col-span-4">
                       <label
-                        htmlFor="email-address"
+                        htmlFor="email"
                         className="block text-sm font-medium text-gray-700"
                       >
                         Email address
                       </label>
                       <input
-                        type="text"
-                        name="email-address"
-                        id="email-address"
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="Email address"
+                        required
                         autoComplete="email"
                         className="mt-1 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:border-lime-500 focus:outline-none focus:ring-lime-500 sm:text-sm"
                       />
@@ -152,12 +156,13 @@ const EditProfilePage: React.FC = () => {
                       <select
                         id="country"
                         name="country"
-                        autoComplete="country-name"
+                        autoComplete="country"
                         className="mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-lime-500 focus:outline-none focus:ring-lime-500 sm:text-sm"
                       >
-                        <option>United States</option>
+                        <option>United Kingdom</option>
                         <option>Canada</option>
                         <option>Mexico</option>
+                        <option>United States</option>
                       </select>
                     </div>
 
@@ -173,6 +178,7 @@ const EditProfilePage: React.FC = () => {
                         name="street-address"
                         id="street-address"
                         autoComplete="street-address"
+                        placeholder="Street address"
                         className="mt-1 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:border-lime-500 focus:outline-none focus:ring-lime-500 sm:text-sm"
                       />
                     </div>
@@ -188,23 +194,8 @@ const EditProfilePage: React.FC = () => {
                         type="text"
                         name="city"
                         id="city"
-                        autoComplete="address-level2"
-                        className="mt-1 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:border-lime-500 focus:outline-none focus:ring-lime-500 sm:text-sm"
-                      />
-                    </div>
-
-                    <div className="col-span-6 sm:col-span-3 lg:col-span-2">
-                      <label
-                        htmlFor="region"
-                        className="block text-sm font-medium text-gray-700"
-                      >
-                        State / Province
-                      </label>
-                      <input
-                        type="text"
-                        name="region"
-                        id="region"
-                        autoComplete="address-level1"
+                        autoComplete="city"
+                        placeholder="City"
                         className="mt-1 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:border-lime-500 focus:outline-none focus:ring-lime-500 sm:text-sm"
                       />
                     </div>
@@ -214,13 +205,14 @@ const EditProfilePage: React.FC = () => {
                         htmlFor="postal-code"
                         className="block text-sm font-medium text-gray-700"
                       >
-                        ZIP / Postal code
+                        Post code / ZIP
                       </label>
                       <input
                         type="text"
-                        name="postal-code"
-                        id="postal-code"
-                        autoComplete="postal-code"
+                        name="post-code"
+                        id="post-code"
+                        autoComplete="post-code"
+                        placeholder="Post code"
                         className="mt-1 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:border-lime-500 focus:outline-none focus:ring-lime-500 sm:text-sm"
                       />
                     </div>
@@ -241,7 +233,7 @@ const EditProfilePage: React.FC = () => {
               <div className="shadow sm:overflow-hidden sm:rounded-md">
                 <div className="space-y-6 bg-white py-6 px-4 sm:p-6">
                   <div>
-                    <h3 className="text-lg font-medium leading-6 text-gray-900">
+                    <h3 className="text-xl font-medium leading-6 text-gray-900">
                       Notifications
                     </h3>
                     <p className="mt-1 text-sm text-gray-500">
