@@ -1,7 +1,37 @@
 {
   "name": "pet-pal",
   "version": "0.1.0",
-  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/imevanc/pet-pal.git"
+  },
+  "keywords": [
+    "github",
+    "react",
+    "javascript",
+    "typescript",
+    "html5",
+    "nextjs",
+    "next-auth",
+    "tailwindcss",
+    "dogs",
+    "community"
+  ],
+  "author": {
+    "name": "Evan Charalampidis",
+    "url": "https://github.com/imevanc"
+  },
+  "contributors": [
+    {
+      "name": "Evan Charalampidis",
+      "url": "https://github.com/imevanc"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/imevanc/pet-pal/issues"
+  },
+  "homepage": "https://www.pet-pal.vercel.app/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
