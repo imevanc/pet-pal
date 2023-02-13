@@ -39,16 +39,18 @@ const EditProfilePage: React.FC = () => {
   }, [router, setPaths]);
 
   return (
-    <div className="sm:my-4 mx-4">
-      <div className="sm:mx-auto max-w-3xl lg:max-w-7xl bg-gray-100">
-        <div className="lg:grid lg:grid-cols-12 lg:gap-x-5">
-          <NavigationTabs paths={paths} />
-          <div className="space-y-6 sm:px-6 lg:col-span-9 lg:px-0 m-2">
-            <ConditionalTilesWrapper>
-              <PersonalInformation />
-              <PlanAndBilling />
-              <Settings />
-            </ConditionalTilesWrapper>
+    <div className="grow shrink-0">
+      <div className="sm:my-4 mx-4">
+        <div className="sm:mx-auto max-w-3xl lg:max-w-7xl bg-gray-100">
+          <div className="lg:grid lg:grid-cols-12 lg:gap-x-5">
+            <NavigationTabs paths={paths} />
+            <div className="space-y-6 sm:px-6 lg:col-span-9 lg:px-0 m-2">
+              <ConditionalTilesWrapper>
+                <PersonalInformation />
+                <PlanAndBilling />
+                <Settings />
+              </ConditionalTilesWrapper>
+            </div>
           </div>
         </div>
       </div>
