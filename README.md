@@ -22,7 +22,6 @@ You can sign up with your email address or use your social media accounts. We're
   <li>Dog Sitter: Sick Of Having Delays & Cancellations From Dog Owners? Boarding, home visits & similar services with a click of button.</li>
 </ol>
 
-### The Database is hosted on Superbase
 
 ### License
 
