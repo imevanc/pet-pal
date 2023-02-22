@@ -35,19 +35,19 @@ model Session {
 }
 
 model User {
-  id             String    @id @default(cuid())
+  id             String      @id @default(cuid())
   name           String?
-  email          String?   @unique
+  email          String?     @unique
   emailVerified  DateTime?
   image          String?
   addressLineOne String?
   addressLineTwo String?
   age            String?
   city           String?
-  country        String?
   postcode       String?
-  role           UserRole  @default(DOG_OWNER)
+  role           UserRole    @default(DOG_OWNER)
   status         String?
+  country        CountryRole @default(United_Kingdom)
   accounts       Account[]
   sessions       Session[]
 }
@@ -66,4 +66,11 @@ enum UserRole {
   DOG_SITTER
   FOOD_SUPPLIER
   DOG_BREEDER
+}
+
+enum CountryRole {
+  United_Kingdom
+  United_States
+  Canada
+  Mexico
 }
