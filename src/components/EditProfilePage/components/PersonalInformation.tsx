@@ -1,9 +1,9 @@
 import React from "react";
 import axios from "axios";
-import type { User } from "@prisma/client";
+import type { User, UserRole, CountryRole } from "@prisma/client";
 
 const PersonalInformation: React.FC = () => {
-  const [email, setEmail] = React.useState<string>("");
+  const [user, setUser] = React.useState<User | null>(null);
   const handleSubmit = async (email: string): Promise<any> => {
     try {
       const payload = { email_address: email };
