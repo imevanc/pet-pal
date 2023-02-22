@@ -1,23 +1,39 @@
 import React from "react";
 import axios from "axios";
 import type { User, UserRole, CountryRole } from "@prisma/client";
+import { useForm } from "react-hook-form";
+import { useUserContext } from "../../../hooks/useUserContext";
+
+interface PersonalInformationUserIF extends User {
+  firstName: string;
+  lastName: string;
+  streetAddress: string;
+}
 
 const PersonalInformation: React.FC = () => {
-  const [user, setUser] = React.useState<User | null>(null);
-  const handleSubmit = async (email: string): Promise<any> => {
+  const { register, handleSubmit } = useForm<PersonalInformationUserIF>();
+  const user = useUserContext();
+
+  const onSubmit = async (data: PersonalInformationUserIF): Promise<any> => {
+    console.log("data");
+    const payloadUser = {
+      id: JSON.stringify(user?.id),
+      name: `${data.firstName} + ${data.lastName}`,
+      email: data.email,
+      addressLineOne: data.streetAddress,
+      city: data.city,
+      postcode: data.postcode,
+      status: data.status,
+      country: data.country,
+    };
     try {
-      const payload = { email_address: email };
-      const data = await axios.post("/api/createEmailSubscriber", payload);
+      const data = await axios.post("/api/updateUserById", payloadUser);
     } catch (error) {
       console.log(error);
     }
   };
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
-    event.preventDefault();
-    setEmail(event?.target?.value);
-  };
   return (
-    <form action="#" method="POST">
+    <form onSubmit={handleSubmit(onSubmit)}>
       <div className="shadow sm:overflow-hidden sm:rounded-md bg-white py-6 px-4 sm:p-6">
         <h3 className="text-xl font-medium leading-6 text-gray-900">
           Personal Information
@@ -32,11 +48,11 @@ const PersonalInformation: React.FC = () => {
             </label>
             <input
               type="text"
-              name="status"
               id="status"
               autoComplete="status"
               placeholder="Status"
               className="mt-1 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:border-lime-500 focus:outline-none focus:ring-lime-500 sm:text-sm"
+              {...register("status")}
             />
           </div>
 
@@ -61,9 +77,9 @@ const PersonalInformation: React.FC = () => {
                 <span>Upload</span>
                 <input
                   id="file-upload"
-                  name="file-upload"
                   type="file"
                   className="sr-only"
+                  {...register("image")}
                 />
               </label>
             </div>
@@ -77,11 +93,11 @@ const PersonalInformation: React.FC = () => {
             </label>
             <input
               type="text"
-              name="first-name"
               id="first-name"
               placeholder="First name"
               autoComplete="given-name"
               className="mt-1 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:border-lime-500 focus:outline-none focus:ring-lime-500 sm:text-sm"
+              {...register("firstName")}
             />
           </div>
 
@@ -94,11 +110,11 @@ const PersonalInformation: React.FC = () => {
             </label>
             <input
               type="text"
-              name="last-name"
               id="last-name"
               placeholder="Last name"
               autoComplete="family-name"
               className="mt-1 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:border-lime-500 focus:outline-none focus:ring-lime-500 sm:text-sm"
+              {...register("lastName")}
             />
           </div>
 
@@ -111,12 +127,11 @@ const PersonalInformation: React.FC = () => {
             </label>
             <input
               type="email"
-              name="email"
               id="email"
               placeholder="Email address"
-              required
               autoComplete="email"
               className="mt-1 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:border-lime-500 focus:outline-none focus:ring-lime-500 sm:text-sm"
+              {...register("email")}
             />
           </div>
 
@@ -129,9 +144,9 @@ const PersonalInformation: React.FC = () => {
             </label>
             <select
               id="country"
-              name="country"
               autoComplete="country"
               className="mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-lime-500 focus:outline-none focus:ring-lime-500 sm:text-sm"
+              {...register("country")}
             >
               <option>United Kingdom</option>
               <option>Canada</option>
@@ -149,11 +164,11 @@ const PersonalInformation: React.FC = () => {
             </label>
             <input
               type="text"
-              name="street-address"
               id="street-address"
               autoComplete="street-address"
               placeholder="Street address"
               className="mt-1 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:border-lime-500 focus:outline-none focus:ring-lime-500 sm:text-sm"
+              {...register("streetAddress")}
             />
           </div>
 
@@ -166,11 +181,11 @@ const PersonalInformation: React.FC = () => {
             </label>
             <input
               type="text"
-              name="city"
               id="city"
               autoComplete="city"
               placeholder="City"
               className="mt-1 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:border-lime-500 focus:outline-none focus:ring-lime-500 sm:text-sm"
+              {...register("city")}
             />
           </div>
 
@@ -183,11 +198,11 @@ const PersonalInformation: React.FC = () => {
             </label>
             <input
               type="text"
-              name="post-code"
               id="post-code"
               autoComplete="post-code"
               placeholder="Post code"
               className="mt-1 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:border-lime-500 focus:outline-none focus:ring-lime-500 sm:text-sm"
+              {...register("postcode")}
             />
           </div>
         </div>
