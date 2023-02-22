@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import type { User, UserRole, CountryRole } from "@prisma/client";
+import type { User } from "@prisma/client";
 import { useForm } from "react-hook-form";
 import { useUserContext } from "../../../hooks/useUserContext";
 
