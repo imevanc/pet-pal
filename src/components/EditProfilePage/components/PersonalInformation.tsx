@@ -1,4 +1,21 @@
+import React from "react";
+import axios from "axios";
+import type { User } from "@prisma/client";
+
 const PersonalInformation: React.FC = () => {
+  const [email, setEmail] = React.useState<string>("");
+  const handleSubmit = async (email: string): Promise<any> => {
+    try {
+      const payload = { email_address: email };
+      const data = await axios.post("/api/createEmailSubscriber", payload);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
+    event.preventDefault();
+    setEmail(event?.target?.value);
+  };
   return (
     <form action="#" method="POST">
       <div className="shadow sm:overflow-hidden sm:rounded-md bg-white py-6 px-4 sm:p-6">
