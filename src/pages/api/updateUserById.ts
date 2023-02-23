@@ -5,16 +5,16 @@ const handler = async (
   req: NextApiRequest,
   res: NextApiResponse<{ message: string }>
 ): Promise<any> => {
-  const { id, country, status } = req.body;
-  console.log("sadfasdf", id, country);
+  const { id, country, status, name, email, addressLineOne, city, postcode } =
+    req.body;
+  console.log("sdfsdafsa", id, country);
   try {
     const user = await prisma.user.update({
       where: {
         id: id,
       },
       data: {
-        country,
-        status,
+        addressLineOne,
       },
     });
     console.log({ user });

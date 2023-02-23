@@ -15,7 +15,6 @@ const PersonalInformation: React.FC = () => {
   const user = useUserContext();
 
   const onSubmit = async (data: PersonalInformationUserIF): Promise<any> => {
-    console.log("data");
     const payloadUser = {
       id: user?.id,
       name: `${data.firstName} + ${data.lastName}`,
