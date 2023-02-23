@@ -3,9 +3,9 @@ import prisma from "../../../lib/prismadb";
 
 const handler = async (
   req: NextApiRequest,
-  res: NextApiResponse<string>
+  res: NextApiResponse<{ message: string }>
 ): Promise<any> => {
-  const { id, country } = req.body;
+  const { id, country, status } = req.body;
   console.log("sadfasdf", id, country);
   try {
     const user = await prisma.user.update({
@@ -13,13 +13,14 @@ const handler = async (
         id: id,
       },
       data: {
-        country: country,
-      }
+        country,
+        status,
+      },
     });
     console.log({ user });
-    res.status(200).json("updated");
+    res.status(200).json({ message: "Updated successfully" });
   } catch (error) {
-    res.status(400).json("null");
+    res.status(400).json({ message: `${error}` });
   }
 };
 
