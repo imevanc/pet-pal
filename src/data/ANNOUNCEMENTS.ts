@@ -1,5 +1,5 @@
-import { PencilSquareIcon, CheckBadgeIcon } from "@heroicons/react/20/solid";
 import { AnnouncementIF } from "../interfaces/AnnouncementIF";
+import { PencilFill, Check } from "react-bootstrap-icons";
 
 export const ANNOUNCEMENTS: AnnouncementIF[] = [
   {
@@ -7,7 +7,7 @@ export const ANNOUNCEMENTS: AnnouncementIF[] = [
     target: "bla bla bla",
     date: "Sep 20",
     datetime: "2020-09-20",
-    icon: PencilSquareIcon,
+    icon: PencilFill,
     iconBackground: "bg-gray-100",
   },
   {
@@ -15,7 +15,7 @@ export const ANNOUNCEMENTS: AnnouncementIF[] = [
     target: "bla bla bla",
     date: "Sep 20",
     datetime: "2020-09-20",
-    icon: CheckBadgeIcon,
+    icon: Check,
     iconBackground: "bg-gray-100",
   },
   {
@@ -23,7 +23,7 @@ export const ANNOUNCEMENTS: AnnouncementIF[] = [
     target: "bla bla bla",
     date: "Sep 20",
     datetime: "2020-09-20",
-    icon: PencilSquareIcon,
+    icon: PencilFill,
     iconBackground: "bg-gray-100",
   },
   {
@@ -31,7 +31,7 @@ export const ANNOUNCEMENTS: AnnouncementIF[] = [
     target: "bla bla bla",
     date: "Sep 20",
     datetime: "2020-09-20",
-    icon: CheckBadgeIcon,
+    icon: Check,
     iconBackground: "bg-gray-100",
   },
   {
@@ -39,7 +39,7 @@ export const ANNOUNCEMENTS: AnnouncementIF[] = [
     target: "bla bla bla",
     date: "Sep 20",
     datetime: "2020-09-20",
-    icon: PencilSquareIcon,
+    icon: PencilFill,
     iconBackground: "bg-gray-100",
   },
   {
@@ -47,7 +47,7 @@ export const ANNOUNCEMENTS: AnnouncementIF[] = [
     target: "bla bla bla",
     date: "Sep 20",
     datetime: "2020-09-20",
-    icon: CheckBadgeIcon,
+    icon: Check,
     iconBackground: "bg-gray-100",
   },
   {
@@ -55,7 +55,7 @@ export const ANNOUNCEMENTS: AnnouncementIF[] = [
     target: "bla bla bla",
     date: "Sep 20",
     datetime: "2020-09-20",
-    icon: PencilSquareIcon,
+    icon: PencilFill,
     iconBackground: "bg-gray-100",
   },
   {
@@ -63,7 +63,7 @@ export const ANNOUNCEMENTS: AnnouncementIF[] = [
     target: "bla bla bla",
     date: "Sep 20",
     datetime: "2020-09-20",
-    icon: CheckBadgeIcon,
+    icon: Check,
     iconBackground: "bg-gray-100",
   },
   {
@@ -71,7 +71,7 @@ export const ANNOUNCEMENTS: AnnouncementIF[] = [
     target: "bla bla bla",
     date: "Sep 20",
     datetime: "2020-09-20",
-    icon: PencilSquareIcon,
+    icon: PencilFill,
     iconBackground: "bg-gray-100",
   },
   {
@@ -79,7 +79,7 @@ export const ANNOUNCEMENTS: AnnouncementIF[] = [
     target: "bla bla bla",
     date: "Sep 22",
     datetime: "2020-09-22",
-    icon: CheckBadgeIcon,
+    icon: Check,
     iconBackground: "bg-gray-100",
   },
   {
@@ -87,7 +87,7 @@ export const ANNOUNCEMENTS: AnnouncementIF[] = [
     target: "bla bla bla",
     date: "Sep 28",
     datetime: "2020-09-28",
-    icon: PencilSquareIcon,
+    icon: PencilFill,
     iconBackground: "bg-gray-100",
   },
   {
@@ -95,7 +95,7 @@ export const ANNOUNCEMENTS: AnnouncementIF[] = [
     target: "bla bla bla",
     date: "Sep 30",
     datetime: "2020-09-30",
-    icon: CheckBadgeIcon,
+    icon: Check,
     iconBackground: "bg-gray-100",
   },
   {
@@ -103,7 +103,7 @@ export const ANNOUNCEMENTS: AnnouncementIF[] = [
     target: "bla bla bla",
     date: "Sep 30",
     datetime: "2020-09-30",
-    icon: PencilSquareIcon,
+    icon: PencilFill,
     iconBackground: "bg-gray-100",
   },
   {
@@ -111,7 +111,7 @@ export const ANNOUNCEMENTS: AnnouncementIF[] = [
     target: "bla bla bla",
     date: "Sep 30",
     datetime: "2020-09-30",
-    icon: CheckBadgeIcon,
+    icon: Check,
     iconBackground: "bg-gray-100",
   },
   {
@@ -119,7 +119,7 @@ export const ANNOUNCEMENTS: AnnouncementIF[] = [
     target: "bla bla bla",
     date: "Sep 30",
     datetime: "2020-09-30",
-    icon: PencilSquareIcon,
+    icon: PencilFill,
     iconBackground: "bg-gray-100",
   },
   {
@@ -127,7 +127,7 @@ export const ANNOUNCEMENTS: AnnouncementIF[] = [
     target: "bla bla bla",
     date: "Sep 30",
     datetime: "2020-09-30",
-    icon: CheckBadgeIcon,
+    icon: Check,
     iconBackground: "bg-gray-100",
   },
   {
@@ -135,7 +135,7 @@ export const ANNOUNCEMENTS: AnnouncementIF[] = [
     target: "bla bla bla",
     date: "Sep 30",
     datetime: "2020-09-30",
-    icon: PencilSquareIcon,
+    icon: PencilFill,
     iconBackground: "bg-gray-100",
   },
   {
@@ -143,7 +143,7 @@ export const ANNOUNCEMENTS: AnnouncementIF[] = [
     target: "bla bla bla",
     date: "Sep 30",
     datetime: "2020-09-30",
-    icon: CheckBadgeIcon,
+    icon: Check,
     iconBackground: "bg-gray-100",
   },
   {
@@ -151,7 +151,7 @@ export const ANNOUNCEMENTS: AnnouncementIF[] = [
     target: "bla bla bla",
     date: "Sep 30",
     datetime: "2020-09-30",
-    icon: PencilSquareIcon,
+    icon: PencilFill,
     iconBackground: "bg-gray-100",
   },
   {
@@ -159,7 +159,7 @@ export const ANNOUNCEMENTS: AnnouncementIF[] = [
     target: "bla bla bla",
     date: "Sep 30",
     datetime: "2020-09-30",
-    icon: CheckBadgeIcon,
+    icon: Check,
     iconBackground: "bg-gray-100",
   },
 ];

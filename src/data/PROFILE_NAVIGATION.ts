@@ -1,8 +1,4 @@
-import {
-  CreditCardIcon,
-  SquaresPlusIcon,
-  UserCircleIcon,
-} from "@heroicons/react/24/outline";
+import { CreditCard, PersonCircle, Gear } from "react-bootstrap-icons";
 import { ProfileNavigationIF } from "../interfaces/ProfileNavigationIF";
 
 export const PROFILE_NAVIGATION: ProfileNavigationIF = {
@@ -10,17 +6,17 @@ export const PROFILE_NAVIGATION: ProfileNavigationIF = {
     {
       name: "Personal Information",
       queryName: "personalInformation",
-      icon: UserCircleIcon,
+      icon: PersonCircle,
     },
     {
       name: "Plan & Billing",
       queryName: "planAndBilling",
-      icon: CreditCardIcon,
+      icon: CreditCard,
     },
     {
       name: "Settings",
       queryName: "settings",
-      icon: SquaresPlusIcon,
+      icon: Gear,
     },
   ],
 };

@@ -1,4 +1,4 @@
-import { PencilSquareIcon, CheckBadgeIcon } from "@heroicons/react/20/solid";
+import { Icon } from "react-bootstrap-icons";
 
 export interface AnnouncementIF {
   content: string;
@@ -6,5 +6,5 @@ export interface AnnouncementIF {
   date: string;
   datetime: string;
   iconBackground: string;
-  icon: typeof PencilSquareIcon | typeof CheckBadgeIcon;
+  icon: Icon;
 }

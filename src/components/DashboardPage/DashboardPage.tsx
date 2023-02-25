@@ -1,10 +1,11 @@
 import React from "react";
+
 import {
-  CheckIcon,
-  HandThumbUpIcon,
-  QuestionMarkCircleIcon,
-  UserIcon,
-} from "@heroicons/react/20/solid";
+  CheckLg,
+  HandThumbsUp,
+  PersonFill,
+  QuestionCircleFill,
+} from "react-bootstrap-icons";
 import { classNames } from "../../utils/classNames";
 import MyPetsCard from "./components/MyPetsCard";
 import ProfileCard from "./components/ProfileCard";
@@ -18,9 +19,9 @@ const user = {
 };
 
 const eventTypes = {
-  applied: { icon: UserIcon, bgColorClass: "bg-gray-400" },
-  advanced: { icon: HandThumbUpIcon, bgColorClass: "bg-lime-500" },
-  completed: { icon: CheckIcon, bgColorClass: "bg-green-500" },
+  applied: { icon: PersonFill, bgColorClass: "bg-gray-400" },
+  advanced: { icon: HandThumbsUp, bgColorClass: "bg-lime-500" },
+  completed: { icon: CheckLg, bgColorClass: "bg-green-500" },
 };
 const timeline = [
   {
@@ -253,8 +254,8 @@ const Dashboard: React.FC = () => {
                             href="#"
                             className="group inline-flex items-start space-x-2 text-sm text-gray-500 hover:text-gray-900"
                           >
-                            <QuestionMarkCircleIcon
-                              className="h-5 w-5 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
+                            <QuestionCircleFill
+                              className="h-5 w-5 flex-shrink-0 text-red-400 group-hover:text-gray-500"
                               aria-hidden="true"
                             />
                             <span>Some HTML is okay.</span>

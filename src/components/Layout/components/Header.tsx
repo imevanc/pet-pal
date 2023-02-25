@@ -1,6 +1,5 @@
 import React from "react";
 import { Disclosure } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Logo from "./Logo";
 import NavBar from "./NavBar";
 import NonVerifiedUserNavBar from "./NonVerifiedUserNavBar";
@@ -10,6 +9,7 @@ import MobileNavBar from "./MobileNavBar";
 import NotificationsButton from "./NotificationsButton";
 import SignInButton from "./SignInButton";
 import { useSession } from "next-auth/react";
+import { List, XLg } from "react-bootstrap-icons";
 
 const Header: React.FC = () => {
   const { data: user } = useSession();
@@ -26,9 +26,9 @@ const Header: React.FC = () => {
                   <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-lime-500">
                     <span className="sr-only">Open main menu</span>
                     {open ? (
-                      <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
+                      <XLg className="block h-6 w-6" aria-hidden="true" />
                     ) : (
-                      <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
+                      <List className="block h-6 w-6" aria-hidden="true" />
                     )}
                   </Disclosure.Button>
                 </div>
@@ -59,9 +59,9 @@ const Header: React.FC = () => {
                   <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-lime-500">
                     <span className="sr-only">Open main menu</span>
                     {open ? (
-                      <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
+                      <XLg className="block h-6 w-6" aria-hidden="true" />
                     ) : (
-                      <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
+                      <List className="block h-6 w-6" aria-hidden="true" />
                     )}
                   </Disclosure.Button>
                 </div>
