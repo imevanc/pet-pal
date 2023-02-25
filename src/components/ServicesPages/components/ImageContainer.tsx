@@ -1,10 +1,10 @@
-import { ImageIF } from "../../../interfaces/ImageIF";
+import { ImageContainerIF } from "../../../interfaces/ImageContainerIF";
 
-interface ImagePropsIF {
-  image: ImageIF;
+interface ImageContainerPropsIF {
+  image: ImageContainerIF;
 }
 
-const Image: React.FC<ImagePropsIF> = ({ image }) => {
+const ImageContainer: React.FC<ImageContainerPropsIF> = ({ image }) => {
   return (
     <div className="mt-2 lg:mt-0">
       <div className="sm:w-full sm:overflow-hidden sm:rounded-lg">
@@ -22,4 +22,4 @@ const Image: React.FC<ImagePropsIF> = ({ image }) => {
   );
 };
 
-export default Image;
+export default ImageContainer;

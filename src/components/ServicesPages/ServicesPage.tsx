@@ -1,6 +1,6 @@
 import Heading from "./components/Heading";
 import Paragraph from "./components/Paragraph";
-import Image from "./components/Image";
+import ImageContainer from "./components/ImageContainer";
 import ConnectWith from "./components/ConnectWith";
 import { ServicesPageIF } from "../../interfaces/ServicesPageIF";
 
@@ -22,7 +22,7 @@ const ServicesPage: React.FC<ServicesPageIF> = ({
                 <ConnectWith connectWith={connectWith} />
               </div>
             </div>
-            <Image image={image} />
+            <ImageContainer image={image} />
           </div>
         </div>
       </div>
