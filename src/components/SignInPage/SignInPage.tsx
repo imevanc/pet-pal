@@ -1,9 +1,7 @@
 import SignInForm from "./components/SignInForm";
 import SocialNetButton from "./components/SocialNetButton";
 import signIn from "../../data/fixtures/signIn.json";
-import FacebookIcon from "../Layout/components/FacebookIcon";
-import InstagramIcon from "../Layout/components/InstagramIcon";
-import GoogleIcon from "../Layout/components/GoogleIcon";
+import { Facebook, Google, Instagram } from "react-bootstrap-icons";
 import { SignInIF } from "../../interfaces/SignInIF";
 import React from "react";
 import Link from "next/link";
@@ -42,17 +40,17 @@ const SignInPage: React.FC<SignInIF> = ({ providers }) => {
             <div className="mt-6 grid grid-cols-3 gap-3">
               <SocialNetButton
                 provider={providers.facebook}
-                SocialNetIcon={FacebookIcon}
+                SocialNetIcon={Facebook}
                 socialNet={"Facebook"}
               />
               <SocialNetButton
                 provider={providers.google}
-                SocialNetIcon={GoogleIcon}
+                SocialNetIcon={Google}
                 socialNet={"Google"}
               />
               <SocialNetButton
                 provider={providers.instagram}
-                SocialNetIcon={InstagramIcon}
+                SocialNetIcon={Instagram}
                 socialNet={"Instagram"}
               />
             </div>

@@ -1,10 +1,9 @@
-import { SocialNetIconIF } from "../../../interfaces/SocialNetIconIF";
 import { signIn, useSession } from "next-auth/react";
 import { ProviderIF } from "../../../interfaces/ProviderIF";
-import { useUserContext } from "../../../hooks/useUserContext";
+import { Icon } from "react-bootstrap-icons";
 
 interface SocialNetButtonPropsIF {
-  SocialNetIcon: React.FC<SocialNetIconIF>;
+  SocialNetIcon: Icon;
   socialNet: string;
   provider: ProviderIF;
 }

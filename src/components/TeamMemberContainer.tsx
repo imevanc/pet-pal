@@ -1,6 +1,5 @@
 import { PersonIF } from "../interfaces/PersonIF";
-import GoogleIcon from "../components/Layout/components/GoogleIcon";
-import FacebookIcon from "./Layout/components/FacebookIcon";
+import { Facebook, Google } from "react-bootstrap-icons";
 import Link from "next/link";
 
 interface PersonPropsIF {
@@ -31,7 +30,7 @@ const TeamMemberContainer: React.FC<PersonPropsIF> = ({ person }) => {
                 className="text-gray-400 hover:text-gray-500"
               >
                 <span className="sr-only">Google</span>
-                <GoogleIcon className={"w-5 h-5"} ariaHidden={true} />
+                <Google className={"w-5 h-5"} aria-hidden={true} />
               </Link>
             </li>
             <li>
@@ -40,7 +39,7 @@ const TeamMemberContainer: React.FC<PersonPropsIF> = ({ person }) => {
                 className="text-gray-400 hover:text-gray-500"
               >
                 <span className="sr-only">Facebook</span>
-                <FacebookIcon className={"w-5 h-5"} ariaHidden={true} />
+                <Facebook className={"w-5 h-5"} aria-hidden={true} />
               </Link>
             </li>
           </ul>
