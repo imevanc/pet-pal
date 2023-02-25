@@ -1,4 +1,4 @@
-import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/outline";
+import { Envelope, Telephone } from "react-bootstrap-icons";
 
 const ContactContainer: React.FC = () => {
   return (
@@ -24,7 +24,7 @@ const ContactContainer: React.FC = () => {
                 <dt className="sr-only">Phone number</dt>
                 <dd className="flex">
                   <div className="pt-1">
-                    <PhoneIcon
+                    <Telephone
                       className="h-6 w-6 flex-shrink-0 text-gray-400"
                       aria-hidden="true"
                     />
@@ -36,7 +36,7 @@ const ContactContainer: React.FC = () => {
                 <dt className="sr-only">Email</dt>
                 <dd className="flex">
                   <div className="pt-1">
-                    <EnvelopeIcon
+                    <Envelope
                       className="h-6 w-6 flex-shrink-0 text-gray-400"
                       aria-hidden="true"
                     />

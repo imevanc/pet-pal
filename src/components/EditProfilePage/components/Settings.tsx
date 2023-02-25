@@ -1,4 +1,4 @@
-import { BellIcon } from "@heroicons/react/24/outline";
+import { Bell } from "react-bootstrap-icons";
 
 const Settings: React.FC = () => {
   return (
@@ -16,7 +16,7 @@ const Settings: React.FC = () => {
 
           <div>
             <div className="flex">
-              <BellIcon className="mt-1 h-5 w-5" aria-hidden="true" />
+              <Bell className="mt-1 h-5 w-5" aria-hidden="true" />
               <span className="ml-1 text-lg font-medium text-gray-900">
                 Notifications
               </span>

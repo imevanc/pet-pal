@@ -1,5 +1,5 @@
-import { CheckIcon } from "@heroicons/react/20/solid";
 import { classNames } from "../../../utils/classNames";
+import { Check } from "react-bootstrap-icons";
 
 const tiers = [
   {
@@ -100,7 +100,7 @@ const PlanAndBilling: React.FC = () => {
               >
                 {tier.features.map((feature) => (
                   <li key={feature} className="flex gap-x-3">
-                    <CheckIcon
+                    <Check
                       className="h-6 w-5 flex-none text-lime-600"
                       aria-hidden="true"
                     />
