@@ -1,5 +1,5 @@
 import { signIn, useSession } from "next-auth/react";
-import { ProviderIF } from "../../../interfaces/ProviderIF";
+import { ProviderIF } from "../../../interfaces/ProvidersIF";
 import { Icon } from "react-bootstrap-icons";
 
 interface SocialNetButtonPropsIF {

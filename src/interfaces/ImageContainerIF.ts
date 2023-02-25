@@ -1,4 +1,4 @@
-export interface ImageIF {
+export interface ImageContainerIF {
   source: string;
   alternative: string;
 }

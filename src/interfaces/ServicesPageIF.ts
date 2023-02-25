@@ -1,9 +1,9 @@
-import { ImageIF } from "./ImageIF";
-import { ConnectionsIF } from "./ConnectionsIF";
+import { ImageContainerIF } from "./ImageContainerIF";
+import { ConnectionsIF } from "./ConnectWithIF";
 
 export interface ServicesPageIF {
   heading: string;
   paragraph: string;
   connectWith: ConnectionsIF;
-  image: ImageIF;
+  image: ImageContainerIF;
 }
