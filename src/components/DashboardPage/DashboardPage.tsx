@@ -1,5 +1,5 @@
 import React from "react";
-
+import axios from "axios";
 import {
   CheckLg,
   HandThumbsUp,
@@ -9,14 +9,15 @@ import {
 import { classNames } from "../../utils/classNames";
 import MyPetsCard from "./components/MyPetsCard";
 import ProfileCard from "./components/ProfileCard";
+import { useUserContext } from "../../hooks/useUserContext";
 
-const user = {
-  name: "Whitney Francis",
-  email: "whitney@example.com",
-  status: "Bruno loves walks",
-  imageUrl:
-    "https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=256&h=256&q=80",
-};
+// const user = {
+//   name: "Whitney Francis",
+//   email: "whitney@example.com",
+//   status: "Bruno loves walks",
+//   imageUrl:
+//     "https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=256&h=256&q=80",
+// };
 
 const eventTypes = {
   applied: { icon: PersonFill, bgColorClass: "bg-gray-400" },
@@ -90,6 +91,18 @@ const comments = [
 ];
 
 const Dashboard: React.FC = () => {
+  const user = useUserContext();
+  React.useEffect((): void => {
+    const fetchPetsByUserId = async (userId: string): Promise<void> => {
+      const fetchedPets = await axios.get(
+        `/api/getPetsByUserId?userId=${userId}`
+      );
+      if (fetchedPets.data) {
+        console.log("updated");
+      }
+    };
+    if (user) fetchPetsByUserId(user?.id);
+  }, [user]);
   return (
     <div className="min-h-full">
       <div className="py-4 smg:py-10 mx-4">
