@@ -3,10 +3,34 @@ export const { PrismaClient } = require("@prisma/client");
 const prisma = new PrismaClient();
 
 const main = async (): Promise<any> => {
-  const users = await prisma.user.createMany({
+  await prisma.pet.createMany({
     data: [
       {
-        name: "John Smith",
+        name: "Bruno",
+        breed: "Labrador Retriever",
+        sex: "Male",
+        age: "1 year 9 months old",
+        weight: "10kg",
+        image: "",
+        userId: "cleltq205000047vcqd26r146",
+      },
+      {
+        name: "Charlie",
+        breed: "Labrador Retriever",
+        sex: "Male",
+        age: "4 year 9 months old",
+        weight: "20kg",
+        image: "",
+        userId: "cleltq205000047vcqd26r146",
+      },
+      {
+        name: "Donald",
+        breed: "Labrador Retriever",
+        sex: "Male",
+        age: "3 year 9 months old",
+        weight: "30kg",
+        image: "",
+        userId: "cleltq205000047vcqd26r146",
       },
     ],
   });
