@@ -13,7 +13,7 @@ const PetCard: React.FC<PetCardPropsIF> = ({ pet }) => {
         <div>
           <img
             className="mx-auto flex-shrink-0 h-64 w-64 object-contain"
-            src={pet.imageUrl}
+            src={pet.image}
             alt="dog-img"
           />
         </div>
