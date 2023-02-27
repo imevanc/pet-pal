@@ -4,13 +4,13 @@ import { useForm } from "react-hook-form";
 import { useUserContext } from "../../../hooks/useUserContext";
 import type { PayloadUserPartial } from "../../../types/PayloadUserPartial";
 import { removeBlankAttributes } from "../../../utils/removeBlankAttributes";
-import { UserType } from "../../../types/UserType";
+import { User } from "@prisma/client";
 
 const PersonalInformation: React.FC = () => {
-  const { register, handleSubmit } = useForm<UserType>();
+  const { register, handleSubmit } = useForm<User>();
   const user = useUserContext();
 
-  const onSubmit = async (data: UserType): Promise<any> => {
+  const onSubmit = async (data: User): Promise<any> => {
     const payloadUser: PayloadUserPartial = {
       id: user?.id!,
       name: data.name,
