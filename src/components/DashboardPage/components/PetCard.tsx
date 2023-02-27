@@ -1,9 +1,9 @@
 import Link from "next/link";
-import { PetIF } from "../../../interfaces/PetIF";
 import { PencilSquare, Eye } from "react-bootstrap-icons";
+import type { Pet } from "@prisma/client";
 
 interface PetCardPropsIF {
-  pet: PetIF;
+  pet: Pet;
 }
 
 const PetCard: React.FC<PetCardPropsIF> = ({ pet }) => {
@@ -13,7 +13,7 @@ const PetCard: React.FC<PetCardPropsIF> = ({ pet }) => {
         <div>
           <img
             className="mx-auto flex-shrink-0 h-64 w-64 object-contain"
-            src={pet.image}
+            src={pet.image!}
             alt="dog-img"
           />
         </div>
