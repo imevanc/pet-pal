@@ -1,11 +1,13 @@
 import PetCard from "./PetCard";
 import petsData from "../../../data/fixtures/pets.json";
-import { PetIF } from "../../../interfaces/PetIF";
 import AddAPetCard from "./AddAPetCard";
+import type { Pet } from "@prisma/client";
 
-const MyPetsCard: React.FC = () => {
-  const pets: PetIF[] = petsData.pets;
+interface MyPetsCardPropsIF {
+  pets: Pet[];
+}
 
+const MyPetsCard: React.FC<MyPetsCardPropsIF> = ({ pets }) => {
   return (
     <div className="space-y-6 lg:col-span-2 lg:col-start-1">
       <section aria-labelledby="applicant-information-title">

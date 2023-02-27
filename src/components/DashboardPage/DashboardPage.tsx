@@ -113,7 +113,7 @@ const Dashboard: React.FC = () => {
       <div className="py-4 smg:py-10 mx-4">
         <ProfileCard />
         <div className="mx-auto mt-8 grid max-w-3xl grid-cols-1 gap-6 sm:px-6 lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-3">
-          <MyPetsCard />
+          <MyPetsCard pets={pets} />
 
           {/* <div className="space-y-6 lg:col-span-1 lg:col-start-3">
             <section aria-labelledby="timeline-title">
