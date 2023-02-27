@@ -1,7 +1,7 @@
 import { useSession } from "next-auth/react";
 import React from "react";
 import axios from "axios";
-import type { User } from "@prisma/client";
+import { User } from "@prisma/client";
 
 export const UserContext = React.createContext<User | null>(null);
 

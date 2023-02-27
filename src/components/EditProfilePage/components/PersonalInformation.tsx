@@ -1,10 +1,10 @@
 import React from "react";
 import axios from "axios";
-import type { User } from "@prisma/client";
 import { useForm } from "react-hook-form";
 import { useUserContext } from "../../../hooks/useUserContext";
 import type { PayloadUserPartial } from "../../../types/PayloadUserPartial";
 import { removeBlankAttributes } from "../../../utils/removeBlankAttributes";
+import { User } from "@prisma/client";
 
 const PersonalInformation: React.FC = () => {
   const { register, handleSubmit } = useForm<User>();
