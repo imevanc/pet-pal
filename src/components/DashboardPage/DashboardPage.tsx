@@ -10,6 +10,7 @@ import { classNames } from "../../utils/classNames";
 import MyPetsCard from "./components/MyPetsCard";
 import ProfileCard from "./components/ProfileCard";
 import { useUserContext } from "../../hooks/useUserContext";
+import { Pet, User } from "@prisma/client";
 
 // const user = {
 //   name: "Whitney Francis",
@@ -91,18 +92,22 @@ const comments = [
 ];
 
 const Dashboard: React.FC = () => {
-  const user = useUserContext();
+  const user: User = useUserContext()!;
+  const [pets, setPets] = React.useState<Pet[] | []>([]);
   React.useEffect((): void => {
     const fetchPetsByUserId = async (userId: string): Promise<void> => {
       const fetchedPets = await axios.get(
         `/api/getPetsByUserId?userId=${userId}`
       );
       if (fetchedPets.data) {
-        console.log("updated");
+        setPets(fetchedPets.data);
       }
     };
-    if (user) fetchPetsByUserId(user?.id);
-  }, [user]);
+    if (user) {
+      fetchPetsByUserId(user?.id);
+    }
+  }, [user, setPets]);
+
   return (
     <div className="min-h-full">
       <div className="py-4 smg:py-10 mx-4">
