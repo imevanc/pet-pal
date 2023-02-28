@@ -1,14 +1,13 @@
 import PetCard from "./PetCard";
 import AddAPetCard from "./AddAPetCard";
 import type { Pet } from "@prisma/client";
+import LoadingBar from "../../LoadingBar";
 
 interface MyPetsCardPropsIF {
   pets: Pet[];
 }
 
 const MyPetsCard: React.FC<MyPetsCardPropsIF> = ({ pets }) => {
-  console.log(pets);
-
   return (
     <div className="space-y-6 lg:col-span-2 lg:col-start-1">
       <section aria-labelledby="applicant-information-title">
@@ -25,12 +24,7 @@ const MyPetsCard: React.FC<MyPetsCardPropsIF> = ({ pets }) => {
             </p>
           </div>
           {pets.length === 0 ? (
-            <div className="p-2 w-full h-full z-50 overflow-hidden bg-lime-50 opacity-65 flex flex-col items-center justify-center">
-              <div className="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-12 w-12 mb-4"></div>
-              <h2 className="text-center text-white text-xl font-semibold text-black">
-                Loading...
-              </h2>
-            </div>
+            <LoadingBar />
           ) : (
             <div className="border-t border-gray-200 px-4 py-5 sm:px-6">
               <div className="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2">

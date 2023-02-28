@@ -109,13 +109,14 @@ const Dashboard: React.FC = () => {
   }, [user, setPets]);
 
   return (
-    <div className="min-h-full">
-      <div className="py-4 smg:py-10 mx-4">
-        <ProfileCard />
-        <div className="mx-auto mt-8 grid max-w-3xl grid-cols-1 gap-6 sm:px-6 lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-3">
-          <MyPetsCard pets={pets} />
+    <div className="grow shrink-0">
+      <div className="min-h-full">
+        <div className="py-4 smg:py-10 mx-4">
+          <ProfileCard />
+          <div className="mx-auto mt-8 grid max-w-3xl grid-cols-1 gap-6 sm:px-6 lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-3">
+            <MyPetsCard pets={pets} />
 
-          {/* <div className="space-y-6 lg:col-span-1 lg:col-start-3">
+            {/* <div className="space-y-6 lg:col-span-1 lg:col-start-3">
             <section aria-labelledby="timeline-title">
               <div className="bg-white px-4 py-5 shadow-2xl sm:rounded-lg sm:px-6">
                 <h2
@@ -186,7 +187,7 @@ const Dashboard: React.FC = () => {
             </section>
           </div> */}
 
-          {/* <div className="space-y-6 lg:col-span-2 lg:col-start-1">
+            {/* <div className="space-y-6 lg:col-span-2 lg:col-start-1">
             <section aria-labelledby="notes-title">
               <div className="bg-white shadow-2xl sm:overflow-hidden sm:rounded-lg">
                 <div className="divide-y divide-gray-200">
@@ -293,7 +294,7 @@ const Dashboard: React.FC = () => {
             </section>
           </div> */}
 
-          {/* <div className="space-y-6 lg:col-span-1 lg:col-start-3">
+            {/* <div className="space-y-6 lg:col-span-1 lg:col-start-3">
             <section aria-labelledby="timeline-title">
               <div className="bg-white px-4 py-5 shadow-2xl sm:rounded-lg sm:px-6">
                 <h2
@@ -363,6 +364,7 @@ const Dashboard: React.FC = () => {
               </div>
             </section>
           </div> */}
+          </div>
         </div>
       </div>
     </div>
