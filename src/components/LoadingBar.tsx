@@ -1,4 +1,4 @@
-const Loading: React.FC = () => {
+const LoadingBar: React.FC = () => {
   return (
     <div className="grow shrink-0">
       <div className="p-2 w-full h-full z-50 overflow-hidden bg-lime-50 opacity-65 flex flex-col items-center justify-center">
@@ -11,4 +11,4 @@ const Loading: React.FC = () => {
   );
 };
 
-export default Loading;
+export default LoadingBar;

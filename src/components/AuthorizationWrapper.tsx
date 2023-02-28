@@ -1,7 +1,7 @@
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 import React from "react";
-import Loading from "./Loading";
+import LoadingBar from "./LoadingBar";
 
 const AuthorizationWrapper: React.FC<{
   children: any;
@@ -19,7 +19,7 @@ const AuthorizationWrapper: React.FC<{
   }
 
   if (status === "loading") {
-    return <Loading />;
+    return <LoadingBar />;
   }
 };
 
