@@ -1,8 +1,21 @@
 import { Pet } from "@prisma/client";
 import { usePetsContext } from "../../hooks/usePetsContext";
+import { useRouter } from "next/router";
+import { classNames } from "../../utils/classNames";
+import React from "react";
 
 const MyPetsPage: React.FC = () => {
   const pets: Pet[] = usePetsContext();
+  const router = useRouter();
+  const isSelectedPet = (petId: string): boolean => {
+    const selectedPet = router.query.petSelected;
+    return petId === selectedPet;
+  };
+  const handleClick = (petId: string) => {
+    router.replace({
+      query: { ...router.query, petSelected: petId },
+    });
+  };
   return (
     <div className="grow shrink-0">
       <div className="sm:mx-auto max-w-3xl lg:max-w-5xl bg-gray-100 mx-4">
@@ -15,7 +28,13 @@ const MyPetsPage: React.FC = () => {
           <ul role="list" className="divide-y divide-gray-200">
             {pets.map((pet: Pet) => (
               <li key={pet.id}>
-                <div className="block hover:bg-gray-50">
+                <div
+                  onClick={() => handleClick(pet.id)}
+                  className={classNames(
+                    isSelectedPet(pet.id) ? "bg-gray-100" : "hover:bg-gray-50",
+                    "block hover:cursor-pointer"
+                  )}
+                >
                   <div className="flex items-right px-4 py-4">
                     <div className="flex flex-1 min-w-0 items-center">
                       <div className="flex-shrink-0">
