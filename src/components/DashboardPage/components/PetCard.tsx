@@ -1,12 +1,14 @@
 import Link from "next/link";
 import { PencilSquare, Eye } from "react-bootstrap-icons";
 import type { Pet } from "@prisma/client";
+import { removeLastPartOfUrl } from "../../../utils/removeLastPartOfUrl";
 
 interface PetCardPropsIF {
   pet: Pet;
 }
 
 const PetCard: React.FC<PetCardPropsIF> = ({ pet }) => {
+  console.log(removeLastPartOfUrl(window.location.href));
   return (
     <div className="shadow-md">
       <div className="text-center flex flex-1 flex-col p-8">
@@ -44,7 +46,10 @@ const PetCard: React.FC<PetCardPropsIF> = ({ pet }) => {
           </div>
           <div className="flex w-0 flex-1">
             <Link
-              href="#"
+              href={{
+                pathname: `${removeLastPartOfUrl(window.location.href)}/myPets`,
+                query: { petSelected: `${pet.id}` },
+              }}
               className="relative -mr-px inline-flex w-0 flex-1 items-center justify-center rounded-bl-lg border border-transparent py-4 text-baseline font-medium text-gray-500 hover:text-gray-700"
             >
               <Eye className="h-5 w-5" aria-hidden="true" />

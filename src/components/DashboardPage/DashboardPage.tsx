@@ -1,5 +1,4 @@
 import React from "react";
-import axios from "axios";
 import {
   CheckLg,
   HandThumbsUp,
@@ -9,8 +8,8 @@ import {
 import { classNames } from "../../utils/classNames";
 import MyPetsCard from "./components/MyPetsCard";
 import ProfileCard from "./components/ProfileCard";
-import { useUserContext } from "../../hooks/useUserContext";
-import { Pet, User } from "@prisma/client";
+import { Pet } from "@prisma/client";
+import { usePetsContext } from "../../hooks/usePetsContext";
 
 // const user = {
 //   name: "Whitney Francis",
@@ -92,21 +91,8 @@ const comments = [
 ];
 
 const Dashboard: React.FC = () => {
-  const user: User = useUserContext()!;
-  const [pets, setPets] = React.useState<Pet[] | []>([]);
-  React.useEffect((): void => {
-    const fetchPetsByUserId = async (userId: string): Promise<void> => {
-      const fetchedPets = await axios.get(
-        `/api/getPetsByUserId?userId=${userId}`
-      );
-      if (fetchedPets.data) {
-        setPets(fetchedPets.data);
-      }
-    };
-    if (user) {
-      fetchPetsByUserId(user?.id);
-    }
-  }, [user, setPets]);
+  const pets: Pet[] = usePetsContext();
+  console.log("here s");
 
   return (
     <div className="grow shrink-0">

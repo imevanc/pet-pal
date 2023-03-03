@@ -28,7 +28,7 @@ const MyPetsCard: React.FC<MyPetsCardPropsIF> = ({ pets }) => {
           ) : (
             <div className="border-t border-gray-200 px-4 py-5 sm:px-6">
               <div className="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2">
-                {pets.map((pet) => {
+                {pets.map((pet: Pet) => {
                   return (
                     <div key={pet.id} className="sm:col-span-1">
                       <PetCard pet={pet} />
