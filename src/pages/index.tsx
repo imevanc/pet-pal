@@ -4,15 +4,18 @@ import DescriptionContainer from "../components/DescriptionContainer";
 import NewsletterContainer from "../components/NewsletterContainer/NewsletterContainer";
 import ServicesContainer from "../components/ServicesContainer";
 import React from "react";
+import AuthorizationWrapper from "../components/AuthorizationWrapper";
 
 const Home: NextPage = () => {
   return (
-    <div className="flex flex-col justify-between bg-white px-6">
-      <DescriptionContainer />
-      <ServicesContainer />
-      <NewsletterContainer />
-      <ContactContainer />
-    </div>
+    <AuthorizationWrapper>
+      <div className="flex flex-col justify-between bg-white px-6">
+        <DescriptionContainer />
+        <ServicesContainer />
+        <NewsletterContainer />
+        <ContactContainer />
+      </div>
+    </AuthorizationWrapper>
   );
 };
 

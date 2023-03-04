@@ -12,9 +12,8 @@ import { useSession } from "next-auth/react";
 import { List, XLg } from "react-bootstrap-icons";
 
 const Header: React.FC = () => {
-  const { data: user } = useSession();
-
-  return user ? (
+  const { status } = useSession();
+  return status === "authenticated" ? (
     <div className="z-40 w-full sticky top-0 flex items-center justify-center bg-white">
       <Disclosure as="nav" className="w-full max-w-8xl bg-white">
         {({ open }) => (
