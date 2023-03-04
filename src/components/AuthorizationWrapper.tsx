@@ -6,13 +6,15 @@ import LoadingBar from "./LoadingBar";
 const AuthorizationWrapper: React.FC<{
   children: any;
 }> = ({ children }): any => {
-  const { status, data: user } = useSession();
+  const { status } = useSession();
   const router = useRouter();
-  React.useEffect(() => {
-    if (status === "unauthenticated") {
-      router.push("/account/sign-in");
+
+  if (status === "unauthenticated") {
+    if (router.asPath === "/") {
+      return children;
     }
-  }, [router, status]);
+    router.push("/account/sign-in");
+  }
 
   if (status === "authenticated") {
     if (router.asPath === "/") {
