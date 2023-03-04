@@ -92,8 +92,6 @@ const comments = [
 
 const Dashboard: React.FC = () => {
   const pets: Pet[] = usePetsContext();
-  console.log("here s");
-
   return (
     <div className="grow shrink-0">
       <div className="min-h-full">

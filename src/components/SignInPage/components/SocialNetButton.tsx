@@ -13,15 +13,10 @@ const SocialNetButton: React.FC<SocialNetButtonPropsIF> = ({
   socialNet,
   provider,
 }) => {
-  const { data: user } = useSession();
   const handleClick = async () => {
     const res = await signIn(provider.id, {
       callbackUrl: `${window.location.origin}/account/loading`,
     });
-    if (!res) {
-      console.log({ user });
-    }
-    console.log({ res });
   };
   return (
     <div>
