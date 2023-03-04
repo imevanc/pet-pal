@@ -8,7 +8,6 @@ interface PetCardPropsIF {
 }
 
 const PetCard: React.FC<PetCardPropsIF> = ({ pet }) => {
-  console.log(removeLastPartOfUrl(window.location.href));
   return (
     <div className="shadow-md">
       <div className="text-center flex flex-1 flex-col p-8">
