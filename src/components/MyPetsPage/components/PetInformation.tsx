@@ -10,6 +10,27 @@ interface PetInformationPropsIF {
   selectedPetObj: Pet;
 }
 
+const files = [
+  {
+    path: "https://images.unsplash.com/photo-1582053433976-25c00369fc93?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=512&q=80",
+  },
+  {
+    path: "https://images.unsplash.com/photo-1582053433976-25c00369fc93?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=512&q=80",
+  },
+  {
+    path: "https://images.unsplash.com/photo-1582053433976-25c00369fc93?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=512&q=80",
+  },
+  {
+    path: "https://images.unsplash.com/photo-1582053433976-25c00369fc93?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=512&q=80",
+  },
+  {
+    path: "https://images.unsplash.com/photo-1582053433976-25c00369fc93?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=512&q=80",
+  },
+  {
+    path: "https://images.unsplash.com/photo-1582053433976-25c00369fc93?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=512&q=80",
+  },
+];
+
 const PetInformation: React.FC<PetInformationPropsIF> = ({
   selectedPetObj,
 }) => {
@@ -141,7 +162,28 @@ const PetInformation: React.FC<PetInformationPropsIF> = ({
             </span>
             <h3 className="ml-2">Photo Gallery</h3>
           </div>
-          <div className="mt-3 border-t border-gray-200"></div>
+          <div className="mt-3 border-t border-gray-200">
+            <ul
+              role="list"
+              className="mt-4 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8"
+            >
+              {files.map((file, idx) => (
+                <li key={idx} className="relative">
+                  <div className="group aspect-w-10 aspect-h-7 block w-full overflow-hidden rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-lime-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-100">
+                    <img
+                      src={file.path}
+                      alt="random"
+                      className="pointer-events-none object-cover group-hover:opacity-75"
+                    />
+                    <button
+                      type="button"
+                      className="absolute inset-0 focus:outline-none"
+                    ></button>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </div>

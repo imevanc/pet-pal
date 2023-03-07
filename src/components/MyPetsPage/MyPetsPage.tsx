@@ -5,12 +5,17 @@ import React from "react";
 import { getSelectedPet } from "../../utils/getSelectedPet";
 import PetSelector from "./components/PetSelector";
 import PetInformation from "./components/PetInformation";
+import LoadingBar from "../LoadingBar";
 
 const MyPetsPage: React.FC = () => {
   const pets: Pet[] = usePetsContext();
   const router = useRouter();
   const selectedPet = router.query.petSelected;
   const selectedPetObj: Pet = getSelectedPet(pets, selectedPet?.toString()!);
+
+  if (!selectedPetObj) {
+    return <LoadingBar />;
+  }
 
   return (
     <div className="grow shrink-0">
