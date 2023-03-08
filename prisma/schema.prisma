@@ -62,17 +62,27 @@ model VerificationToken {
 }
 
 model Pet {
-  id        String   @id @default(cuid())
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  name      String?
-  breed     String?
-  sex       String?
-  age       String?
-  weight    String?
-  image     String?
-  User      User?    @relation(fields: [userId], references: [id])
-  userId    String?
+  id                   String        @id @default(cuid())
+  createdAt            DateTime      @default(now())
+  updatedAt            DateTime      @updatedAt
+  name                 String?
+  breed                String?
+  sex                  String?
+  age                  String?
+  weight               String?
+  image                String?
+  User                 User?         @relation(fields: [userId], references: [id])
+  userId               String?
+  sprayedOrNeutered    AboutRespones @default(Unsure)
+  microchipped         AboutRespones @default(Unsure)
+  houseTrained         AboutRespones @default(Unsure)
+  friendlyWithDogs     AboutRespones @default(Unsure)
+  friendlyWithCats     AboutRespones @default(Unsure)
+  friendlyWithChildren AboutRespones @default(Unsure)
+  pottyBreak           PottyRole     @default(EVERY_HOUR)
+  energyLevel          EnergyRole    @default(Low)
+  feedingSchedule      FeedingRole   @default(Twice)
+  leftAlone            LeftAloneRole @default(No)
 }
 
 enum UserRole {
@@ -88,4 +98,37 @@ enum CountryRole {
   United_States
   Canada
   Mexico
+}
+
+enum AboutRespones {
+  Yes
+  No
+  Unsure
+}
+
+enum PottyRole {
+  EVERY_HOUR
+  TWO_HOURS
+  FOUR_HOURS
+  EIGHT_HOURS
+}
+
+enum EnergyRole {
+  High
+  Medium
+  Low
+}
+
+enum FeedingRole {
+  Once
+  Twice
+  Thrice
+  Fourice
+}
+
+enum LeftAloneRole {
+  No
+  OneToFour
+  FiveToEight
+  MoreThanEight
 }
