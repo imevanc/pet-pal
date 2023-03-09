@@ -18,7 +18,7 @@ const AuthorizationWrapper: React.FC<{
 
   if (status === "authenticated") {
     if (router.asPath === "/") {
-      router.push(`${window.location.origin}/account/loading`);
+      router.push(`${window.location.origin}/account/DOG_OWNER/dashboard`);
     }
     return children;
   }

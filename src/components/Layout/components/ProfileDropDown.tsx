@@ -30,7 +30,7 @@ const ProfileDropDown: React.FC = () => {
           <Menu.Item>
             {({ active }) => (
               <Link
-                href={`/account/${user?.role}/${user?.id}/editProfile?editProfileItem=personalInformation`}
+                href={`/account/${user?.role}/editProfile?editProfileItem=personalInformation`}
                 className={classNames(
                   active ? "border-lime-500 bg-lime-50" : "border-transparent",
                   "block border-l-4 px-4 py-2 text-lg font-medium text-gray-800"
@@ -43,7 +43,7 @@ const ProfileDropDown: React.FC = () => {
           <Menu.Item>
             {({ active }) => (
               <Link
-                href={`/account/${user?.role}/${user?.id}/editProfile?editProfileItem=planAndBilling`}
+                href={`/account/${user?.role}/editProfile?editProfileItem=planAndBilling`}
                 className={classNames(
                   active ? "border-lime-500 bg-lime-50" : "border-transparent",
                   "block border-l-4 px-4 py-2 text-lg font-medium text-gray-800"
@@ -56,7 +56,7 @@ const ProfileDropDown: React.FC = () => {
           <Menu.Item>
             {({ active }) => (
               <Link
-                href={`/account/${user?.role}/${user?.id}/editProfile?editProfileItem=settings`}
+                href={`/account/${user?.role}/editProfile?editProfileItem=settings`}
                 className={classNames(
                   active ? "border-lime-500 bg-lime-50" : "border-transparent",
                   "block border-l-4 px-4 py-2 text-lg font-medium text-gray-800"
