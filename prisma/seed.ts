@@ -12,7 +12,7 @@ const main = async (): Promise<any> => {
         age: "1 year 9 months old",
         weight: "10kg",
         image: "",
-        userId: "cleltq205000047vcqd26r146",
+        userId: "clf1oni9b000047amc21utiy2",
       },
       {
         name: "Charlie",
@@ -21,7 +21,7 @@ const main = async (): Promise<any> => {
         age: "4 year 9 months old",
         weight: "20kg",
         image: "",
-        userId: "cleltq205000047vcqd26r146",
+        userId: "clf1oni9b000047amc21utiy2",
       },
       {
         name: "Donald",
@@ -30,7 +30,7 @@ const main = async (): Promise<any> => {
         age: "3 year 9 months old",
         weight: "30kg",
         image: "",
-        userId: "cleltq205000047vcqd26r146",
+        userId: "clf1oni9b000047amc21utiy2",
       },
     ],
   });
