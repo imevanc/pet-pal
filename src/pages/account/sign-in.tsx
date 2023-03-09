@@ -9,7 +9,7 @@ const SignIn: NextPage<SignInIF> = ({ providers }) => {
   const user = useUserContext();
   const router = useRouter();
   if (user) {
-    router.replace(`/account/${user?.role}/${user?.id}/dashboard`);
+    router.replace(`/account/${user?.role}/dashboard`);
   }
 
   return <SignInPage providers={providers} />;

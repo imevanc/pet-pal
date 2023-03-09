@@ -15,7 +15,7 @@ const SocialNetButton: React.FC<SocialNetButtonPropsIF> = ({
 }) => {
   const handleClick = async () => {
     const res = await signIn(provider.id, {
-      callbackUrl: `${window.location.origin}/account/loading`,
+      callbackUrl: `${window.location.origin}/account/DOG_OWNER/dashboard`,
     });
   };
   return (

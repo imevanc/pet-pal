@@ -13,7 +13,7 @@ const NavBar: React.FC = () => {
   });
 
   React.useEffect((): void => {
-    if (path === `/account/${user?.role}/${user?.id}/dashboard`) {
+    if (path === `/account/${user?.role}/dashboard`) {
       setPaths({
         dashboard: "selected",
         appointments: "nonSelected",
@@ -42,7 +42,7 @@ const NavBar: React.FC = () => {
         className={
           paths.dashboard === "selected" ? selectedClass : nonSelectedClass
         }
-        href={`/account/${user?.role}/${user?.id}/dashboard`}
+        href={`/account/${user?.role}/dashboard`}
       >
         Dashboard
       </Link>

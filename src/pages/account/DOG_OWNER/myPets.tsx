@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
-import AuthorizationWrapper from "../../../../components/AuthorizationWrapper";
-import MyPetsPage from "../../../../components/MyPetsPage/MyPetsPage";
+import AuthorizationWrapper from "../../../components/AuthorizationWrapper";
+import MyPetsPage from "../../../components/MyPetsPage/MyPetsPage";
 
 const MyPets: NextPage = () => {
   return (

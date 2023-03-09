@@ -13,7 +13,7 @@ const MobileNavBar: React.FC = () => {
   });
 
   React.useEffect((): void => {
-    if (path === `/account/${user?.role}/${user?.id}/dashboard`) {
+    if (path === `/account/${user?.role}/dashboard`) {
       setPaths({
         dashboard: "selected",
         appointments: "nonSelected",
