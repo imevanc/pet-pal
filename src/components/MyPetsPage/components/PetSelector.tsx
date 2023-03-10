@@ -1,6 +1,7 @@
 import { Pet } from "@prisma/client";
 import { useRouter } from "next/router";
 import { classNames } from "../../../utils/classNames";
+import { Trash } from "react-bootstrap-icons";
 
 interface PetSelectorPropsIF {
   pets: Pet[];
@@ -54,9 +55,7 @@ const PetSelector: React.FC<PetSelectorPropsIF> = ({ pets }) => {
                         </p>
                       </div>
                       <div className="self-center justify-self-end">
-                        <button className="text-lg font-medium text-lime-600">
-                          Edit
-                        </button>
+                        <Trash className="text-lg font-medium text-red-500 hover:scale-125" />
                       </div>
                     </div>
                   </div>
