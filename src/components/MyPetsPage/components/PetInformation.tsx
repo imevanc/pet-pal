@@ -149,7 +149,7 @@ const PetInformation: React.FC<PetInformationPropsIF> = ({
               role="list"
               className="mt-4 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8"
             >
-              <Link
+              {/* <Link
                 href="#"
                 className="text-gray-500 hover:text-gray-700 flex flex-col justify-center items-center w-full h-full rounded-lg border-2 border-dashed border-gray-500 text-center hover:border-gray-700 focus:outline-none focus:ring-2 focus:ring-lime-500 focus:ring-offset-2"
               >
@@ -157,7 +157,7 @@ const PetInformation: React.FC<PetInformationPropsIF> = ({
                   <PlusCircleDotted />
                 </div>
                 <span className="block text-sm font-medium">Upload</span>
-              </Link>
+              </Link> */}
               {files.map((file, idx) => (
                 <li key={idx} className="relative">
                   <div className="group aspect-w-10 aspect-h-7 block w-full overflow-hidden rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-lime-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-100">
@@ -166,10 +166,6 @@ const PetInformation: React.FC<PetInformationPropsIF> = ({
                       alt="random"
                       className="pointer-events-none object-cover group-hover:opacity-75"
                     />
-                    <button
-                      type="button"
-                      className="absolute inset-0 focus:outline-none"
-                    ></button>
                   </div>
                 </li>
               ))}
