@@ -4,8 +4,10 @@ import {
   CardImage,
   ChatHeart,
   Megaphone,
+  PlusCircleDotted,
 } from "react-bootstrap-icons";
-
+import Link from "next/link";
+import QAndAContainer from "./QAndAContainer";
 interface PetInformationPropsIF {
   selectedPetObj: Pet;
 }
@@ -62,7 +64,7 @@ const PetInformation: React.FC<PetInformationPropsIF> = ({
             </dd>
           </dl>
         </div>
-        <div className="mt-2">
+        <div className="mt-4">
           <div className="flex text-xl font-bold text-gray-900">
             <span className="pt-1">
               <ChatHeart />
@@ -70,47 +72,35 @@ const PetInformation: React.FC<PetInformationPropsIF> = ({
             <h3 className="ml-2">About {selectedPetObj.name}</h3>
           </div>
           <div className="mt-3 border-t border-gray-200">
-            <dl className="mt-4">
-              <div className="mt-1 py-4">
-                <dt className="text-base font-semibold text-gray-600">
-                  Spayed/Neutered?
-                </dt>
-                <dd className="text-base text-gray-600">No</dd>
-              </div>
-              <div className="mt-1 py-4">
-                <dt className="text-base font-semibold text-gray-600">
-                  Microchipped?
-                </dt>
-                <dd className="text-base text-gray-600">Yes</dd>
-              </div>
-              <div className="mt-1 py-4">
-                <dt className="text-base font-semibold text-gray-600">
-                  House trained?
-                </dt>
-                <dd className="text-base text-gray-600">Yes</dd>
-              </div>
-              <div className="mt-1 py-4">
-                <dt className="text-base font-semibold text-gray-600">
-                  Friendly with dogs?
-                </dt>
-                <dd className="text-base text-gray-600">Yes</dd>
-              </div>
-              <div className="mt-1 py-4">
-                <dt className="text-base font-semibold text-gray-600">
-                  Friendly with cats?
-                </dt>
-                <dd className="text-base text-gray-600">No</dd>
-              </div>
-              <div className="mt-1 mb-6 py-4">
-                <dt className="text-base font-semibold text-gray-600">
-                  Friendly with children?
-                </dt>
-                <dd className="text-base text-gray-600">Unsure</dd>
-              </div>
+            <dl className="mt-2">
+              <QAndAContainer
+                question={"Spayed/Neutered?"}
+                answer={selectedPetObj.sprayedOrNeutered}
+              />
+              <QAndAContainer
+                question={"Microchipped?"}
+                answer={selectedPetObj.microchipped}
+              />
+              <QAndAContainer
+                question={"House trained?"}
+                answer={selectedPetObj.houseTrained}
+              />
+              <QAndAContainer
+                question={"Friendly with dogs?"}
+                answer={selectedPetObj.friendlyWithDogs}
+              />
+              <QAndAContainer
+                question={"Friendly with cats?"}
+                answer={selectedPetObj.friendlyWithCats}
+              />
+              <QAndAContainer
+                question={"Friendly with children?"}
+                answer={selectedPetObj.friendlyWithChildren}
+              />
             </dl>
           </div>
         </div>
-        <div className="mt-2">
+        <div className="mt-8">
           <div className="flex text-xl font-bold text-gray-900">
             <span className="pt-1.5">
               <BalloonHeart />
@@ -118,35 +108,27 @@ const PetInformation: React.FC<PetInformationPropsIF> = ({
             <h3 className="ml-2">Care Info</h3>
           </div>
           <div className="mt-3 border-t border-gray-200">
-            <dl className="mt-4">
-              <div className="mt-1 py-4">
-                <dt className="text-base font-semibold text-gray-600">
-                  Potty break schedule
-                </dt>
-                <dd className="text-base text-gray-600">7am and 7pm</dd>
-              </div>
-              <div className="mt-1 py-4">
-                <dt className="text-base font-semibold text-gray-600">
-                  Energy Level
-                </dt>
-                <dd className="text-base text-gray-600">High</dd>
-              </div>
-              <div className="mt-1 py-4">
-                <dt className="text-base font-semibold text-gray-600">
-                  Feeding schedule
-                </dt>
-                <dd className="text-base text-gray-600">Twice a day</dd>
-              </div>
-              <div className="mt-1 py-4">
-                <dt className="text-base font-semibold text-gray-600">
-                  Can be left alone
-                </dt>
-                <dd className="text-base text-gray-600">1 - 4 hours</dd>
-              </div>
+            <dl className="mt-2">
+              <QAndAContainer
+                question={"Potty break schedule"}
+                answer={selectedPetObj.pottyBreak}
+              />
+              <QAndAContainer
+                question={"Energy Level"}
+                answer={selectedPetObj.energyLevel}
+              />
+              <QAndAContainer
+                question={"Feeding schedule"}
+                answer={selectedPetObj.feedingSchedule}
+              />
+              <QAndAContainer
+                question={"Can be left alone"}
+                answer={selectedPetObj.leftAlone}
+              />
             </dl>
           </div>
         </div>
-        <div className="mt-2">
+        <div className="mt-8">
           <div className="flex text-xl font-bold text-gray-900">
             <span className="pt-1.5">
               <Megaphone />
@@ -155,7 +137,7 @@ const PetInformation: React.FC<PetInformationPropsIF> = ({
           </div>
           <div className="mt-3 border-t border-gray-200"></div>
         </div>
-        <div className="mt-2 mb-16">
+        <div className="mt-8 mb-16">
           <div className="flex text-xl font-bold text-gray-900">
             <span className="pt-1.5">
               <CardImage />
@@ -167,11 +149,20 @@ const PetInformation: React.FC<PetInformationPropsIF> = ({
               role="list"
               className="mt-4 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8"
             >
+              <Link
+                href="#"
+                className="text-gray-500 hover:text-gray-700 flex flex-col justify-center items-center w-full h-full rounded-lg border-2 border-dashed border-gray-500 text-center hover:border-gray-700 focus:outline-none focus:ring-2 focus:ring-lime-500 focus:ring-offset-2"
+              >
+                <div className="text-xl sm:text-2xl p-2">
+                  <PlusCircleDotted />
+                </div>
+                <span className="block text-sm font-medium">Upload</span>
+              </Link>
               {files.map((file, idx) => (
                 <li key={idx} className="relative">
                   <div className="group aspect-w-10 aspect-h-7 block w-full overflow-hidden rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-lime-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-100">
                     <img
-                      src={file.path}
+                      src={"/bruno.jpeg"}
                       alt="random"
                       className="pointer-events-none object-cover group-hover:opacity-75"
                     />
