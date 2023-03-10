@@ -1,6 +1,9 @@
 import { Pet } from "@prisma/client";
 import { useRouter } from "next/router";
 import { classNames } from "../../../utils/classNames";
+import { Trash } from "react-bootstrap-icons";
+import DeleteModal from "../../DeleteModal/DeleteModal";
+import React from "react";
 
 interface PetSelectorPropsIF {
   pets: Pet[];
@@ -9,6 +12,8 @@ interface PetSelectorPropsIF {
 const PetSelector: React.FC<PetSelectorPropsIF> = ({ pets }) => {
   const router = useRouter();
   const selectedPet = router.query.petSelected;
+  const [openDeleteModal, setOpenDeleteModal] = React.useState<boolean>(false);
+
   const isSelectedPet = (petId: string): boolean => {
     return petId === selectedPet;
   };
@@ -17,6 +22,14 @@ const PetSelector: React.FC<PetSelectorPropsIF> = ({ pets }) => {
       query: { ...router.query, petSelected: petId },
     });
   };
+  if (openDeleteModal) {
+    return (
+      <DeleteModal
+        openDeleteModal={openDeleteModal}
+        setOpenDeleteModal={setOpenDeleteModal}
+      />
+    );
+  }
   return (
     <div>
       <div className="border-b border-gray-200 bg-white px-4 py-5 sm:px-6">
@@ -54,9 +67,9 @@ const PetSelector: React.FC<PetSelectorPropsIF> = ({ pets }) => {
                         </p>
                       </div>
                       <div className="self-center justify-self-end">
-                        <button className="text-lg font-medium text-lime-600">
-                          Edit
-                        </button>
+                        <div onClick={() => setOpenDeleteModal(true)}>
+                          <Trash className="text-lg font-medium text-red-500 hover:scale-125" />
+                        </div>
                       </div>
                     </div>
                   </div>
