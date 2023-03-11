@@ -4,9 +4,7 @@ import {
   CardImage,
   ChatHeart,
   Megaphone,
-  PlusCircleDotted,
 } from "react-bootstrap-icons";
-import Link from "next/link";
 import QAndAContainer from "./QAndAContainer";
 interface PetInformationPropsIF {
   selectedPetObj: Pet;
