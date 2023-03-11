@@ -10,7 +10,7 @@ const AddAPetSelector: React.FC = () => {
       <div className="text-xl sm:text-2xl p-1">
         <PlusCircleDotted />
       </div>
-      <span className="block text-sm font-medium">Add A Pet</span>
+      <span className="block text-sm font-medium">Add a pet</span>
     </Link>
   );
 };
