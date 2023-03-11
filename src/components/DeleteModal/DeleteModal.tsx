@@ -1,18 +1,32 @@
 import React from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { ExclamationDiamond } from "react-bootstrap-icons";
+import axios from "axios";
+import { useRouter } from "next/navigation";
 
 interface DeleteModalPropsIF {
+  petId: string;
   openDeleteModal: boolean;
   setOpenDeleteModal: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const DeleteModal: React.FC<DeleteModalPropsIF> = ({
+  petId,
   openDeleteModal,
   setOpenDeleteModal,
 }) => {
+  const router = useRouter();
   const cancelButtonRef = React.useRef(null);
-
+  const handleDelete = async (petId: string) => {
+    try {
+      const fetchedUser = await axios.get(
+        `/api/deletePetByPetId?petId=${petId}`
+      );
+    } catch (error) {
+      console.log(error);
+    }
+    router.refresh();
+  };
   return (
     <Transition.Root show={openDeleteModal} as={React.Fragment}>
       <Dialog
@@ -72,7 +86,10 @@ const DeleteModal: React.FC<DeleteModalPropsIF> = ({
                   <button
                     type="button"
                     className="inline-flex w-full justify-center rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 sm:ml-3 sm:w-auto"
-                    onClick={() => setOpenDeleteModal(false)}
+                    onClick={() => {
+                      handleDelete(petId);
+                      setOpenDeleteModal(false);
+                    }}
                   >
                     Delete
                   </button>
