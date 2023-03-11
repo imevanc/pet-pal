@@ -5,7 +5,7 @@ import React from "react";
 import { getSelectedPet } from "../../utils/getSelectedPet";
 import PetSelector from "./components/PetSelector";
 import PetInformation from "./components/PetInformation";
-import LoadingBar from "../LoadingBar";
+import AddAPetSelector from "./components/AddAPetSelector";
 
 const MyPetsPage: React.FC = () => {
   const pets: Pet[] = usePetsContext();
@@ -13,15 +13,15 @@ const MyPetsPage: React.FC = () => {
   const selectedPet = router.query.petSelected;
   const selectedPetObj: Pet = getSelectedPet(pets, selectedPet?.toString()!);
 
-  if (!selectedPetObj) {
-    return <LoadingBar />;
-  }
-
   return (
     <div className="grow shrink-0">
       <div className="sm:mx-auto max-w-2xl lg:max-w-3xl mx-4">
         <PetSelector pets={pets} />
-        <PetInformation selectedPetObj={selectedPetObj} />
+        {selectedPetObj ? (
+          <PetInformation selectedPetObj={selectedPetObj} />
+        ) : (
+          <AddAPetSelector />
+        )}
       </div>
     </div>
   );

@@ -32,6 +32,33 @@ const main = async (): Promise<any> => {
         image: "",
         userId: "clf1oni9b000047amc21utiy2",
       },
+      {
+        name: "Donald",
+        breed: "Labrador Retriever",
+        sex: "Male",
+        age: "3 year 9 months old",
+        weight: "30kg",
+        image: "",
+        userId: "clf1oni9b000047amc21utiy2",
+      },
+      {
+        name: "Donald",
+        breed: "Labrador Retriever",
+        sex: "Male",
+        age: "3 year 9 months old",
+        weight: "30kg",
+        image: "",
+        userId: "clf1oni9b000047amc21utiy2",
+      },
+      {
+        name: "Donald",
+        breed: "Labrador Retriever",
+        sex: "Male",
+        age: "3 year 9 months old",
+        weight: "30kg",
+        image: "",
+        userId: "clf1oni9b000047amc21utiy2",
+      },
     ],
   });
 };
