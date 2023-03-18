@@ -2,7 +2,7 @@ import React from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { ExclamationDiamond } from "react-bootstrap-icons";
 import axios from "axios";
-import { useRouter } from "next/navigation";
+import { useRouter } from "next/router";
 
 interface DeleteModalPropsIF {
   petId: string;
@@ -19,13 +19,16 @@ const DeleteModal: React.FC<DeleteModalPropsIF> = ({
   const cancelButtonRef = React.useRef(null);
   const handleDelete = async (petId: string) => {
     try {
-      const fetchedUser = await axios.get(
+      const deletedPet = await axios.get(
         `/api/deletePetByPetId?petId=${petId}`
       );
     } catch (error) {
       console.log(error);
     }
-    router.refresh();
+    await router.replace("/account/DOG_OWNER/myPets", undefined, {
+      shallow: true,
+    });
+    router.reload();
   };
   return (
     <Transition.Root show={openDeleteModal} as={React.Fragment}>

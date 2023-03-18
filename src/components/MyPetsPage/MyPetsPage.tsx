@@ -12,7 +12,6 @@ const MyPetsPage: React.FC = () => {
   const router = useRouter();
   const selectedPet = router.query.petSelected;
   const selectedPetObj: Pet = getSelectedPet(pets, selectedPet?.toString()!);
-
   return (
     <div className="grow shrink-0">
       <div className="sm:mx-auto max-w-2xl lg:max-w-3xl mx-4">
