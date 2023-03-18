@@ -8,6 +8,7 @@ const NavBar: React.FC = () => {
   const user = useUserContext();
   const path: string = useRouter().asPath;
   const [paths, setPaths] = React.useState<PathsStateIF>({
+    myPets: "",
     dashboard: "",
     appointments: "",
   });
@@ -17,16 +18,25 @@ const NavBar: React.FC = () => {
       setPaths({
         dashboard: "selected",
         appointments: "nonSelected",
+        myPets: "nonSelected",
       });
     } else if (path === "/account/appointments") {
       setPaths({
         dashboard: "nonSelected",
         appointments: "selected",
+        myPets: "nonSelected",
+      });
+    } else if (path === "/account/DOG_OWNER/myPets") {
+      setPaths({
+        dashboard: "nonSelected",
+        appointments: "nonSelected",
+        myPets: "selected",
       });
     } else {
       setPaths({
         dashboard: "nonSelected",
         appointments: "nonSelected",
+        myPets: "nonSelected",
       });
     }
   }, [path, user]);
@@ -53,6 +63,14 @@ const NavBar: React.FC = () => {
         href="/account/appointments"
       >
         Appointments
+      </Link>
+      <Link
+        className={
+          paths.myPets === "selected" ? selectedClass : nonSelectedClass
+        }
+        href="/account/DOG_OWNER/myPets"
+      >
+        My Pets
       </Link>
     </div>
   );

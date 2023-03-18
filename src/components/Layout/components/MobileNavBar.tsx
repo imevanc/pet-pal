@@ -8,6 +8,7 @@ const MobileNavBar: React.FC = () => {
   const user = useUserContext();
   const path: string = useRouter().asPath;
   const [paths, setPaths] = React.useState<PathsStateIF>({
+    myPets: "",
     dashboard: "",
     appointments: "",
   });
@@ -17,16 +18,25 @@ const MobileNavBar: React.FC = () => {
       setPaths({
         dashboard: "selected",
         appointments: "nonSelected",
+        myPets: "nonSelected",
       });
     } else if (path === "/account/appointments") {
       setPaths({
         dashboard: "nonSelected",
         appointments: "selected",
+        myPets: "nonSelected",
+      });
+    } else if (path === "/account/DOG_OWNER/myPets") {
+      setPaths({
+        dashboard: "nonSelected",
+        appointments: "nonSelected",
+        myPets: "selected",
       });
     } else {
       setPaths({
         dashboard: "nonSelected",
         appointments: "nonSelected",
+        myPets: "nonSelected",
       });
     }
   }, [path, user]);
@@ -41,7 +51,7 @@ const MobileNavBar: React.FC = () => {
       <div className="space-y-1 pt-2 pb-4">
         <Disclosure.Button
           as="a"
-          href="/account/dashboard"
+          href="/account/DOG_OWNER/dashboard"
           className={
             paths.dashboard === "selected" ? selectedClass : nonSelectedClass
           }
@@ -56,6 +66,15 @@ const MobileNavBar: React.FC = () => {
           }
         >
           Appointments
+        </Disclosure.Button>
+        <Disclosure.Button
+          as="a"
+          href="/account/DOG_OWNER/myPets"
+          className={
+            paths.myPets === "selected" ? selectedClass : nonSelectedClass
+          }
+        >
+          My Pets
         </Disclosure.Button>
       </div>
     </Disclosure.Panel>

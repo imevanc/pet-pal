@@ -8,4 +8,5 @@ export interface PathsStateIF {
   personalInformation?: string;
   planAndBilling?: string;
   settings?: string;
+  myPets?: string;
 }
