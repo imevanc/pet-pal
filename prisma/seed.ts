@@ -13,6 +13,7 @@ const main = async (): Promise<any> => {
         weight: "10kg",
         image: "",
         userId: "clf1oni9b000047amc21utiy2",
+        sprayedOrNeutered: "Yes",
       },
       {
         name: "Charlie",
