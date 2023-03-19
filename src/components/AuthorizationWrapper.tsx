@@ -10,14 +10,14 @@ const AuthorizationWrapper: React.FC<{
   const router = useRouter();
 
   if (status === "unauthenticated") {
-    if (router.asPath === "/") {
+    if (router.pathname === "/") {
       return children;
     }
     router.push("/account/sign-in");
   }
 
   if (status === "authenticated") {
-    if (router.asPath === "/") {
+    if (router.pathname === "/") {
       router.push(`${window.location.origin}/account/DOG_OWNER/dashboard`);
     }
     return children;

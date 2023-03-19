@@ -6,7 +6,7 @@ import { useUserContext } from "../../../hooks/useUserContext";
 
 const MobileNavBar: React.FC = () => {
   const user = useUserContext();
-  const path: string = useRouter().asPath;
+  const path: string = useRouter().pathname;
   const [paths, setPaths] = React.useState<PathsStateIF>({
     myPets: "",
     dashboard: "",
