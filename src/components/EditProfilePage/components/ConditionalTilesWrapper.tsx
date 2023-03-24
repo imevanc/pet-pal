@@ -1,4 +1,4 @@
-import { useRouter } from "next/router";
+import { NextRouter, useRouter } from "next/router";
 import React from "react";
 
 interface ConditionalTilesWrapperPropsIF {
@@ -8,7 +8,7 @@ interface ConditionalTilesWrapperPropsIF {
 const ConditionalTilesWrapper: React.FC<ConditionalTilesWrapperPropsIF> = ({
   children,
 }) => {
-  const router = useRouter();
+  const router: NextRouter = useRouter();
   const [SelectedChild, setSelectedChild] = React.useState<JSX.Element>(<></>);
 
   React.useEffect((): void => {

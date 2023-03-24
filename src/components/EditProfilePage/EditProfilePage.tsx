@@ -1,4 +1,4 @@
-import { useRouter } from "next/router";
+import { NextRouter, useRouter } from "next/router";
 import React from "react";
 import { PathsStateIF } from "../../interfaces/PathsStateIF";
 import ConditionalTilesWrapper from "./components/ConditionalTilesWrapper";
@@ -8,7 +8,7 @@ import PlanAndBilling from "./components/PlanAndBilling";
 import Settings from "./components/Settings";
 
 const EditProfilePage: React.FC = () => {
-  const router = useRouter();
+  const router: NextRouter = useRouter();
 
   const [paths, setPaths] = React.useState<PathsStateIF>({
     personalInformation: "",

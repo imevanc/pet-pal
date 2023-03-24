@@ -1,6 +1,6 @@
 import { Pet } from "@prisma/client";
 import { usePetsContext } from "../../hooks/usePetsContext";
-import { useRouter } from "next/router";
+import { NextRouter, useRouter } from "next/router";
 import React from "react";
 import { getSelectedPet } from "../../utils/getSelectedPet";
 import PetSelector from "./components/PetSelector";
@@ -9,8 +9,8 @@ import AddAPetSelector from "./components/AddAPetSelector";
 
 const MyPetsPage: React.FC = () => {
   const pets: Pet[] = usePetsContext();
-  const router = useRouter();
-  const selectedPet = router.query.petSelected;
+  const router: NextRouter = useRouter();
+  const selectedPet: string | string[] | undefined = router.query.petSelected;
   const selectedPetObj: Pet = getSelectedPet(pets, selectedPet?.toString()!);
   return (
     <div className="grow shrink-0">

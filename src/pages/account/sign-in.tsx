@@ -3,11 +3,11 @@ import SignInPage from "../../components/SignInPage/SignInPage";
 import { getProviders } from "next-auth/react";
 import { SignInIF } from "../../interfaces/SignInIF";
 import { useUserContext } from "../../hooks/useUserContext";
-import { useRouter } from "next/router";
+import { NextRouter, useRouter } from "next/router";
 
 const SignIn: NextPage<SignInIF> = ({ providers }) => {
   const user = useUserContext();
-  const router = useRouter();
+  const router: NextRouter = useRouter();
   if (user) {
     router.replace(`/account/${user?.role}/dashboard`);
   }

@@ -2,7 +2,7 @@ import { stringToBool } from "../../../utils/stringToBool";
 import { ProfileNavigationIF } from "../../../interfaces/ProfileNavigationIF";
 import { getProfileNavigation } from "../../../utils/getProfileNavigation";
 import { classNames } from "../../../utils/classNames";
-import { useRouter } from "next/router";
+import { NextRouter, useRouter } from "next/router";
 import { PathsStateIF } from "../../../interfaces/PathsStateIF";
 
 interface NavigationTabsIF {
@@ -10,7 +10,7 @@ interface NavigationTabsIF {
 }
 
 const NavigationTabs: React.FC<NavigationTabsIF> = ({ paths }) => {
-  const router = useRouter();
+  const router: NextRouter = useRouter();
 
   const navigation: ProfileNavigationIF = getProfileNavigation(paths);
 
