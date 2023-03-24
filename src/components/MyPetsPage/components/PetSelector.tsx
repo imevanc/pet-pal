@@ -1,5 +1,5 @@
 import { Pet } from "@prisma/client";
-import { useRouter } from "next/router";
+import { NextRouter, useRouter } from "next/router";
 import { classNames } from "../../../utils/classNames";
 import { Trash } from "react-bootstrap-icons";
 import DeleteModal from "../../DeleteModal/DeleteModal";
@@ -10,9 +10,9 @@ interface PetSelectorPropsIF {
 }
 
 const PetSelector: React.FC<PetSelectorPropsIF> = ({ pets }) => {
-  const router = useRouter();
+  const router: NextRouter = useRouter();
   const selectedPet = router.query.petSelected;
-  console.log(selectedPet);
+
   const [openDeleteModal, setOpenDeleteModal] = React.useState<boolean>(false);
 
   const isSelectedPet = (petId: string): boolean => {

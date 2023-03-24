@@ -2,7 +2,7 @@ import React from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { ExclamationDiamond } from "react-bootstrap-icons";
 import axios from "axios";
-import { useRouter } from "next/router";
+import { NextRouter, useRouter } from "next/router";
 
 interface DeleteModalPropsIF {
   petId: string;
@@ -15,7 +15,7 @@ const DeleteModal: React.FC<DeleteModalPropsIF> = ({
   openDeleteModal,
   setOpenDeleteModal,
 }) => {
-  const router = useRouter();
+  const router: NextRouter = useRouter();
   const cancelButtonRef = React.useRef(null);
   const handleDelete = async (petId: string) => {
     try {
