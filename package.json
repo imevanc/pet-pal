@@ -61,7 +61,8 @@
     "react": "18.2.0",
     "react-bootstrap-icons": "^1.10.2",
     "react-dom": "18.2.0",
-    "react-hook-form": "^7.43.2"
+    "react-hook-form": "^7.43.2",
+    "react-map-gl": "^7.0.21"
   },
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.2",
