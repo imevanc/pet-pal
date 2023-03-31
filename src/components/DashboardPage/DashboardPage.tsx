@@ -10,6 +10,7 @@ import MyPetsCard from "./components/MyPetsCard";
 import ProfileCard from "./components/ProfileCard";
 import { Pet } from "@prisma/client";
 import { usePetsContext } from "../../hooks/usePetsContext";
+import MapCard from "./components/MapCard";
 
 // const user = {
 //   name: "Whitney Francis",
@@ -99,6 +100,7 @@ const Dashboard: React.FC = () => {
           <ProfileCard />
           <div className="mx-auto mt-8 grid max-w-3xl grid-cols-1 gap-6 sm:px-6 lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-3">
             <MyPetsCard pets={pets} />
+            <MapCard />
 
             {/* <div className="space-y-6 lg:col-span-1 lg:col-start-3">
             <section aria-labelledby="timeline-title">
