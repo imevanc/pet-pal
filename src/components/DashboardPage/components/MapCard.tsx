@@ -10,6 +10,11 @@ const MapCard: React.FC = () => {
     latitude: 53.480069,
     zoom: 12,
   });
+  const mapStyles: React.CSSProperties = {
+    position: "relative",
+    width: "inherit",
+    height: "inherit",
+  };
   return (
     <div className="space-y-6 lg:col-span-2 lg:col-start-1">
       <section aria-labelledby="applicant-information-title">
@@ -25,14 +30,14 @@ const MapCard: React.FC = () => {
               You can see dog friendly places
             </p>
           </div>
-          <div className="p-5">
-            <div className="cursor-pointer flex w-full justify-center">
-              <div className="shadow-xl">
+          <div className="p-5 h-[400px] w-full">
+            <div className="cursor-pointer flex w-full justify-center h-full w-full">
+              <div className="shadow-xl h-full w-full">
                 <Map
                   attributionControl={false}
                   {...viewState}
                   onMove={(evt) => setViewState(evt.viewState)}
-                  style={{ width: 600, height: 400 }}
+                  style={mapStyles}
                   mapStyle="mapbox://styles/imevanc/clfx4e7xp000y01li4pvo9pok"
                   mapboxAccessToken={`${process.env.mapbox_token}`}
                 />
