@@ -6,6 +6,7 @@ import { SessionProvider } from "next-auth/react";
 import type { AppProps } from "next/app";
 import { UserContextProvider } from "../context/UserContext";
 import { PetsContextProvider } from "../context/PetsContext";
+import NetworkWrapper from "../components/NetworkWrapper";
 
 const App = ({ Component, pageProps }: AppProps) => {
   return (
@@ -42,7 +43,9 @@ const App = ({ Component, pageProps }: AppProps) => {
               {/* {description && <meta name="description" content={description} />} */}
             </Head>
             <Layout>
-              <Component {...pageProps} />
+              <NetworkWrapper>
+                <Component {...pageProps} />
+              </NetworkWrapper>
             </Layout>
           </React.Fragment>
         </PetsContextProvider>
