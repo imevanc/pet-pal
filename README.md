@@ -1,3 +1,6 @@
+🚀 Exciting News! While this repository is archived, I'm actively working on a new version using different technologies for similar use cases. Check out my latest projects on GitHub for the latest updates and improvements. Stay tuned for more innovation and happy coding! 🌟
+
+
 # Pet Pal
 
 <div align="center">
